@@ -1,0 +1,13 @@
+{ self, ... }: {
+  flake.wrappers.fish = { pkgs, wlib, ... }: {
+    imports = [ wlib.wrapperModules.fish ];
+    options = {
+    };
+    config = {
+    };
+  };
+
+  perSystem = { lib, pkgs, ... } : {
+    packages.fish = lib.mkDefault (self.wrappers.fish.wrap { inherit pkgs; });
+  };
+}

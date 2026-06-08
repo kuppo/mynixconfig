@@ -1,0 +1,22 @@
+<type>(<scope>): <short summary under 50 characters>
+
+# ── Body (Optional) ──────────────────────────────────────────────────
+# Explain WHAT changed and WHY (not how). Wrap at 72 characters.
+
+# ── Footer / Metadata (Optional) ─────────────────────────────────────
+# Fixes: #123
+# See-also: https://example.com
+# Co-authored-by: Name <email@example.com>
+
+# ── Guidelines ───────────────────────────────────────────────────────
+# [type] choices: 
+#   feat     (New feature)
+#   fix      (Bug fix)
+#   docs     (Documentation changes)
+#   style    (Formatting, missing semi-colons, etc; no code changes)
+#   refactor (Refactoring production code)
+#   test     (Adding missing tests, refactoring tests)
+#   chore    (Updating build tasks, package manager configs, etc)
+#
+# Remember to leave a blank line between the summary and the body!
+

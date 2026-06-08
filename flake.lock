@@ -1,0 +1,144 @@
+{
+  "nodes": {
+    "flake-parts": {
+      "inputs": {
+        "nixpkgs-lib": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1778716662,
+        "narHash": "sha256-m1Yf0wZ8j1OHjTc2UwHwyQRSnNeSgLJOd7q5Y45hzi4=",
+        "ref": "refs/heads/main",
+        "rev": "f7c1a2d347e4c52d5fb8d10cb4d94b5884e546fb",
+        "revCount": 475,
+        "type": "git",
+        "url": "https://v6.gh-proxy.org/https://github.com/hercules-ci/flake-parts"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://v6.gh-proxy.org/https://github.com/hercules-ci/flake-parts"
+      }
+    },
+    "home-manager": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1780361225,
+        "narHash": "sha256-wnV9ttf4fPWNonBIQmvlrSlNpQYgx5HgWWd007mwIFA=",
+        "ref": "release-26.05",
+        "rev": "e28654b71096e08c019d4861ca26acb646f583d8",
+        "revCount": 6799,
+        "type": "git",
+        "url": "https://v6.gh-proxy.org/https://github.com/nix-community/home-manager.git"
+      },
+      "original": {
+        "ref": "release-26.05",
+        "type": "git",
+        "url": "https://v6.gh-proxy.org/https://github.com/nix-community/home-manager.git"
+      }
+    },
+    "import-tree": {
+      "locked": {
+        "lastModified": 1778781969,
+        "narHash": "sha256-Jjuz5CmSkur8KvLDoGa+vylEp+RkQtv4mt/qcMznpH0=",
+        "ref": "refs/heads/main",
+        "rev": "d321337efd0f23a9eb14a42adb7b2c29313ab274",
+        "revCount": 99,
+        "type": "git",
+        "url": "https://v6.gh-proxy.org/https://github.com/denful/import-tree"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://v6.gh-proxy.org/https://github.com/denful/import-tree"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1780453794,
+        "narHash": "sha256-bXMRa9VTsHSPXL4Cw8R6JJLQeY3Y/IP4+YJCYVmQ7FY=",
+        "ref": "nixos-26.05",
+        "rev": "6b316287bae2ee04c9b93c8c858d930fd07d7338",
+        "shallow": true,
+        "type": "git",
+        "url": "https://mirror.nju.edu.cn/git/nixpkgs.git"
+      },
+      "original": {
+        "ref": "nixos-26.05",
+        "shallow": true,
+        "type": "git",
+        "url": "https://mirror.nju.edu.cn/git/nixpkgs.git"
+      }
+    },
+    "root": {
+      "inputs": {
+        "flake-parts": "flake-parts",
+        "home-manager": "home-manager",
+        "import-tree": "import-tree",
+        "nixpkgs": "nixpkgs",
+        "stable": "stable",
+        "unstable": "unstable",
+        "wrappers": "wrappers"
+      }
+    },
+    "stable": {
+      "locked": {
+        "lastModified": 1780453794,
+        "narHash": "sha256-bXMRa9VTsHSPXL4Cw8R6JJLQeY3Y/IP4+YJCYVmQ7FY=",
+        "ref": "nixos-26.05",
+        "rev": "6b316287bae2ee04c9b93c8c858d930fd07d7338",
+        "shallow": true,
+        "type": "git",
+        "url": "https://mirror.nju.edu.cn/git/nixpkgs.git"
+      },
+      "original": {
+        "ref": "nixos-26.05",
+        "shallow": true,
+        "type": "git",
+        "url": "https://mirror.nju.edu.cn/git/nixpkgs.git"
+      }
+    },
+    "unstable": {
+      "locked": {
+        "lastModified": 1780243769,
+        "narHash": "sha256-x5UQuRsH3MqI0U9afaXSNqzTPSeZlRLvFAav2Ux1pNw=",
+        "ref": "nixos-unstable",
+        "rev": "331800de5053fcebacf6813adb5db9c9dca22a0c",
+        "shallow": true,
+        "type": "git",
+        "url": "https://mirror.nju.edu.cn/git/nixpkgs.git"
+      },
+      "original": {
+        "ref": "nixos-unstable",
+        "shallow": true,
+        "type": "git",
+        "url": "https://mirror.nju.edu.cn/git/nixpkgs.git"
+      }
+    },
+    "wrappers": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1780661205,
+        "narHash": "sha256-3F5DixT3Gk91lBI9E+TGMm0ko5HrRbDiL23di16TJGA=",
+        "ref": "refs/heads/main",
+        "rev": "8dd304c3582ddd339217e1cc5fb53f50acb63c2d",
+        "revCount": 767,
+        "type": "git",
+        "url": "https://v6.gh-proxy.org/https://github.com/BirdeeHub/nix-wrapper-modules"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://v6.gh-proxy.org/https://github.com/BirdeeHub/nix-wrapper-modules"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
