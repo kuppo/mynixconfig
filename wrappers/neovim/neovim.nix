@@ -12,6 +12,6 @@
   };
 
   perSystem = { lib, pkgs, ... }: {
-    packages.neovim = lib.mkDefault (self.wrappers.neovim.wrap { inherit pkgs; });
+    packages.neovim = lib.mkDefault self.wrappers.neovim.wrap;
   };
 }

@@ -1,4 +1,4 @@
-<type>(<scope>): <short summary under 50 characters>
+# <type>(<scope>): <short summary under 50 characters>
 
 # ── Body (Optional) ──────────────────────────────────────────────────
 # Explain WHAT changed and WHY (not how). Wrap at 72 characters.

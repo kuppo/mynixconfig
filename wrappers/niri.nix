@@ -273,6 +273,6 @@
   };
 
   perSystem = { lib, pkgs, ... }: {
-    packages.fish = lib.mkDefault (self.wrappers.fish.wrap { inherit pkgs; });
+    packages.fish = lib.mkDefault (self.wrappers.niri.wrap { inherit pkgs; });
   };
 }
