@@ -1,4 +1,4 @@
-{ self, ... }: {
+{ self, priUser, ... }: {
   flake.nixosModules.nixconfig = {
     nix.settings = {
       extra-substituters = [
@@ -12,7 +12,7 @@
       ];
       trusted-users = [
         "root"
-        "peng"
+        "${priUser.name}"
       ];
       extra-experimental-features = [
         "nix-command"

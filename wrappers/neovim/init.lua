@@ -70,6 +70,9 @@ vim.cmd('colorscheme unokai')
 local map = vim.keymap.set
 map('i', 'jk', '<esc>')
 
+-- F1 to open help is annoying
+map({'i', 'n', 'v'}, '<F1>', '')
+
 -- clear hl
 map("n", "<leader>ur", ":nohlsearch<Bar>diffupdate<Bar>normal! <C-L><CR>", { desc = "Clear search highlights" })
 

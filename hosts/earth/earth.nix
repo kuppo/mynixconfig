@@ -9,6 +9,7 @@
     modules = [
       self.nixosModules.bootloader
       self.nixosModules.nixconfig
+      self.nixosModules.desktop
 
       self.nixosModules.graphics
       {

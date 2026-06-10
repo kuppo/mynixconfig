@@ -1,4 +1,4 @@
-{ self, ... }: {
+{ self, priUser, ... }: {
   flake.wrappers.git = { pkgs, wlib, config, lib, ... }: {
     imports = [ wlib.wrapperModules.git ];
 
@@ -6,12 +6,12 @@
       git.user = lib.mkOption {
         type = lib.types.str;
         description = "Git user name, will appear on the commit message.";
-        default = "Peng Lei";
+        default = "${priUser.description}";
       };
       git.email = lib.mkOption {
         type = lib.types.str;
         description = "Git user's email, will appear on the commit message.";
-        default = "swk-pl@163.com";
+        default = "${priUser.email}";
       };
     };
 

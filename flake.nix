@@ -36,7 +36,26 @@
       flake-parts,
       ...
     }@inputs:
-    inputs.flake-parts.lib.mkFlake { inherit inputs; } (
+    let
+      args = {
+        priUser = {
+          name = "peng";
+          description = "Peng Lei";
+          email = "swk-pl@163.com";
+          initialPw = "123";
+        };
+        secUser = {
+          name = "test";
+          description = "Test people";
+          email = "test@example.com";
+          initialPw = "123";
+        };
+      };
+    in
+    inputs.flake-parts.lib.mkFlake {
+      inherit inputs;
+      specialArgs = args;
+    } (
       inputs.import-tree.matchNot ".*/flake\.nix" ./.
     );
 

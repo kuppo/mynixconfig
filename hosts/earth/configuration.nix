@@ -1,4 +1,4 @@
-{ self, ... }:
+{ self, priUser, ... }:
 {
   flake.nixosModules.earthConfiguration =
     {
@@ -21,11 +21,11 @@
         pulse.enable = true;
       };
       services.libinput.enable = true;
-      users.users.peng = {
+      users.users.${priUser.name} = {
         isNormalUser = true;
         extraGroups = [ "wheel" ];
-        description = "Peng Lei";
-        initialPassword = "123";
+        description = "${priUser.description}";
+        initialPassword = "${priUser.initialPw}";
         shell = pkgs.fish;
         packages = with pkgs; [
           tree
@@ -39,11 +39,8 @@
         };
         neovim = {
           enable = true;
+          defaultEditor = true;
           package = self.packages.${pkgs.stdenv.hostPlatform.system}.neovim;
-        };
-        niri = {
-          enable = true;
-          package = self.packages.${pkgs.stdenv.hostPlatform.system}.niri;
         };
         git = {
           enable = true;

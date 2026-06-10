@@ -1,4 +1,4 @@
-{ self, ... }:
+{ self, priUser, ... }:
 {
   flake.nixosModules.graphics = { pkgs, lib, config, ... } :
   let
@@ -57,7 +57,7 @@
     config = lib.mkMerge [
       {
         hardware.graphics.enable = true;
-        users.users.peng.extraGroups = [ "video" "render" ];
+        users.users.${priUser.name}.extraGroups = [ "video" "render" ];
       }
 
       # Intel

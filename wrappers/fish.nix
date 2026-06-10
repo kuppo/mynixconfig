@@ -217,8 +217,4 @@
       '';
     };
   };
-
-  perSystem = { lib, pkgs, ... }: {
-    packages.fish = lib.mkDefault self.wrappers.fish.wrap;
-  };
 }

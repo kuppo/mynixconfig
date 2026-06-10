@@ -9,13 +9,10 @@
         scrolling.history = 20000;
         cursor.style.blinking = "On";
         mouse.hide_when_typing = true;
+        window.decorations = "None";
         # debug.log_level = "Debug";
         # debug.persistent_logging = true;
       };
     };
-  };
-
-  perSystem = { lib, pkgs, ... } : {
-    packages.alacritty = lib.mkDefault self.wrappers.alacritty.wrap;
   };
 }
