@@ -16,15 +16,15 @@
         };
 
         dm = lib.mkOption {
-          type = lib.types.enum [ "plasma" "sddm" "gdm" "cosmic" ];
+          type = lib.types.enum [ "plasma" "sddm" "cosmic" "ly" "lemurs" ];
           description = "Choose the display manager";
-          default = "cosmic";
+          default = "sddm";
         };
       };
     };
 
     config = {
-      desktop.dm = "sddm";
+      desktop.dm = "ly";
     };
 
     imports = [

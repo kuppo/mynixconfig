@@ -21,6 +21,8 @@
         user.email = config.git.email;
         user.name = config.git.user;
         init.defaultBranch = "dev";
+        url."https://v6.gh-proxy.org/https://github.com".insteadOf = "https://github.com";
+        url."https://github.com".pushInsteadOf = "https://github.com";
       };
     };
   };

@@ -2,30 +2,39 @@
   description = "My system config";
 
   inputs = {
-    # nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    nixpkgs = {
-      url = "git+https://mirror.nju.edu.cn/git/nixpkgs.git?ref=nixos-26.05&shallow=1";
-    };
-    stable.url = "git+https://mirror.nju.edu.cn/git/nixpkgs.git?ref=nixos-26.05&shallow=1";
-    unstable.url = "git+https://mirror.nju.edu.cn/git/nixpkgs.git?ref=nixos-unstable&shallow=1";
+    stable.follows = "nixpkgs";
 
     flake-parts = {
-      url = "git+https://v6.gh-proxy.org/https://github.com/hercules-ci/flake-parts";
+      url = "github:hercules-ci/flake-parts";
       inputs.nixpkgs-lib.follows = "nixpkgs";
     };
 
     home-manager = {
-      url = "git+https://v6.gh-proxy.org/https://github.com/nix-community/home-manager.git?ref=release-26.05";
+      url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     import-tree = {
-      url = "git+https://v6.gh-proxy.org/https://github.com/denful/import-tree";
+      url = "github:denful/import-tree";
     };
 
     wrappers = {
-      url = "git+https://v6.gh-proxy.org/https://github.com/BirdeeHub/nix-wrapper-modules";
+      url = "github:BirdeeHub/nix-wrapper-modules";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    devshell.url = "github:numtide/devshell";
+
+    # devenv = {
+    #   url = "git+https://v6.gh-proxy.org/https://github.com/cachix/devenv";
+    # };
+
+    # flake-parts.follows = "devenv/flake-parts";
+
+    # nixpkgs.follows = "devenv/nixpkgs";
+
+    nixpkgs = {
+      url = "git+https://github.com/NixOS/nixpkgs?ref=nixos-26.05&shallow=1";
     };
   };
 

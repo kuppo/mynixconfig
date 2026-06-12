@@ -40,7 +40,7 @@
         neovim = {
           enable = true;
           defaultEditor = true;
-          package = self.packages.${pkgs.stdenv.hostPlatform.system}.neovim;
+          package = self.wrappers.neovim.wrap { inherit pkgs; settings.profile = "full"; };
         };
         git = {
           enable = true;

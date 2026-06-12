@@ -19,7 +19,7 @@
         #   expansion = "pushd $NIXDOTFILE_PATH && nix flake  && popd";
         # };
         nixupgrade = {
-          expansion = "pushd $NIXDOTFILE_PATH && sudo nix flake update && nixos-rebuild switch --flake .#hostname && popd";
+          expansion = "pushd $NIXDOTFILE_PATH && sudo nix flake update && nixos-rebuild switch --flake .#$hostname && popd";
           position = "command";
           cursor = "%";
         };

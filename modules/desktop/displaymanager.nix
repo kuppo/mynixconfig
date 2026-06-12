@@ -5,17 +5,32 @@
         enable = true;
         enableHidpi = true;
         wayland.enable = true;
-        theme = "${pkgs.sddm-chili-theme}/share/sddm/themes/chili";
-        extraPackages = [ pkgs.sddm-chili-theme ];
+        theme = "${pkgs.sddm-astronaut}/share/sddm/themes/sddm-astronaut-theme";
+        extraPackages = [ pkgs.sddm-astronaut ];
       };
       plasma-login-manager = lib.mkIf (config.desktop.dm == "plasma") {
         enable = true;
       };
       gdm = lib.mkIf (config.desktop.dm == "gdm") {
         enable = true;
-        wayland = true;
       };
       cosmic-greeter = lib.mkIf (config.desktop.dm == "cosmic") {
+        enable = true;
+      };
+      ly = lib.mkIf (config.desktop.dm == "ly") {
+        enable = true;
+        settings = {
+          animation = "doom";
+          # animation = "gameoflife";
+          animation_frame_delay = 10;
+          battery_id = "BAT0";
+          bigclock = "fa";
+          doom_fire_height = 4;
+          vi_mode = true;
+          vi_default_mode = "insert";
+        };
+      };
+      lemurs = lib.mkIf (config.desktop.dm == "lemurs") {
         enable = true;
       };
     };

@@ -14,6 +14,7 @@
                 content.spawn-sh = "noctalia-shell ipc call launcher toggle";
                 props.hotkey-overlay-title = "Open noctalia launcher";
               };
+              # "Super".spawn-sh = "noctalia-shell ipc call bar showBar";
               # "Mod+S" = _: {
               #   content.spawn-sh "noctalia-shell ipc call controlCenter toggle";
               #   prop.hotkey-overlay-title = "Open noctalia controlCenter";
