@@ -1,0 +1,29 @@
+.devenv
+
+# Devenv
+.devenv*
+devenv.local.nix
+devenv.local.yaml
+
+# direnv
+.direnv
+
+# pre-commit
+.pre-commit-config.yaml
+
+# Devenv
+.devenv*
+devenv.local.nix
+devenv.local.yaml
+devenv.*
+
+# direnv
+.direnv
+
+# pre-commit
+.pre-commit-config.yaml
+
+wrappers/fcitx5-rime/rime/build/
+wrappers/fcitx5-rime/rime/installation.yaml
+wrappers/fcitx5-rime/rime/sync/
+wrappers/fcitx5-rime/rime/user.yaml

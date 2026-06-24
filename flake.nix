@@ -1,41 +1,24 @@
-{
+rec {
   description = "My system config";
 
   inputs = {
     stable.follows = "nixpkgs";
 
-    flake-parts = {
-      url = "github:hercules-ci/flake-parts";
-      inputs.nixpkgs-lib.follows = "nixpkgs";
-    };
+    nixpkgs.url = "git+https://github.com/NixOS/nixpkgs?ref=nixos-26.05&shallow=1";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    import-tree = {
-      url = "github:denful/import-tree";
-    };
+    import-tree.url = "github:denful/import-tree";
 
     wrappers = {
       url = "github:BirdeeHub/nix-wrapper-modules";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    devshell.url = "github:numtide/devshell";
-
-    # devenv = {
-    #   url = "git+https://v6.gh-proxy.org/https://github.com/cachix/devenv";
-    # };
-
-    # flake-parts.follows = "devenv/flake-parts";
-
-    # nixpkgs.follows = "devenv/nixpkgs";
-
-    nixpkgs = {
-      url = "git+https://github.com/NixOS/nixpkgs?ref=nixos-26.05&shallow=1";
-    };
+    flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
   outputs =
@@ -49,28 +32,40 @@
       args = {
         priUser = {
           name = "peng";
-          description = "Peng Lei";
+          fullName = "Peng Lei";
+          description = "The Best!";
           email = "swk-pl@163.com";
           initialPw = "123";
+          groups = [
+            "wheel"
+            "video"
+            "audio"
+            "wireshark"
+            "networkmanager"
+          ];
         };
         secUser = {
           name = "test";
-          description = "Test people";
+          fullName = "Jane Doe";
+          description = "Anonymous!";
           email = "test@example.com";
           initialPw = "123";
         };
+        cursor = {
+          theme = "";
+          size = 24;
+        };
+        inherit nixConfig;
       };
     in
     inputs.flake-parts.lib.mkFlake {
       inherit inputs;
       specialArgs = args;
-    } (
-      inputs.import-tree.matchNot ".*/flake\.nix" ./.
-    );
+    } (inputs.import-tree.matchNot ".*/(flake|devenv)\.nix" ./.);
 
   nixConfig = {
     extra-substituters = [
-      "https://mirror.sjtu.edu.cn/nix-channels/store?priority=20"
+      # "https://mirror.sjtu.edu.cn/nix-channels/store?priority=20"
       "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store?priority=21"
       "https://mirror.nju.edu.cn/nix-channels/store?priority=22"
       "https://nix-community.cachix.org?priority=39"

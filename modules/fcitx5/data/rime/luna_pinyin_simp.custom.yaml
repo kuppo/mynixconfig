@@ -1,0 +1,11 @@
+patch:
+  key_binder/bindings:
+    - {accept: "Control+j", send: Down, when: composing}
+    - {accept: "Control+k", send: Up, when: composing}
+  reverse_lookup/prefix: "`"         # 反查鍵
+  reverse_lookup/dictionary: cangjie5_sc
+  reverse_lookup/prism: cangjie5_sc
+  reverse_lookup/tips: 〔仓颉〕
+  switches/@0/reset: 1
+  punctuator/symbols/+:
+    "/zbf": ["─", "│", "┌", "┐", "└", "┘", "├", "┤", "┬", "┴", "┼"]

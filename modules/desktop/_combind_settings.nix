@@ -10,7 +10,7 @@
         props.hotkey-overlay-title = "Lock the Screen: swaylock";
         content.spawn = "swaylock";
       };
-    
+
       "XF86AudioRaiseVolume" = _: {
         props.allow-when-locked = true;
         content.spawn-sh = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0";
@@ -27,7 +27,7 @@
         props.allow-when-locked = true;
         content.spawn-sh = "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
       };
-    
+
       "XF86AudioPlay" = _: {
         props.allow-when-locked = true;
         content.spawn-sh = "playerctl play-pause";
@@ -48,7 +48,7 @@
         props.allow-when-locked = true;
         content.spawn-sh = "playerctl next";
       };
-    
+
       "XF86MonBrightnessUp" = _: {
         props.allow-when-locked = true;
         content.spawn-sh = "brightnessctl --class=backlight set +10%";

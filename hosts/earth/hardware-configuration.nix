@@ -1,4 +1,5 @@
-{ self, ... }: {
+{ self, ... }:
+{
   flake.nixosModules.earthHardware =
     {
       config,

@@ -1,18 +1,18 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ','
+vim.g.mapleader = " "
+vim.g.maplocalleader = ","
 
 -- options
 vim.opt.number = true
 local vo = vim.opt
 vo.relativenumber = true
-vo.signcolumn = 'yes'
+vo.signcolumn = "yes"
 
 vo.list = true
-vo.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vo.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
 vo.hlsearch = true
 
-vo.mouse = 'a'
+vo.mouse = "a"
 
 vo.scrolloff = 8
 
@@ -64,17 +64,22 @@ g.netrw_sizestyle = "h"
 g.netrw_sort_by = "size"
 
 -- colorscheme
-vim.cmd('colorscheme unokai')
+vim.cmd("colorscheme unokai")
 
 -- keymaps
 local map = vim.keymap.set
-map('i', 'jk', '<esc>')
+map("i", "jk", "<esc>")
 
 -- F1 to open help is annoying
-map({'i', 'n', 'v'}, '<F1>', '')
+map({ "i", "n", "v" }, "<F1>", "")
 
 -- clear hl
-map("n", "<leader>ur", ":nohlsearch<Bar>diffupdate<Bar>normal! <C-L><CR>", { desc = "Clear search highlights" })
+map(
+  "n",
+  "<leader>ur",
+  ":nohlsearch<Bar>diffupdate<Bar>normal! <C-L><CR>",
+  { desc = "Clear search highlights" }
+)
 
 -- Y to EOL
 map("n", "Y", "y$", { desc = "Yank to end of line" })
@@ -86,11 +91,11 @@ map("n", "<C-d>", "<C-d>zz", { desc = "Half page down (centered)" })
 map("n", "<C-u>", "<C-u>zz", { desc = "Half page up (centered)" })
 
 -- Better paste behavior
-map("x", "<leader>p", '"_dP', { desc = "Paste without yanking" })
+map("x", "<leader>p", "\"_dP", { desc = "Paste without yanking" })
 
 -- Delete without yanking
-map({ "n", "v" }, "<leader>d", '"_d', { desc = "Delete without yanking" })
-map("n", "x", '"_x', { desc = "Delete single char without yanking" })
+map({ "n", "v" }, "<leader>d", "\"_d", { desc = "Delete without yanking" })
+map("n", "x", "\"_x", { desc = "Delete single char without yanking" })
 
 -- Buffer navigation
 map("n", "L", ":bnext<CR>", { desc = "Next buffer" })
@@ -139,7 +144,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 vim.api.nvim_create_autocmd("BufReadPost", {
   group = augroup,
   callback = function()
-    local mark = vim.api.nvim_buf_get_mark(0, '"')
+    local mark = vim.api.nvim_buf_get_mark(0, "\"")
     local lcount = vim.api.nvim_buf_line_count(0)
     if mark[1] > 0 and mark[1] <= lcount then
       pcall(vim.api.nvim_win_set_cursor, 0, mark)
@@ -152,7 +157,7 @@ vim.api.nvim_create_autocmd("TermClose", {
   group = augroup,
   callback = function()
     if vim.v.event.status == 0 then
-    vim.api.nvim_buf_delete(0, {})
+      vim.api.nvim_buf_delete(0, {})
     end
   end,
 })

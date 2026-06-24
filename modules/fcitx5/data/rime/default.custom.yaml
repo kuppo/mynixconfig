@@ -1,0 +1,14 @@
+patch:
+  schema_list:
+    - schema: cangjie5_sc
+    - schema: luna_pinyin_simp
+    # - schema: quick5
+  menu/page_size: 10
+  switcher/hotkeys:
+    - "Control+grave"
+    - "Control+Shift+grave"
+  style:
+    inline_preedit: true
+    inline_candidate: true
+    horizontal: true
+    font_point: 12
