@@ -1,6 +1,6 @@
 { self, ... }:
 {
-  flake.nixosModules.myServices =
+  flake.nixosModules.earthServices =
     {
       pkgs,
       wlib,

@@ -1,4 +1,9 @@
-{ self, priUser, ... }:
+{
+  self,
+  priUser,
+  nixConfig,
+  ...
+}:
 {
   flake.nixosModules.earthConfiguration =
     {
@@ -12,6 +17,7 @@
         self.nixosModules.earthHardware
       ];
 
+      nix.settings = nixConfig;
       networking.hostName = "earth";
       networking.networkmanager.enable = true;
       time.timeZone = "Asia/Shanghai";

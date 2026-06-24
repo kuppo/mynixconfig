@@ -1,6 +1,6 @@
 { self, ... }:
 {
-  flake.nixosModules.bootloader = {
+  flake.nixosModules.earthBootloader = {
     options = {
     };
 

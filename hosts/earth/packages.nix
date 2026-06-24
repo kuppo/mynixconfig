@@ -1,6 +1,6 @@
 { self, priUser, ... }:
 {
-  flake.nixosModules.myPackages =
+  flake.nixosModules.earthPackages =
     {
       pkgs,
       wlib,
