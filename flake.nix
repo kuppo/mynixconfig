@@ -11,6 +11,15 @@ rec {
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    vimplug-floatty = {
+      url = "github:ingur/floatty.nvim";
+      flake = false;
+    };
+    org-bullets = {
+      url = "github:nvim-orgmode/org-bullets.nvim";
+      flake = false;
+    };
+
     import-tree.url = "github:denful/import-tree";
 
     wrappers = {
@@ -65,7 +74,7 @@ rec {
 
   nixConfig = {
     extra-substituters = [
-      # "https://mirror.sjtu.edu.cn/nix-channels/store?priority=20"
+      "https://mirror.sjtu.edu.cn/nix-channels/store?priority=20"
       "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store?priority=21"
       "https://mirror.nju.edu.cn/nix-channels/store?priority=22"
       "https://nix-community.cachix.org?priority=39"

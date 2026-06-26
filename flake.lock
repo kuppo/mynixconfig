@@ -25,11 +25,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1781184346,
-        "narHash": "sha256-cZRlW47U6A2nWvAmnZeeO6Xvq23gxYbVLel4KxqOrcQ=",
+        "lastModified": 1781981105,
+        "narHash": "sha256-/1nNBbA7PrSQpTc9Qazkhl4kIPg+TNl0CjxS3UQJKlw=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "ea6d221d7aa85652d014b6f719dddf036037515b",
+        "rev": "7bfff44b465909f69a442701293bc0badcf476dc",
         "type": "github"
       },
       "original": {
@@ -56,10 +56,10 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1780902259,
-        "narHash": "sha256-q8yYEC5f1mFlQO9RGna4LTc9QrcvWunX6FYp83munkQ=",
+        "lastModified": 1782116945,
+        "narHash": "sha256-G3tw/IXmaH6IQ2upZvhuN9sG8CkuX+BLuJDpE8hz0Ds=",
         "ref": "nixos-26.05",
-        "rev": "bd0ff2d3eac24699c3664d5966b9ef36f388e2ca",
+        "rev": "34268251cf5547d39063f2c5ea9a196246f7f3a6",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/NixOS/nixpkgs"
@@ -86,16 +86,50 @@
         "type": "github"
       }
     },
+    "org-bullets": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1774343634,
+        "narHash": "sha256-Tgeqr/Zd1hJXXaln4XWGS5aZqypnpfNxgO/+pQVk7jg=",
+        "owner": "nvim-orgmode",
+        "repo": "org-bullets.nvim",
+        "rev": "503fe053550879cc202086a40454e46a87c41ddb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-orgmode",
+        "repo": "org-bullets.nvim",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "flake-parts": "flake-parts",
         "home-manager": "home-manager",
         "import-tree": "import-tree",
         "nixpkgs": "nixpkgs",
+        "org-bullets": "org-bullets",
         "stable": [
           "nixpkgs"
         ],
+        "vimplug-floatty": "vimplug-floatty",
         "wrappers": "wrappers"
+      }
+    },
+    "vimplug-floatty": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1757702119,
+        "narHash": "sha256-12WW1ysEyeMd7rhWET9Gx6wIvYl70AZdM9EdadTo+hY=",
+        "owner": "ingur",
+        "repo": "floatty.nvim",
+        "rev": "e82ae3bbe46b8e28918bcf7b9f3d5c36304e0c9f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ingur",
+        "repo": "floatty.nvim",
+        "type": "github"
       }
     },
     "wrappers": {
