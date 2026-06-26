@@ -1,4 +1,4 @@
-{ self, ... }:
+{ self, inputs, ... }:
 {
   flake.wrappers.neovim =
     {
@@ -78,9 +78,15 @@
             lazy = true;
             data = with pkgs.vimPlugins; [
               lazydev-nvim
+              orgmode
+              org-roam-nvim
+              (config.nvim-lib.mkPlugin "org-bullets" inputs.org-bullets)
               neo-tree-nvim
               lualine-nvim
               which-key-nvim
+              {
+                data = config.nvim-lib.mkPlugin "floatty" inputs.vimplug-floatty;
+              }
               {
                 data = fzf-lua;
                 runtimePkgs = with pkgs; [
