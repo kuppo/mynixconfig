@@ -3,70 +3,73 @@ rec {
 
   inputs = {
     stable.follows = "nixpkgs";
-
     nixpkgs.url = "git+https://github.com/NixOS/nixpkgs?ref=nixos-26.05&shallow=1";
-
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     vimplug-floatty = {
       url = "github:ingur/floatty.nvim";
+      flake = false;
+    };
+    nvim-autopairs = {
+      url = "github:windwp/nvim-autopairs";
       flake = false;
     };
     org-bullets = {
       url = "github:nvim-orgmode/org-bullets.nvim";
       flake = false;
     };
-
     import-tree.url = "github:denful/import-tree";
-
+    # wrappers = {
+    #   url = "github:BirdeeHub/nix-wrapper-modules";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
     wrappers = {
-      url = "github:BirdeeHub/nix-wrapper-modules";
+      url = "path:///home/peng/projects/nix-wrapper-modules";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    flake-parts.url = "github:hercules-ci/flake-parts";
+    flake-parts = {
+      url = "github:hercules-ci/flake-parts";
+      inputs.nixpkgs-lib.follows = "nixpkgs";
+    };
   };
 
-  outputs =
-    {
-      self,
-      import-tree,
-      flake-parts,
-      ...
-    }@inputs:
-    let
-      args = {
-        priUser = {
-          name = "peng";
-          fullName = "Peng Lei";
-          description = "The Best!";
-          email = "swk-pl@163.com";
-          initialPw = "123";
-          groups = [
-            "wheel"
-            "video"
-            "audio"
-            "wireshark"
-            "networkmanager"
-          ];
-        };
-        secUser = {
-          name = "test";
-          fullName = "Jane Doe";
-          description = "Anonymous!";
-          email = "test@example.com";
-          initialPw = "123";
-        };
-        cursor = {
-          theme = "";
-          size = 24;
-        };
-        inherit nixConfig;
+  outputs = {
+    self,
+    import-tree,
+    flake-parts,
+    ...
+  } @ inputs: let
+    args = {
+      priUser = {
+        name = "peng";
+        fullName = "Peng Lei";
+        description = "The Best!";
+        email = "swk-pl@163.com";
+        initialPw = "123";
+        groups = [
+          "wheel"
+          "video"
+          "audio"
+          "wireshark"
+          "networkmanager"
+        ];
       };
-    in
+      secUser = {
+        name = "test";
+        fullName = "Jane Doe";
+        description = "Anonymous!";
+        email = "test@example.com";
+        initialPw = "123";
+      };
+      cursor = {
+        theme = "";
+        size = 24;
+      };
+      inherit nixConfig;
+    };
+  in
     inputs.flake-parts.lib.mkFlake {
       inherit inputs;
       specialArgs = args;
