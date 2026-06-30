@@ -67,11 +67,6 @@
         };
 
         configFile.content = ''
-          # launch tmux if the connection is over ssh --disalbed in NixOS
-          # if status is-interactive; and test -z "$TMUX"; and not set -q INSIDE_EMACS; and false
-          #     test -x /etc/profiles/per-usr/$USER/bin/tmux; and tmux new-session -A -s TMUX
-          # end
-
           # set the default fzf interface
           set -g -x FZF_DEFAULT_OPTS '--reverse --border=sharp --height=40% --no-info'
 
@@ -103,11 +98,6 @@
 
           # Cargo home
           set -gx CARGO_HOME "$HOME/.local/cargo/"
-
-          # Starship setup -- Disabled in NixOS
-          # if test -x /etc/profiles/per-usr/$USER/bin/starship
-          #     /etc/profiles/per-usr/$USER/bin/starship init fish | source
-          # end
 
           # devenv
           if test -x /etc/profiles/per-user/$USER/bin/devenv
@@ -173,16 +163,6 @@
               alias cat="bat"
           end
 
-          # add flutter to PATH -- Disalbed in NixOS
-          # if test -e ~/dev/tools/flutter/bin
-          #     fish_add_path ~/dev/tools/flutter/bin
-          # end
-
-          # add flutter cli to PATH
-          if test -e ~/.pub-cache/bin/
-              fish_add_path ~/.pub-cache/bin/
-          end
-
           # probe-rs
           if test -x ~/.local/cargo/bin/probe-rs
               probe-rs complete install 2>/dev/null | source
@@ -195,19 +175,11 @@
           set -gx NIXDOTFILE_PATH $HOME/.config/nixos
 
           ## fish
-          # color theme
-          # function apply-my-theme --on-variable=my_theme
-          #     fish_config theme choose $my_theme
-          # end
-          # set -U my_theme bay-cruise
           fish_config theme choose bay-cruise
-
-          # prompts
-          # function apply-my-prompt --on-variable=my_prompt
-          #     fish_config prompt choose $my_prompt
-          # end
-          # set -U my_prompt scales
           fish_config prompt choose nim
+          function fish_greeting
+            echo Fishing time! $hostname @ (set_color yellow)(date +%T)(set_color --reset)
+          end
         '';
       };
     };

@@ -64,6 +64,11 @@
           package = self.wrappers.neovim.wrap {
             inherit pkgs;
             settings.profile = "full";
+            # dev = {
+            #   lua = true;
+            #   python = true;
+            #   nix = true;
+            # };
           };
         };
         gnupg.agent = {

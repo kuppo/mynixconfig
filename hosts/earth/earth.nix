@@ -15,9 +15,9 @@
       # self.nixosModules.gtk
       self.nixosModules.earthPackages
       self.nixosModules.earthServices
+      self.nixosModules.dev
       self.nixosModules.primaryUser
       self.nixosModules.xdg
-
       self.nixosModules.graphics
 
       self.nixosModules.earthConfiguration
