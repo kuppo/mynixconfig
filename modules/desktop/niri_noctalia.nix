@@ -16,6 +16,12 @@
           inherit pkgs;
           setCursor = true;
           settings = lib.mkIf (config.desktop.de == "noctalia-shell") {
+            extraConfig = ''
+              debug {
+                // Allows notification actions and window activation from Noctalia.
+                honor-xdg-activation-with-invalid-serial
+              }
+            '';
             spawn-at-startup = [
               ["noctalia-shell"]
             ];
