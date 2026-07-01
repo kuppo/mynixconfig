@@ -3,22 +3,10 @@ rec {
 
   inputs = {
     stable.follows = "nixpkgs";
-    nixpkgs.url = "git+https://github.com/NixOS/nixpkgs?ref=nixos-26.05&shallow=1";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05?shallow=1";
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-    vimplug-floatty = {
-      url = "github:ingur/floatty.nvim";
-      flake = false;
-    };
-    nvim-autopairs = {
-      url = "github:windwp/nvim-autopairs";
-      flake = false;
-    };
-    org-bullets = {
-      url = "github:nvim-orgmode/org-bullets.nvim";
-      flake = false;
     };
     import-tree.url = "github:denful/import-tree";
     # wrappers = {
@@ -32,6 +20,24 @@ rec {
     flake-parts = {
       url = "github:hercules-ci/flake-parts";
       inputs.nixpkgs-lib.follows = "nixpkgs";
+    };
+
+    # nvim plugins
+    vimplug-floatty = {
+      url = "github:ingur/floatty.nvim";
+      flake = false;
+    };
+    nvim-autopairs = {
+      url = "github:windwp/nvim-autopairs";
+      flake = false;
+    };
+    org-bullets = {
+      url = "github:nvim-orgmode/org-bullets.nvim";
+      flake = false;
+    };
+    orgmode = {
+      url = "github:nvim-orgmode/orgmode/0.7.5";
+      flake = false;
     };
   };
 

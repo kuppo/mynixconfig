@@ -58,19 +58,18 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1782116945,
-        "narHash": "sha256-G3tw/IXmaH6IQ2upZvhuN9sG8CkuX+BLuJDpE8hz0Ds=",
-        "ref": "nixos-26.05",
-        "rev": "34268251cf5547d39063f2c5ea9a196246f7f3a6",
-        "shallow": true,
-        "type": "git",
-        "url": "https://github.com/NixOS/nixpkgs"
+        "lastModified": 1782691344,
+        "narHash": "sha256-i5nw9BYYsMDAaOC4J+JmTof6b2GhlyH076awYRNrTV8=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "1f01958ffb5b3545c96d9ef2f4e24c5e5e1eb846",
+        "type": "github"
       },
       "original": {
+        "owner": "NixOS",
         "ref": "nixos-26.05",
-        "shallow": true,
-        "type": "git",
-        "url": "https://github.com/NixOS/nixpkgs"
+        "repo": "nixpkgs",
+        "type": "github"
       }
     },
     "nvim-autopairs": {
@@ -105,6 +104,23 @@
         "type": "github"
       }
     },
+    "orgmode": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1781806138,
+        "narHash": "sha256-8UREyswGYEUr61+4H6WOZExoFLcX5AtQqG+dA+7VoQM=",
+        "owner": "nvim-orgmode",
+        "repo": "orgmode",
+        "rev": "359538284a21c1edac20cb8a0b6b772ca098098e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-orgmode",
+        "ref": "0.7.5",
+        "repo": "orgmode",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "flake-parts": "flake-parts",
@@ -113,32 +129,12 @@
         "nixpkgs": "nixpkgs",
         "nvim-autopairs": "nvim-autopairs",
         "org-bullets": "org-bullets",
+        "orgmode": "orgmode",
         "stable": [
           "nixpkgs"
         ],
-        "treefmt-nix": "treefmt-nix",
         "vimplug-floatty": "vimplug-floatty",
         "wrappers": "wrappers"
-      }
-    },
-    "treefmt-nix": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1780220602,
-        "narHash": "sha256-eynAfOmbmxJnkp7YewvCEbShNnnYJ9gLLqkzsYtBPeM=",
-        "owner": "numtide",
-        "repo": "treefmt-nix",
-        "rev": "db947814a175b7ca6ded66e21383d938df01c227",
-        "type": "github"
-      },
-      "original": {
-        "owner": "numtide",
-        "repo": "treefmt-nix",
-        "type": "github"
       }
     },
     "vimplug-floatty": {
