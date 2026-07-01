@@ -37,13 +37,16 @@
         dust
         nwg-look
         ripgrep-all
-        nh
       ]
       ++ [
         self.packages.${pkgs.stdenv.hostPlatform.system}.alacritty
       ];
 
     programs = {
+      nh = {
+        enable = true;
+        flake = "$HOME/.config/nixos";
+      };
       wireshark = {
         enable = true;
         package = pkgs.wireshark;
