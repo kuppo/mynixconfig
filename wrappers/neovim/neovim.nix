@@ -75,9 +75,6 @@
           data = with pkgs.vimPlugins; [
             nvim-surround
             ultimate-autopair-nvim
-            # {
-            #   data = config.nvim-lib.mkPlugin "nvim-autopairs" inputs.nvim-autopairs;
-            # }
             vim-suda
           ];
         };
@@ -87,7 +84,9 @@
           lazy = true;
           data = with pkgs.vimPlugins; [
             lazydev-nvim
-            orgmode
+            {
+              data = config.nvim-lib.mkPlugin "orgmode" inputs.orgmode;
+            }
             org-roam-nvim
             (config.nvim-lib.mkPlugin "org-bullets" inputs.org-bullets)
             neo-tree-nvim
