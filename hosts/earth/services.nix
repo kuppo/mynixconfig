@@ -19,6 +19,7 @@
         # package = pkgs.xray;
       };
       gvfs.enable = true;
+      power-profiles-daemon.enable = true;
     };
   };
 }
