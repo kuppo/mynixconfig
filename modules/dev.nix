@@ -19,7 +19,7 @@
     {
       config = {
         users.users.${priUser.name}.packages = with pkgs; [
-          (inputs.wrappers.wrappers.treefmt.wrap {
+          (self.wrappers.treefmt.wrap {
             inherit pkgs;
             settings = {
               nix = {
@@ -61,13 +61,21 @@
           ty
 
           # nix
+          alejandra
           nixd
           nixfmt-rs
-          alejandra
 
           # typst
           tinymist
           typstyle
+
+          # other common tools
+          bat
+          fd
+          fzf
+          lazygit
+          ripgrep
+          yazi
         ];
       };
     };

@@ -99,22 +99,26 @@
                 data = plenary-nvim;
                 lazy = false;
               }
+
+              (config.nvim-lib.mkPlugin "floatty" inputs.vimplug-floatty)
+              (config.nvim-lib.mkPlugin "neo-tree" inputs.neo-tree)
+              (config.nvim-lib.mkPlugin "org-bullets" inputs.org-bullets)
+              (config.nvim-lib.mkPlugin "project" inputs.project)
+              blink-cmp
+              blink-indent
+              conform-nvim
               lazydev-nvim
+              lazygit-nvim
+              lualine-nvim
+              multicursors-nvim
               org-roam-nvim
               orgmode
-              (config.nvim-lib.mkPlugin "project" inputs.project)
-              (config.nvim-lib.mkPlugin "org-bullets" inputs.org-bullets)
-              (config.nvim-lib.mkPlugin "neo-tree" inputs.neo-tree)
-              (config.nvim-lib.mkPlugin "floatty" inputs.vimplug-floatty)
-              lualine-nvim
               which-key-nvim
+              yazi-nvim
+
               {
                 data = fzf-lua;
                 runtimePkgs = with pkgs; [
-                  fzf
-                  fd
-                  ripgrep
-                  bat
                   delta
                   jj
                 ];
@@ -123,24 +127,6 @@
                 data = luasnip;
                 runtimePkgs = [ pkgs.luajitPackages.jsregexp ];
               }
-              {
-                data = yazi-nvim;
-                runtimePkgs = [ pkgs.yazi ];
-              }
-              {
-                data = lazygit-nvim;
-                runtimePkgs = [ pkgs.lazygit ];
-              }
-              {
-                data = blink-cmp;
-                runtimePkgs = [
-                  (self.packages.${pkgs.stdenv.hostPlatform.system}.git or pkgs.git)
-                  pkgs.curl
-                ];
-              }
-              blink-indent
-              multicursors-nvim
-              conform-nvim
               {
                 data = nvim-web-devicons;
                 runtimePkgs = [ pkgs.nerd-fonts.symbols-only ];

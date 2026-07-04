@@ -17,11 +17,8 @@
       users.users.${priUser.name}.packages =
         with pkgs;
         [
-          lazygit
-          fzf
-          yazi
+          curl
           vlc
-          fuzzel
           wget
           htop
           firefox
@@ -37,11 +34,9 @@
           numix-cursor-theme
           numix-icon-theme-square
           eza
-          fd
           zoxide
           dust
           nwg-look
-          ripgrep-all
         ]
         ++ [
           self.packages.${pkgs.stdenv.hostPlatform.system}.alacritty
