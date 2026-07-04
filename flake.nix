@@ -2,15 +2,22 @@ rec {
   description = "My system config";
 
   inputs = {
+    ## NOTE
+    # 1. using "git+https://github.com/someuser/somerepo" schema will use nix internal libcurl to download
+    # 2. using "git+ssh/https://url" will use git to dwonload
+    # 3. can add "host" parameters to "git+https://github.com/someuser/somerepo?host=host" to change url to non-github
+    # 4. regarding parameters of the url
+    #    - ref = branches or tag, use ref=refs/tags/tag to get tag
+    #    - shallow = truncated git history, small size for big repo
     stable.follows = "nixpkgs";
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05?shallow=1";
+    nixpkgs.url = "git+https://github.com/NixOS/nixpkgs?ref=nixos-26.05&shallow=1";
     home-manager = {
-      url = "github:nix-community/home-manager/release-26.05";
+      url = "git+https://github.com/nix-community/home-manager?ref=release-26.05&shallow=1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    import-tree.url = "github:denful/import-tree";
+    import-tree.url = "git+https://github.com/denful/import-tree";
     # wrappers = {
-    #   url = "github:BirdeeHub/nix-wrapper-modules";
+    #   url = "git+https://github.com/BirdeeHub/nix-wrapper-modules";
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
     wrappers = {
@@ -18,64 +25,79 @@ rec {
       inputs.nixpkgs.follows = "nixpkgs";
     };
     flake-parts = {
-      url = "github:hercules-ci/flake-parts";
+      url = "git+https://github.com/hercules-ci/flake-parts";
       inputs.nixpkgs-lib.follows = "nixpkgs";
+    };
+    # vaultix.url = "git+https://github.com/milieuim/vaultix";
+    sops-nix = {
+      url = "git+https://github.com/Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # nvim plugins
-    vimplug-floatty = {
-      url = "github:ingur/floatty.nvim";
+    lze = {
+      url = "git+https://github.com/BirdeeHub/lze";
       flake = false;
     };
-    nvim-autopairs = {
-      url = "github:windwp/nvim-autopairs";
+    lzextras = {
+      url = "git+https://github.com/BirdeeHub/lzextras";
+      flake = false;
+    };
+    vimplug-floatty = {
+      url = "git+https://github.com/ingur/floatty.nvim";
       flake = false;
     };
     org-bullets = {
-      url = "github:nvim-orgmode/org-bullets.nvim";
+      url = "git+https://github.com/nvim-orgmode/org-bullets.nvim";
       flake = false;
     };
-    orgmode = {
-      url = "github:nvim-orgmode/orgmode/0.7.5";
+    project = {
+      url = "git+https://github.com/DrKJeff16/project.nvim?ref=refs/tags/v5.1.0-1";
+      flake = false;
+    };
+    neo-tree = {
+      url = "git+https://github.com/nvim-neo-tree/neo-tree.nvim";
       flake = false;
     };
   };
 
-  outputs = {
-    self,
-    import-tree,
-    flake-parts,
-    ...
-  } @ inputs: let
-    args = {
-      priUser = {
-        name = "peng";
-        fullName = "Peng Lei";
-        description = "The Best!";
-        email = "swk-pl@163.com";
-        initialPw = "123";
-        groups = [
-          "wheel"
-          "video"
-          "audio"
-          "wireshark"
-          "networkmanager"
-        ];
+  outputs =
+    {
+      self,
+      import-tree,
+      flake-parts,
+      ...
+    }@inputs:
+    let
+      args = {
+        priUser = {
+          name = "peng";
+          fullName = "Peng Lei";
+          description = "The Best!";
+          email = "swk-pl@163.com";
+          initialPw = "123";
+          groups = [
+            "wheel"
+            "video"
+            "audio"
+            "wireshark"
+            "networkmanager"
+          ];
+        };
+        secUser = {
+          name = "test";
+          fullName = "Jane Doe";
+          description = "Anonymous!";
+          email = "test@example.com";
+          initialPw = "123";
+        };
+        cursor = {
+          theme = "";
+          size = 24;
+        };
+        inherit nixConfig;
       };
-      secUser = {
-        name = "test";
-        fullName = "Jane Doe";
-        description = "Anonymous!";
-        email = "test@example.com";
-        initialPw = "123";
-      };
-      cursor = {
-        theme = "";
-        size = 24;
-      };
-      inherit nixConfig;
-    };
-  in
+    in
     inputs.flake-parts.lib.mkFlake {
       inherit inputs;
       specialArgs = args;

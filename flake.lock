@@ -7,17 +7,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1778716662,
-        "narHash": "sha256-m1Yf0wZ8j1OHjTc2UwHwyQRSnNeSgLJOd7q5Y45hzi4=",
-        "owner": "hercules-ci",
-        "repo": "flake-parts",
-        "rev": "f7c1a2d347e4c52d5fb8d10cb4d94b5884e546fb",
-        "type": "github"
+        "lastModified": 1782949081,
+        "narHash": "sha256-vp6Y/Grm98ESt6ceOkWiHWyZRDV3J1RID4w+6NWK9yA=",
+        "ref": "refs/heads/main",
+        "rev": "17c9d6cdfc60c64f4ee8d306f9bc0b4ccb51481e",
+        "revCount": 480,
+        "type": "git",
+        "url": "https://github.com/hercules-ci/flake-parts"
       },
       "original": {
-        "owner": "hercules-ci",
-        "repo": "flake-parts",
-        "type": "github"
+        "type": "git",
+        "url": "https://github.com/hercules-ci/flake-parts"
       }
     },
     "home-manager": {
@@ -27,65 +27,99 @@
         ]
       },
       "locked": {
-        "lastModified": 1781981105,
-        "narHash": "sha256-/1nNBbA7PrSQpTc9Qazkhl4kIPg+TNl0CjxS3UQJKlw=",
-        "owner": "nix-community",
-        "repo": "home-manager",
-        "rev": "7bfff44b465909f69a442701293bc0badcf476dc",
-        "type": "github"
+        "lastModified": 1782704057,
+        "narHash": "sha256-G1I1gd32F7mp9LAe1DaZ4ZL7NX5gyiKwdCMwro1Vrck=",
+        "ref": "release-26.05",
+        "rev": "868d0a692de703c2de98fab61968e4e310b7c28e",
+        "shallow": true,
+        "type": "git",
+        "url": "https://github.com/nix-community/home-manager"
       },
       "original": {
-        "owner": "nix-community",
         "ref": "release-26.05",
-        "repo": "home-manager",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "https://github.com/nix-community/home-manager"
       }
     },
     "import-tree": {
       "locked": {
         "lastModified": 1778781969,
         "narHash": "sha256-Jjuz5CmSkur8KvLDoGa+vylEp+RkQtv4mt/qcMznpH0=",
-        "owner": "denful",
-        "repo": "import-tree",
+        "ref": "refs/heads/main",
         "rev": "d321337efd0f23a9eb14a42adb7b2c29313ab274",
-        "type": "github"
+        "revCount": 99,
+        "type": "git",
+        "url": "https://github.com/denful/import-tree"
       },
       "original": {
-        "owner": "denful",
-        "repo": "import-tree",
-        "type": "github"
+        "type": "git",
+        "url": "https://github.com/denful/import-tree"
+      }
+    },
+    "lze": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1782136817,
+        "narHash": "sha256-7RNUVDWU13E0LGv3QVfC/Qmz/gA564FKfpv6PxYn75M=",
+        "ref": "refs/heads/master",
+        "rev": "ae45b9f1fd923955a5ebc733b920e23f0c105ae1",
+        "revCount": 470,
+        "type": "git",
+        "url": "https://github.com/BirdeeHub/lze"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://github.com/BirdeeHub/lze"
+      }
+    },
+    "lzextras": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1782220927,
+        "narHash": "sha256-9hoMQoor4SjQ8+2eH33YQkoEfSXc+kKjRdTRCJYxL+M=",
+        "ref": "refs/heads/master",
+        "rev": "0dd4ed15331b6eaf4b6304d4e0db32ccb043b76e",
+        "revCount": 223,
+        "type": "git",
+        "url": "https://github.com/BirdeeHub/lzextras"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://github.com/BirdeeHub/lzextras"
+      }
+    },
+    "neo-tree": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1782564534,
+        "narHash": "sha256-ixqPyrPGDfIrx0JgzaE18FImQeJMAR4T658oreNRiMc=",
+        "ref": "refs/heads/main",
+        "rev": "b01ee1769144c4491ea44bc329cb84040e9793be",
+        "revCount": 961,
+        "type": "git",
+        "url": "https://github.com/nvim-neo-tree/neo-tree.nvim"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://github.com/nvim-neo-tree/neo-tree.nvim"
       }
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1782691344,
-        "narHash": "sha256-i5nw9BYYsMDAaOC4J+JmTof6b2GhlyH076awYRNrTV8=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "1f01958ffb5b3545c96d9ef2f4e24c5e5e1eb846",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
+        "lastModified": 1782847225,
+        "narHash": "sha256-JC9PjqKYG9ve5U8aDOLQipp3+KLANBHUvGdLZlxzdKI=",
         "ref": "nixos-26.05",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nvim-autopairs": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1778204579,
-        "narHash": "sha256-klOJgBPw8oGDnF9wKIpGDzuBY+tH1acRyvZSPR4wrjw=",
-        "owner": "windwp",
-        "repo": "nvim-autopairs",
-        "rev": "7b9923abad60b903ece7c52940e1321d39eccc79",
-        "type": "github"
+        "rev": "95ca1e203c0750115fd4a6f17d5a245dfe6b1edd",
+        "shallow": true,
+        "type": "git",
+        "url": "https://github.com/NixOS/nixpkgs"
       },
       "original": {
-        "owner": "windwp",
-        "repo": "nvim-autopairs",
-        "type": "github"
+        "ref": "nixos-26.05",
+        "shallow": true,
+        "type": "git",
+        "url": "https://github.com/NixOS/nixpkgs"
       }
     },
     "org-bullets": {
@@ -93,32 +127,32 @@
       "locked": {
         "lastModified": 1774343634,
         "narHash": "sha256-Tgeqr/Zd1hJXXaln4XWGS5aZqypnpfNxgO/+pQVk7jg=",
-        "owner": "nvim-orgmode",
-        "repo": "org-bullets.nvim",
+        "ref": "refs/heads/main",
         "rev": "503fe053550879cc202086a40454e46a87c41ddb",
-        "type": "github"
+        "revCount": 59,
+        "type": "git",
+        "url": "https://github.com/nvim-orgmode/org-bullets.nvim"
       },
       "original": {
-        "owner": "nvim-orgmode",
-        "repo": "org-bullets.nvim",
-        "type": "github"
+        "type": "git",
+        "url": "https://github.com/nvim-orgmode/org-bullets.nvim"
       }
     },
-    "orgmode": {
+    "project": {
       "flake": false,
       "locked": {
-        "lastModified": 1781806138,
-        "narHash": "sha256-8UREyswGYEUr61+4H6WOZExoFLcX5AtQqG+dA+7VoQM=",
-        "owner": "nvim-orgmode",
-        "repo": "orgmode",
-        "rev": "359538284a21c1edac20cb8a0b6b772ca098098e",
-        "type": "github"
+        "lastModified": 1782937652,
+        "narHash": "sha256-V4GAh22phFQLEonJa/quLGP7IKxi+4Wtym1paC4yJfk=",
+        "ref": "refs/tags/v5.1.0-1",
+        "rev": "89b4b25d752360c06519e749c7d76eb59913a08a",
+        "revCount": 1512,
+        "type": "git",
+        "url": "https://github.com/DrKJeff16/project.nvim"
       },
       "original": {
-        "owner": "nvim-orgmode",
-        "ref": "0.7.5",
-        "repo": "orgmode",
-        "type": "github"
+        "ref": "refs/tags/v5.1.0-1",
+        "type": "git",
+        "url": "https://github.com/DrKJeff16/project.nvim"
       }
     },
     "root": {
@@ -126,10 +160,13 @@
         "flake-parts": "flake-parts",
         "home-manager": "home-manager",
         "import-tree": "import-tree",
+        "lze": "lze",
+        "lzextras": "lzextras",
+        "neo-tree": "neo-tree",
         "nixpkgs": "nixpkgs",
-        "nvim-autopairs": "nvim-autopairs",
         "org-bullets": "org-bullets",
-        "orgmode": "orgmode",
+        "project": "project",
+        "sops-nix": "sops-nix",
         "stable": [
           "nixpkgs"
         ],
@@ -137,20 +174,40 @@
         "wrappers": "wrappers"
       }
     },
+    "sops-nix": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1782165805,
+        "narHash": "sha256-478kKQBvK6SYTOdN2h9jhKJv94nbXRbFMfuL1WshErg=",
+        "ref": "refs/heads/master",
+        "rev": "56b24064fdcaedca53553b1a6d607fd23b613a24",
+        "revCount": 1221,
+        "type": "git",
+        "url": "https://github.com/Mic92/sops-nix"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://github.com/Mic92/sops-nix"
+      }
+    },
     "vimplug-floatty": {
       "flake": false,
       "locked": {
         "lastModified": 1757702119,
         "narHash": "sha256-12WW1ysEyeMd7rhWET9Gx6wIvYl70AZdM9EdadTo+hY=",
-        "owner": "ingur",
-        "repo": "floatty.nvim",
+        "ref": "refs/heads/main",
         "rev": "e82ae3bbe46b8e28918bcf7b9f3d5c36304e0c9f",
-        "type": "github"
+        "revCount": 26,
+        "type": "git",
+        "url": "https://github.com/ingur/floatty.nvim"
       },
       "original": {
-        "owner": "ingur",
-        "repo": "floatty.nvim",
-        "type": "github"
+        "type": "git",
+        "url": "https://github.com/ingur/floatty.nvim"
       }
     },
     "wrappers": {
@@ -160,8 +217,8 @@
         ]
       },
       "locked": {
-        "lastModified": 1782771907,
-        "narHash": "sha256-Xqd56C/BJ4W+wb6VbIqHJNZKonjEga80qjApHf8LmrU=",
+        "lastModified": 1782991076,
+        "narHash": "sha256-vRrsvpQ1CNSNdRH3iVM4gmEAi0LDb60gV1bY5HCGDn0=",
         "path": "/home/peng/projects/nix-wrapper-modules",
         "type": "path"
       },

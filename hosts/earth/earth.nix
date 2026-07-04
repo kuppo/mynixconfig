@@ -21,6 +21,7 @@
       self.nixosModules.xdg
       self.nixosModules.graphics
 
+      inputs.sops-nix.nixosModules.sops
       inputs.nixpkgs.nixosModules.readOnlyPkgs
       self.nixosModules.nixpkgs
     ];
