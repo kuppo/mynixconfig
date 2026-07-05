@@ -70,6 +70,7 @@
           typstyle
 
           # other common tools
+          jujutsu
           bat
           fd
           fzf
