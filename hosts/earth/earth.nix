@@ -3,7 +3,8 @@
   inputs,
   withSystem,
   ...
-}: {
+}:
+{
   flake.nixosConfigurations.earth = inputs.nixpkgs.lib.nixosSystem {
     modules = [
       self.nixosModules.earthBootloader
@@ -20,6 +21,9 @@
       self.nixosModules.primaryUser
       self.nixosModules.xdg
       self.nixosModules.graphics
+      self.nixosModules.ssh
+      self.nixosModules.network
+      self.nixosModules.security
 
       inputs.sops-nix.nixosModules.sops
       inputs.nixpkgs.nixosModules.readOnlyPkgs

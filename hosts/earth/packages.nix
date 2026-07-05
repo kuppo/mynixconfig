@@ -37,6 +37,7 @@
           zoxide
           dust
           nwg-look
+          nix-tree
         ]
         ++ [
           self.packages.${pkgs.stdenv.hostPlatform.system}.alacritty
