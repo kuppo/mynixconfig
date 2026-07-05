@@ -15,9 +15,11 @@
       ...
     }:
     {
+      imports = [
+        (lib.mkAliasOptionModule [ "knownHosts" ] [ "programs" "ssh" "knownHosts" ])
+      ];
       options = {
         enableSshd = lib.mkEnableOption "Whether enable the sshd.";
-        knownHosts = options.services.openssh.knownHosts;
       };
       config = {
         services.openssh = {
@@ -31,10 +33,8 @@
             MaxAuthTries = 3;
             PerSourcePenalties = "crash:3600s authfail:3600s max:86400s";
           };
-          knownHosts = config.knownHosts;
         };
         programs.ssh = {
-          knownHosts = config.knownHosts;
         };
       };
     };
