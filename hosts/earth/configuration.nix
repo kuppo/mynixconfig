@@ -17,9 +17,15 @@
         self.nixosModules.earthHardware
       ];
 
+      hostName = "earth";
+      networkManager = {
+        enable = true;
+      };
+      # firewallToUse = "firewalld";
+
+      enableSshd = false;
+
       nix.settings = nixConfig;
-      networking.hostName = "earth";
-      networking.networkmanager.enable = true;
       time.timeZone = "Asia/Shanghai";
       i18n.defaultLocale = "en_US.UTF-8";
 
