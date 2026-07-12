@@ -1,4 +1,4 @@
-{ self, ... }:
+{ self, priUser, ... }:
 {
   flake.nixosModules.security =
     {
@@ -13,7 +13,9 @@
       security.polkit = {
         enable = true;
       };
-      services.gnome.gnome-keyring.enable = true;
-      # environment.systemPackages = [ pkgs.polkit_gnome ];
+      # services.gnome.gnome-keyring.enable = true;
+      users.users.${priUser.name}.packages = [
+        pkgs.polkit_gnome
+      ];
     };
 }

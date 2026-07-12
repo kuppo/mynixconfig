@@ -38,6 +38,10 @@
 
       config = {
         desktop.dm = "ly";
+        userTerminal = "wezterm";
+        environment.sessionVariables = {
+          TERMINAL = "${config.userTerminal}";
+        };
       };
 
       imports = [

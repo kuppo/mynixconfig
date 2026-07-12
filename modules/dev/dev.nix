@@ -17,6 +17,7 @@
       ...
     }:
     {
+      imports = [ self.nixosModules.latex ];
       config = {
         users.users.${priUser.name}.packages = with pkgs; [
           (self.wrappers.treefmt.wrap {
@@ -27,6 +28,9 @@
               };
               lua = {
                 command = "stylua";
+              };
+              typst = {
+                command = "typstyle";
               };
             };
           })
@@ -66,17 +70,33 @@
           nixfmt-rs
 
           # typst
+          typst
           tinymist
           typstyle
 
+          # toml
+          tombi
+
+          # rust
+          rust-analyzer
+          rust-bin.stable.latest.default
+          graphviz-nox # dependency for rustaceanvim
+
           # other common tools
-          jujutsu
+          (self.wrappers.jujutsu.wrap {
+            inherit pkgs;
+            settings = {
+              user = {
+                name = "${priUser.fullName}";
+                email = "${priUser.email}";
+              };
+            };
+          })
           bat
           fd
           fzf
           lazygit
           ripgrep
-          yazi
         ];
       };
     };

@@ -15,6 +15,16 @@
         icons.enable = true;
         mime.enable = true;
         portal.enable = true;
+        terminal-exec = {
+          settings = {
+            default = [
+              "wezterm.desktop"
+              "kitty.desktop"
+              "alacritty.desktop"
+              "ghostty.desktop"
+            ];
+          };
+        };
       };
     };
 }

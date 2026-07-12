@@ -2,19 +2,19 @@ patch:
   translator/enable_user_dict: true  # 是否開啟用戶詞典
   menu/page_size: 8                  # 每頁候選字數
   switches/@0/reset: 1
+  abc_segmentor/extra_tags:
+     - reverse_lookup  # 與拼音（反查碼）混打
   reverse_lookup:
     prism: luna_pinyin_simp
+    dictionary: luna_pinyin
     tips: "〔拼音〕"
     comment_format:
       - "xform/(?<![^x])x/#/"
       - "xlit|abcdefghijklmnopqrstuvwxyz#~|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜片重～|"
-    dictionary: luna_pinyin
     preedit_format:
       - "xform/([nl])v/$1ü/"
       - "xform/([nl])ue/$1üe/"
       - "xform/([jqxy])v/$1u/"
     prefix: "`"
     suffix: "'"
-  abc_segmentor/extra_tags:
-     - reverse_lookup  # 與拼音（反查碼）混打
 

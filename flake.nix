@@ -11,17 +11,18 @@ rec {
     #    - shallow = truncated git history, small size for big repo
     stable.follows = "nixpkgs";
     nixpkgs.url = "git+https://github.com/NixOS/nixpkgs?ref=nixos-26.05&shallow=1";
-    home-manager = {
-      url = "git+https://github.com/nix-community/home-manager?ref=release-26.05&shallow=1";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # nixpkgs.url = "path:///home/peng/Projects/nixpkgs";
+    # home-manager = {
+    #   url = "git+https://github.com/nix-community/home-manager?ref=release-26.05&shallow=1";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
     import-tree.url = "git+https://github.com/denful/import-tree";
     # wrappers = {
     #   url = "git+https://github.com/BirdeeHub/nix-wrapper-modules";
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
     wrappers = {
-      url = "path:///home/peng/projects/nix-wrapper-modules";
+      url = "path:///home/peng/Projects/nix-wrapper-modules";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     flake-parts = {
@@ -31,6 +32,10 @@ rec {
     # vaultix.url = "git+https://github.com/milieuim/vaultix";
     sops-nix = {
       url = "git+https://github.com/Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    rust-overlay = {
+      url = "git+https://github.com/oxalica/rust-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -59,6 +64,22 @@ rec {
       url = "git+https://github.com/nvim-neo-tree/neo-tree.nvim";
       flake = false;
     };
+    rustaceanvim = {
+      url = "git+https://github.com/mrcjkb/rustaceanvim?ref=refs/tags/v9.0.5";
+      flake = false;
+    };
+    nvim-dap = {
+      url = "git+https://github.com/mfussenegger/nvim-dap";
+      flake = false;
+    };
+    dap-virtual-text = {
+      url = "git+https://github.com/theHamsta/nvim-dap-virtual-text";
+      flake = false;
+    };
+    dap-view = {
+      url = "git+https://github.com/igorlfs/nvim-dap-view";
+      flake = false;
+    };
   };
 
   outputs =
@@ -76,6 +97,7 @@ rec {
           description = "The Best!";
           email = "swk-pl@163.com";
           initialPw = "123";
+          uid = "1000";
           groups = [
             "wheel"
             "video"
@@ -90,6 +112,7 @@ rec {
           description = "Anonymous!";
           email = "test@example.com";
           initialPw = "123";
+          uid = "1001";
         };
         cursor = {
           theme = "";

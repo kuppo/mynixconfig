@@ -66,7 +66,7 @@
 
         specs = lib.mkIf (config.settings.profile != "mini") {
           lze = {
-            data = with pkgs.vimPlugins; [
+            data = [
               (config.nvim-lib.mkPlugin "lze" inputs.lze)
               (config.nvim-lib.mkPlugin "lzextras" inputs.lzextras)
             ];
@@ -104,6 +104,12 @@
               (config.nvim-lib.mkPlugin "neo-tree" inputs.neo-tree)
               (config.nvim-lib.mkPlugin "org-bullets" inputs.org-bullets)
               (config.nvim-lib.mkPlugin "project" inputs.project)
+              (config.nvim-lib.mkPlugin "rustaceanvim" inputs.rustaceanvim)
+              (config.nvim-lib.mkPlugin "nvim-dap" inputs.nvim-dap)
+              (config.nvim-lib.mkPlugin "dap-virtual-text" inputs.dap-virtual-text)
+              (config.nvim-lib.mkPlugin "dap-view" inputs.dap-view)
+              # (config.nvim-lib.mkPlugin "texpresso" inputs.texpresso)
+              # knap
               blink-cmp
               blink-indent
               conform-nvim
@@ -113,6 +119,7 @@
               multicursors-nvim
               org-roam-nvim
               orgmode
+              vimtex
               which-key-nvim
               yazi-nvim
 
@@ -131,12 +138,25 @@
                 data = nvim-web-devicons;
                 runtimePkgs = [ pkgs.nerd-fonts.symbols-only ];
               }
-              {
-                data = mini-icons;
-                runtimePkgs = [ pkgs.nerd-fonts.symbols-only ];
-              }
             ];
           };
+          grammers = lib.mkIf (config.settings.profile == "full") {
+            data = with pkgs.vimPlugins.nvim-treesitter-parsers; [
+              c
+              rust
+              python
+              make
+              markdown
+              typst
+              latex
+              zig
+              lua
+              vim
+              vimdoc
+              cmake
+            ];
+          };
+
         };
       };
     };

@@ -14,34 +14,32 @@
       ...
     }:
     {
-      users.users.${priUser.name}.packages =
-        with pkgs;
-        [
-          curl
-          vlc
-          wget
-          htop
-          firefox
-          devenv
-          tree
-          qqmusic
-          blender
-          freecad-wayland
-          kdePackages.kdenlive
-          _7zip-zstd
-          yt-dlg
-          zathura
-          numix-cursor-theme
-          numix-icon-theme-square
-          eza
-          zoxide
-          dust
-          nwg-look
-          nix-tree
-        ]
-        ++ [
-          self.packages.${pkgs.stdenv.hostPlatform.system}.alacritty
-        ];
+      users.users.${priUser.name}.packages = with pkgs; [
+        curl
+        vlc
+        wget
+        htop
+        firefox
+        devenv
+        tree
+        qqmusic
+        blender
+        freecad-wayland
+        kdePackages.kdenlive
+        _7zip-zstd
+        yt-dlg
+        sioyek
+        # (zathura.override { useMupdf = false; })
+        numix-cursor-theme
+        numix-icon-theme-square
+        eza
+        zoxide
+        dust
+        nwg-look
+        nix-tree
+        gimp
+        kicad
+      ];
 
       programs = {
         nh = {
@@ -82,13 +80,6 @@
             wlrobs
             obs-vaapi
             obs-pipewire-audio-capture
-          ];
-        };
-        thunar = {
-          enable = true;
-          plugins = with pkgs; [
-            thunar-archive-plugin
-            thunar-volman
           ];
         };
       };

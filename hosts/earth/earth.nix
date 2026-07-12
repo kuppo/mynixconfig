@@ -24,6 +24,8 @@
       self.nixosModules.ssh
       self.nixosModules.network
       self.nixosModules.security
+      self.nixosModules.yazi
+      self.nixosModules.locale
 
       inputs.sops-nix.nixosModules.sops
       inputs.nixpkgs.nixosModules.readOnlyPkgs

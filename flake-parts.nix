@@ -2,7 +2,8 @@
   self,
   inputs,
   ...
-}: {
+}:
+{
   debug = true;
   systems = [
     "x86_64-linux"
@@ -14,12 +15,21 @@
     inputs.flake-parts.flakeModules.modules
   ];
 
-  perSystem = {system, ...}: {
-    _module.args.pkgs = import inputs.nixpkgs {
-      inherit system;
-      config = {
-        allowUnfree = true;
+  perSystem =
+    { system, ... }:
+    {
+      _module.args.pkgs = import inputs.nixpkgs {
+        inherit system;
+        overlays = [
+          inputs.rust-overlay.overlays.default
+          # use wl-clipboard-rs instead of wl-clipboard
+          (final: prev: {
+            wl-clipboard = final.wl-clipboard-rs;
+          })
+        ];
+        config = {
+          allowUnfree = true;
+        };
       };
     };
-  };
 }

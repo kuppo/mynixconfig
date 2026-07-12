@@ -18,18 +18,13 @@
       };
       config = {
         runtimePkgs = [
-          pkgs.wl-clipboard
+          pkgs.wl-clipboard-rs
           pkgs.wl-clipboard-x11
           pkgs.xwayland-satellite
         ];
         settings = {
           binds = {
             "Mod+Shift+Slash".show-hotkey-overlay = _: { };
-
-            "Mod+Return" = _: {
-              props.hotkey-overlay-title = "Open a Terminal: alacritty";
-              content.spawn = "alacritty";
-            };
 
             "Super+Alt+S" = _: {
               props.allow-when-locked = true;
@@ -205,17 +200,16 @@
           window-rules = [
             {
               matches = [
-                { app-id = "r#\"^org\.wezfurlong\.wezterm$\"#"; }
-              ];
-              default-column-width = _: { };
-            }
-
-            {
-              matches = [
                 { app-id = "r#\"firefox$\"#"; }
                 { title = "^Picture-in-Picture$"; }
               ];
               open-floating = true;
+            }
+            {
+              matches = [
+                { app-id = "vlc"; }
+              ];
+              open-maximized = true;
             }
           ];
           extraConfig = ''
@@ -236,7 +230,7 @@
             }
           '';
           layout = {
-            gaps = 4;
+            gaps = 1;
             focus-ring.off = _: { };
             border.width = 1;
           };

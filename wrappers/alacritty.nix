@@ -8,7 +8,7 @@
       };
       config = {
         settings = {
-          font.size = 11;
+          font.size = 12;
           scrolling.history = 20000;
           cursor.style.blinking = "On";
           mouse.hide_when_typing = true;
