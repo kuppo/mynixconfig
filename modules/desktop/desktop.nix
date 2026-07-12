@@ -38,7 +38,7 @@
 
       config = {
         desktop.dm = "ly";
-        userTerminal = "wezterm";
+        userTerminal = "kitty";
         environment.sessionVariables = {
           TERMINAL = "${config.userTerminal}";
         };

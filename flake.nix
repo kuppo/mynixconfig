@@ -127,11 +127,12 @@ rec {
     } (inputs.import-tree.matchNot ".*/(flake|devenv)\.nix" ./.);
 
   nixConfig = {
-    extra-substituters = [
-      "https://mirror.sjtu.edu.cn/nix-channels/store?priority=20"
+    substituters = [
+      # "https://mirror.sjtu.edu.cn/nix-channels/store?priority=20"
       "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store?priority=21"
       "https://mirror.nju.edu.cn/nix-channels/store?priority=22"
       "https://nix-community.cachix.org?priority=39"
+      "https://cache.nixos.org?priority=40"
     ];
 
     extra-trusted-public-keys = [

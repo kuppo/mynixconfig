@@ -14,6 +14,9 @@
         # package = pkgs.fishMinimal;
         flags."--no-config".data = false;
         pluginConfigDirs = [ "/etc/fish" ];
+        shellAliases = {
+          ls = "ls --hyperlink=auto --color=auto";
+        };
         abbreviations = {
           nixswitch = {
             position = "command";

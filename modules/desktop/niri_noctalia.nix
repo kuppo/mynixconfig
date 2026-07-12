@@ -18,8 +18,9 @@
           type = lib.types.enum [
             "alacritty"
             "wezterm"
+            "kitty"
           ];
-          description = ''User configured terminal. One of "alacritty", "wezterm"'';
+          description = ''User configured terminal. One of "alacritty", "wezterm" and "kitty"'';
         };
 
       };
@@ -30,7 +31,8 @@
           ) self.packages.${pkgs.stdenv.hostPlatform.system}.wezterm)
           (lib.mkIf (
             config.userTerminal == "alacritty"
-          ) self.packages.${pkgs.stdenv.hostPlatform.system}.wezterm)
+          ) self.packages.${pkgs.stdenv.hostPlatform.system}.alacritty)
+          (lib.mkIf (config.userTerminal == "kitty") self.packages.${pkgs.stdenv.hostPlatform.system}.kitty)
         ];
         programs = {
           niri = lib.mkIf (config.desktop.wm == "niri") {
@@ -48,14 +50,20 @@
                   [ "noctalia-shell" ]
                 ];
                 window-rules = [
-                  (lib.mkIf (config.userTerminal != "alacritty") {
+                  {
                     matches = [
                       { app-id = "org.wezfurlong.wezterm"; }
-                      { app-id = "org.wezfurlong.kitty"; }
-                      { app-id = "org.wezfurlong.ghostty"; }
+                      { app-id = "kitty"; }
+                      { app-id = "ghostty"; }
                     ];
-                    open-maximized = true;
-                  })
+                    open-maximized-to-edges = true;
+                  }
+                  {
+                    matches = [
+                      { app-id = ''r#"^org\.wezfurlong\.wezterm$"#''; }
+                    ];
+                    default-column-width = _: { };
+                  }
 
                 ];
                 outputs = {
@@ -176,7 +184,10 @@
 
         # config de
         environment.systemPackages = lib.mkIf (config.desktop.de == "noctalia-shell") [
-          (self.wrappers.noctalia-shell.wrap { inherit pkgs; })
+          (inputs.wrappers.wrappers.noctalia-shell.wrap {
+            inherit pkgs;
+            settings.appLauncher.terminalCommand = "{config.userTerminal} -e";
+          })
         ];
       };
     };
