@@ -42,9 +42,9 @@
               setCursor = true;
               settings = lib.mkIf (config.desktop.de == "noctalia-shell") {
                 extraConfig = ''
-                  debug {
-                    honor-xdg-activation-with-invalid-serial
-                  }
+                  // debug {
+                  //   honor-xdg-activation-with-invalid-serial
+                  // }
                 '';
                 spawn-at-startup = [
                   [ "noctalia-shell" ]
@@ -184,10 +184,11 @@
 
         # config de
         environment.systemPackages = lib.mkIf (config.desktop.de == "noctalia-shell") [
-          (inputs.wrappers.wrappers.noctalia-shell.wrap {
-            inherit pkgs;
-            settings.appLauncher.terminalCommand = "{config.userTerminal} -e";
-          })
+          pkgs.noctalia-shell
+          # (inputs.wrappers.wrappers.noctalia-shell.wrap {
+          #   inherit pkgs;
+          #   settings.appLauncher.terminalCommand = "{config.userTerminal} -e";
+          # })
         ];
       };
     };

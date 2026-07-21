@@ -1,6 +1,6 @@
 patch:
   translator/enable_user_dict: true  # 是否開啟用戶詞典
-  menu/page_size: 8                  # 每頁候選字數
+  # menu/page_size: 10                  # 每頁候選字數
   switches/@0/reset: 1
   abc_segmentor/extra_tags:
      - reverse_lookup  # 與拼音（反查碼）混打

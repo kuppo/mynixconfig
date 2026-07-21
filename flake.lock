@@ -3,11 +3,11 @@
     "dap-view": {
       "flake": false,
       "locked": {
-        "lastModified": 1782332178,
-        "narHash": "sha256-UHK0ZDNJ8OlWrgPxyXlcxnjfF4ITORlXUhnO9fvpegE=",
+        "lastModified": 1783556270,
+        "narHash": "sha256-arFB/wZkGjgGiJ3WfxUbnum0FIR7rhg2WHbM0sQjpDM=",
         "ref": "refs/heads/main",
-        "rev": "440ec66c2b26470ec97cd4d6667cdd4b51cbc7cb",
-        "revCount": 495,
+        "rev": "b8c8aa91f42055d7f69012587cde4f1d99f2a701",
+        "revCount": 496,
         "type": "git",
         "url": "https://github.com/igorlfs/nvim-dap-view"
       },
@@ -54,11 +54,11 @@
     },
     "import-tree": {
       "locked": {
-        "lastModified": 1778781969,
-        "narHash": "sha256-Jjuz5CmSkur8KvLDoGa+vylEp+RkQtv4mt/qcMznpH0=",
+        "lastModified": 1784254960,
+        "narHash": "sha256-iI88R3wHz8wTKQb5orvpc51L/Xr64AJyxid/0MKa/b8=",
         "ref": "refs/heads/main",
-        "rev": "d321337efd0f23a9eb14a42adb7b2c29313ab274",
-        "revCount": 99,
+        "rev": "4ebb10ae17d5f1ad366e7aef5b92cb8eecf24f69",
+        "revCount": 100,
         "type": "git",
         "url": "https://github.com/denful/import-tree"
       },
@@ -117,10 +117,10 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1783549019,
-        "narHash": "sha256-0XnckG4ZhBmAsYa9mLuEIFowBG0fDGPLHduQGsbMS4A=",
+        "lastModified": 1784432872,
+        "narHash": "sha256-n3gKTBIV4ZA5VQpUakffBe3KGu4+mhPoA34rrqS0GkA=",
         "ref": "nixos-26.05",
-        "rev": "74cc63f702f7d60a557e152a57b40fb1fd0f72ac",
+        "rev": "fd1462031fdee08f65fd0b4c6b64e22239a77870",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/NixOS/nixpkgs"
@@ -130,6 +130,26 @@
         "shallow": true,
         "type": "git",
         "url": "https://github.com/NixOS/nixpkgs"
+      }
+    },
+    "noctalia-greeter": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1784582783,
+        "narHash": "sha256-H1tip870cDS8NiNPB1duHmstwb6T0mcStNLheEWlHss=",
+        "owner": "noctalia-dev",
+        "repo": "noctalia-greeter",
+        "rev": "873268ee327baecff84e4c87b876cc317a84891c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "noctalia-dev",
+        "repo": "noctalia-greeter",
+        "type": "github"
       }
     },
     "nvim-dap": {
@@ -191,6 +211,7 @@
         "lzextras": "lzextras",
         "neo-tree": "neo-tree",
         "nixpkgs": "nixpkgs",
+        "noctalia-greeter": "noctalia-greeter",
         "nvim-dap": "nvim-dap",
         "org-bullets": "org-bullets",
         "project": "project",
@@ -211,11 +232,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1783231873,
-        "narHash": "sha256-cTDI249Vl2JTQ3aicT9jeJPIBlNlodpJbdO0yLigCzU=",
+        "lastModified": 1784526465,
+        "narHash": "sha256-L37teKC6oINWG4PGZLIqbphMWvSQ0PEz+aWxAk+rIDw=",
         "ref": "refs/heads/master",
-        "rev": "cb368fd55ced25a1fa12414b9e984cdfb1681d18",
-        "revCount": 2228,
+        "rev": "58c6334db52d51fc5dd8877c90b01f00cf8a696b",
+        "revCount": 2245,
         "type": "git",
         "url": "https://github.com/oxalica/rust-overlay"
       },
@@ -248,11 +269,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1782165805,
-        "narHash": "sha256-478kKQBvK6SYTOdN2h9jhKJv94nbXRbFMfuL1WshErg=",
+        "lastModified": 1783174389,
+        "narHash": "sha256-aCWC8ngycU7OdJrU2+Je3qf+1a2ykuBvpPhZT/9tXMc=",
         "ref": "refs/heads/master",
-        "rev": "56b24064fdcaedca53553b1a6d607fd23b613a24",
-        "revCount": 1221,
+        "rev": "f1406619a3884cd5c47992a70b8b35c9c0fcb4c9",
+        "revCount": 1226,
         "type": "git",
         "url": "https://github.com/Mic92/sops-nix"
       },
@@ -264,11 +285,11 @@
     "vimplug-floatty": {
       "flake": false,
       "locked": {
-        "lastModified": 1757702119,
-        "narHash": "sha256-12WW1ysEyeMd7rhWET9Gx6wIvYl70AZdM9EdadTo+hY=",
+        "lastModified": 1783278049,
+        "narHash": "sha256-hU+3FV08UXru1H6kwBqlw1IS1EsyUbPzdFL1div4kMI=",
         "ref": "refs/heads/main",
-        "rev": "e82ae3bbe46b8e28918bcf7b9f3d5c36304e0c9f",
-        "revCount": 26,
+        "rev": "ba6c7cd828474084001d131fc0160fcb3bbef6d2",
+        "revCount": 27,
         "type": "git",
         "url": "https://github.com/ingur/floatty.nvim"
       },

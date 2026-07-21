@@ -55,6 +55,8 @@
           # C
           gcc
           clang-tools
+          gnumake
+          cmake
 
           # zig
           zig

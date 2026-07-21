@@ -1,4 +1,4 @@
-{ self, ... }:
+{ self, cursor, ... }:
 {
   flake.wrappers.niri =
     {
@@ -238,8 +238,8 @@
         extraSettings = [
           (lib.mkIf config.setCursor {
             cursor = {
-              xcursor-theme = "Numix-Cursor";
-              xcursor-size = 24;
+              xcursor-theme = cursor.theme;
+              xcursor-size = cursor.size;
             };
           })
         ];

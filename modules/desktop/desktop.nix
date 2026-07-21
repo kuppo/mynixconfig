@@ -29,6 +29,7 @@
               "cosmic"
               "ly"
               "lemurs"
+              "greetd"
             ];
             description = "Choose the display manager";
             default = "sddm";
@@ -37,7 +38,7 @@
       };
 
       config = {
-        desktop.dm = "ly";
+        desktop.dm = "greetd";
         userTerminal = "kitty";
         environment.sessionVariables = {
           TERMINAL = "${config.userTerminal}";

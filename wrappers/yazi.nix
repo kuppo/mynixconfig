@@ -18,11 +18,52 @@
       plugins = with pkgs.yaziPlugins; {
         gvfs = gvfs;
         mount = mount;
+        recycle-bin = recycle-bin;
       };
       settings = {
         keymap = {
           mgr = {
             prepend_keymap = [
+              {
+                on = [
+                  "R"
+                  "o"
+                ];
+                run = "plugin recycle-bin -- open";
+                desc = "Open Trash";
+              }
+              {
+                on = [
+                  "R"
+                  "e"
+                ];
+                run = "plugin recycle-bin -- empty";
+                desc = "Empty Trash";
+              }
+              {
+                on = [
+                  "R"
+                  "D"
+                ];
+                run = "plugin recycle-bin -- emptyDays";
+                desc = "Empty by days deleted";
+              }
+              {
+                on = [
+                  "R"
+                  "d"
+                ];
+                run = "plugin recycle-bin -- delete";
+                desc = "Delete from Trash";
+              }
+              {
+                on = [
+                  "R"
+                  "r"
+                ];
+                run = "plugin recycle-bin -- restore";
+                desc = "Restore from Trash";
+              }
               {
                 on = [
                   "M"
@@ -212,6 +253,53 @@
             tab_size = 2;
             max_width = 1000;
           };
+          opener = {
+            image = [
+              {
+                run = "ristretto %s";
+                desc = "Open Ristretto";
+                orphan = true;
+                for = "unix";
+              }
+            ];
+            pdf = [
+              {
+                run = "zathura %s";
+                desc = "Open Zathura";
+                orphan = true;
+                for = "unix";
+              }
+              {
+                run = "sioyek %s";
+                desc = "Open Sioyek";
+                orphan = true;
+                for = "unix";
+              }
+              {
+                run = "okular %s";
+                desc = "Open Okular";
+                orphan = true;
+                for = "unix";
+              }
+            ];
+
+          };
+          open = {
+            prepend_rules = [
+              {
+                mime = "application/pdf";
+                use = [ "pdf" ];
+              }
+              {
+                mime = "image/*";
+                use = [
+                  "image"
+                  "open"
+                  "reveal"
+                ];
+              }
+            ];
+          };
           plugin = {
             prepend_preloaders = [
               # Do not preload files in mounted locations:
@@ -259,6 +347,7 @@
         content = ''
           Status:children_add(function()
             local h = cx.active.current.hovered
+
             if not h or ya.target_family() ~= "unix" then
               return ""
             end
@@ -297,6 +386,8 @@
             local size = self._file:size()
             return string.format("%s %s %s %s", size and ya.readable_size(size) or "", time, owner(), perm)
           end
+
+          require("recycle-bin"):setup()
 
           require("gvfs"):setup({
             which_keys = "1234567890qwertyuiopasdfghjklzxcvbnm-=[]\\;',./!@#$%^&*()_+{}|:\"<>?",

@@ -1,4 +1,4 @@
-{ self, ... }:
+{ self, cursor, ... }:
 {
   flake.nixosModules.gtk =
     {
@@ -13,9 +13,9 @@
       gtk = {
         enable = true;
         cursorTheme = {
-          name = "numix-cursor-theme";
+          name = cursor.name;
           package = pkgs.numix-cursor-theme;
-          size = 20;
+          size = cursor.size;
         };
         colorScheme = "dark";
         iconTheme = {

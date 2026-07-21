@@ -38,6 +38,10 @@ rec {
       url = "git+https://github.com/oxalica/rust-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    noctalia-greeter = {
+      url = "github:noctalia-dev/noctalia-greeter";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # nvim plugins
     lze = {
@@ -115,7 +119,7 @@ rec {
           uid = "1001";
         };
         cursor = {
-          theme = "";
+          theme = "Numix-Cursor";
           size = 24;
         };
         inherit nixConfig;
@@ -130,7 +134,8 @@ rec {
     substituters = [
       # "https://mirror.sjtu.edu.cn/nix-channels/store?priority=20"
       "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store?priority=21"
-      "https://mirror.nju.edu.cn/nix-channels/store?priority=22"
+      "https://mirrors.ustc.edu.cn/nix-channels/store?priority=22"
+      "https://mirror.nju.edu.cn/nix-channels/store?priority=23"
       "https://nix-community.cachix.org?priority=39"
       "https://cache.nixos.org?priority=40"
     ];

@@ -15,30 +15,39 @@
     }:
     {
       users.users.${priUser.name}.packages = with pkgs; [
-        curl
-        vlc
-        wget
-        htop
-        firefox
-        devenv
-        tree
-        qqmusic
-        blender
-        freecad-wayland
-        kdePackages.kdenlive
+        # self.packages.${pkgs.stdenv.hostPlatform.system}.sioyek
+        # sioyek
+        (zathura.override { useMupdf = false; })
         _7zip-zstd
-        yt-dlg
-        sioyek
-        # (zathura.override { useMupdf = false; })
+        blender
+        curl
+        devenv
+        dust
+        eza
+        firefox
+        freecad-wayland
+        gimp
+        self.packages.${pkgs.stdenv.hostPlatform.system}.helix
+        htop
+        kdePackages.kdenlive
+        kdePackages.okular
+        kicad
+        ksnip
+        exiftool
+        nix-tree
         numix-cursor-theme
         numix-icon-theme-square
-        eza
-        zoxide
-        dust
+        fresh-editor
         nwg-look
-        nix-tree
-        gimp
-        kicad
+        qqmusic
+        ristretto
+        mediainfo
+        tree
+        trash-cli
+        vlc
+        wget
+        yt-dlg
+        zoxide
       ];
 
       programs = {

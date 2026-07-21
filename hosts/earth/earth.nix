@@ -29,6 +29,7 @@
 
       inputs.sops-nix.nixosModules.sops
       inputs.nixpkgs.nixosModules.readOnlyPkgs
+      inputs.noctalia-greeter.nixosModules.default
       self.nixosModules.nixpkgs
     ];
   };

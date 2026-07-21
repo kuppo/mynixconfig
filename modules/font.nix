@@ -17,6 +17,8 @@
           nerd-fonts.jetbrains-mono
           nerd-fonts.symbols-only
           twemoji-color-font
+          edukai
+          arphic-ukai
         ];
         fontconfig = {
           defaultFonts = {

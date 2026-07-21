@@ -31,9 +31,9 @@
     in
     {
       users.users.${priUser.name}.packages = with pkgs; [
-        texliveFull
+        # texliveFull
         # (texliveFull.withPackages (ps: with ps; [ texlive-ctex-kit ]))
-        # miktex
+        miktex
         texlab # lsp
         tex-fmt # formatters
         # texpresso # previewer

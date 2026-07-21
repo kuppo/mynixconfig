@@ -2,6 +2,7 @@ patch:
   schema_list:
     - schema: cangjie5_sc
     - schema: luna_pinyin_simp
+    - schema: cangjie5
     # - schema: quick5
   menu/page_size: 10
   switcher/hotkeys:
@@ -10,5 +11,5 @@ patch:
   style:
     inline_preedit: true
     inline_candidate: true
-    horizontal: true
+    horizontal: false
     font_point: 12
