@@ -13,6 +13,7 @@
       # yazi dependencies
       users.users.${priUser.name}.packages = with pkgs; [
         self.packages.${stdenv.hostPlatform.system}.yazi
+        # yazi
         file
         ffmpeg
         _7zip-zstd

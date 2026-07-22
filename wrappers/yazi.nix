@@ -397,17 +397,33 @@
         content = ''
           Status:children_add(function()
             local h = cx.active.current.hovered
-
-            if not h or ya.target_family() ~= "unix" then
-              return ""
+            if not h or ya.target_family() ~= "unix" then return "" end
+            local btime = math.floor(h.cha.btime or 0)
+            local mtime = math.floor(h.cha.mtime or 0)
+            if btime == 0 then
+              btime = ""
+            elseif os.date("%Y", btime) == os.date("%Y") then
+              btime = os.date("%b %d %H:%M", btime)
+            else
+              btime = os.date("%b %d  %Y", btime)
             end
-
-            return ui.Line {
+            if mtime == 0 then
+              mtime = ""
+            elseif os.date("%Y", mtime) == os.date("%Y") then
+              mtime = os.date("%b %d %H:%M", mtime)
+            else
+              mtime = os.date("%b %d  %Y", mtime)
+            end
+            return ui.Line({
+              ui.Span(tostring(btime)),
+              "-",
+              ui.Span(tostring(mtime)):fg("red"),
+              " ",
               ui.Span(ya.user_name(h.cha.uid) or tostring(h.cha.uid)):fg("magenta"),
               ":",
               ui.Span(ya.group_name(h.cha.gid) or tostring(h.cha.gid)):fg("magenta"),
               " ",
-            }
+            })
           end, 500, Status.RIGHT)
 
           Header:children_add(function()
