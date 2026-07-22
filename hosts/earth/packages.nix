@@ -17,7 +17,7 @@
       users.users.${priUser.name}.packages = with pkgs; [
         # self.packages.${pkgs.stdenv.hostPlatform.system}.sioyek
         # sioyek
-        (zathura.override { useMupdf = false; })
+        self.packages.${pkgs.stdenv.hostPlatform.system}.zathura
         _7zip-zstd
         blender
         curl
@@ -49,7 +49,9 @@
         yt-dlg
         zoxide
       ];
-
+      environment.sessionVariables = {
+        PDFVIEWER = "zathura";
+      };
       programs = {
         nh = {
           enable = true;

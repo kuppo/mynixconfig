@@ -18,33 +18,33 @@
           ls = "ls --hyperlink=auto --color=auto";
         };
         abbreviations = {
-          nixswitch = {
-            position = "command";
-            cursor = "%";
-            expansion = "pushd $NIXDOTFILE_PATH && nixos-rebuild switch --flake .#$hostname --sudo && popd";
-          };
-          nixdev = {
-            position = "command";
-            cursor = "%";
-            expansion = "nix develop --no-pure-eval $NIXDOTFILE_PATH#%";
-          };
+          # nixdev = {
+          #   position = "command";
+          #   cursor = "%";
+          #   expansion = "nix develop --no-pure-eval $NIXDOTFILE_PATH#%";
+          # };
           # homeswitch = {
           #   position = "command";
           #   cursor = "%";
           #   expansion = "pushd $NIXDOTFILE_PATH && nix flake  && popd";
           # };
-          nixupgrade = {
-            expansion = "pushd $NIXDOTFILE_PATH && sudo nix flake update && nixos-rebuild switch --flake .#$hostname && popd";
-            position = "command";
-            cursor = "%";
-          };
           # homeupdate = {
           #   expansion = "pushd $NIXDOTFILE_PATH && sudo nix run .#update && nix run .#activate $USER@$hostname && popd";
           #   position = "command";
           #   cursor = "%";
           # };
-          nixclean = {
-            expansion = "pushd $NIXDOTFILE_PATH && sudo nix-collect-garbage --delete-older-than 15d && nixos-rebuild boot --flake .% --sudo && popd";
+          nswitch = {
+            position = "command";
+            cursor = "%";
+            expansion = "nixos-rebuild switch --flake $NIXDOTFILE_PATH#$hostname --sudo";
+          };
+          nupgrade = {
+            expansion = "nix flake update --flake $NIXDOTFILE_PATH && nixos-rebuild switch --flake $NIXDOTFILE_PATH#$hostname";
+            position = "command";
+            cursor = "%";
+          };
+          nclean = {
+            expansion = "sudo nix-collect-garbage --delete-older-than 15d && nixos-rebuild boot --flake .$NIXDOTFILE_PATH#$hostname --sudo";
             position = "command";
             cursor = "%";
           };
