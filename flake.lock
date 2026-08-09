@@ -70,16 +70,15 @@
     "lze": {
       "flake": false,
       "locked": {
-        "lastModified": 1769574380,
-        "narHash": "sha256-5o9/qvlQW7f/+ofENfs63zZls1gWYpug5+PzxSbwSgQ=",
-        "ref": "refs/tags/v0.13.0",
-        "rev": "a6314f9aff8cdbf872f96ff41ee2d2f27627b743",
-        "revCount": 388,
+        "lastModified": 1782136817,
+        "narHash": "sha256-7RNUVDWU13E0LGv3QVfC/Qmz/gA564FKfpv6PxYn75M=",
+        "ref": "refs/heads/master",
+        "rev": "ae45b9f1fd923955a5ebc733b920e23f0c105ae1",
+        "revCount": 470,
         "type": "git",
         "url": "https://github.com/BirdeeHub/lze"
       },
       "original": {
-        "ref": "refs/tags/v0.13.0",
         "type": "git",
         "url": "https://github.com/BirdeeHub/lze"
       }
