@@ -72,9 +72,9 @@
           nixfmt-rs
 
           # typst
-          typst
-          tinymist
-          typstyle
+          inputs.unstable.legacyPackages.${pkgs.stdenv.hostPlatform.system}.typst
+          inputs.unstable.legacyPackages.${pkgs.stdenv.hostPlatform.system}.tinymist
+          inputs.unstable.legacyPackages.${pkgs.stdenv.hostPlatform.system}.typstyle
 
           # toml
           # tombi
