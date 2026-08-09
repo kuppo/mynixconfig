@@ -20,23 +20,23 @@
       imports = [ self.nixosModules.latex ];
       config = {
         users.users.${priUser.name}.packages = with pkgs; [
-          (self.wrappers.treefmt.wrap {
-            inherit pkgs;
-            settings = {
-              nix = {
-                command = "alejandra";
-              };
-              lua = {
-                command = "stylua";
-              };
-              typst = {
-                command = "typstyle";
-              };
-            };
-          })
+          # (self.wrappers.treefmt.wrap {
+          #   inherit pkgs;
+          #   settings = {
+          #     nix = {
+          #       command = "alejandra";
+          #     };
+          #     lua = {
+          #       command = "stylua";
+          #     };
+          #     typst = {
+          #       command = "typstyle";
+          #     };
+          #   };
+          # })
           # lua
           lua-language-server
-          (inputs.wrappers.wrappers.stylua.wrap {
+          (self.wrappers.stylua.wrap {
             inherit pkgs;
             generateCpScript = {
               enable = true;
@@ -77,7 +77,8 @@
           typstyle
 
           # toml
-          tombi
+          # tombi
+          taplo
 
           # rust
           rust-analyzer

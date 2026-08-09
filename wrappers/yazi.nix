@@ -341,6 +341,10 @@
                 use = [ "pdf" ];
               }
               {
+                url = "*.djv[u]";
+                use = [ "pdf" ];
+              }
+              {
                 mime = "image/*";
                 use = [
                   "image"

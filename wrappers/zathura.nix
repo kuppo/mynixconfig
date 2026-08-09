@@ -12,11 +12,21 @@
     {
       imports = [ wlib.wrapperModules.zathura ];
       config = {
-        overrides = [
-          (pkg: pkg.override { useMupdf = false; })
-        ];
+        # overrides = [
+        #   (pkg: pkg.override { useMupdf = false; })
+        # ];
         settings = {
-          font = "monospace normal 11";
+          font = "Sans normal 12";
+          recolor = true;
+          recolor-lightcolor = "#111111";
+          recolor-darkcolor = "#aaaaaa";
+          recolor-keephue = true;
+        };
+        mappings = {
+          "[normal] bb" = "feedkeys :bmark<Space>";
+          "[normal] bd" = "feedkeys :bdelete<Space> ";
+          "[normal] bl" = "feedkeys :blist<Return>";
+          "[normal] <C-o>" = "file_chooser";
         };
       };
     };

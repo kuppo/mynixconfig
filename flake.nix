@@ -9,20 +9,17 @@ rec {
     # 4. regarding parameters of the url
     #    - ref = branches or tag, use ref=refs/tags/tag to get tag
     #    - shallow = truncated git history, small size for big repo
-    stable.follows = "nixpkgs";
-    nixpkgs.url = "git+https://github.com/NixOS/nixpkgs?ref=nixos-26.05&shallow=1";
+    nixpkgs.follows = "stable";
+    stable.url = "git+https://github.com/NixOS/nixpkgs?ref=nixos-26.05&shallow=1";
+    unstable.url = "git+https://github.com/NixOS/nixpkgs?ref=nixos-unstable&shallow=1";
     # nixpkgs.url = "path:///home/peng/Projects/nixpkgs";
     # home-manager = {
     #   url = "git+https://github.com/nix-community/home-manager?ref=release-26.05&shallow=1";
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
     import-tree.url = "git+https://github.com/denful/import-tree";
-    # wrappers = {
-    #   url = "git+https://github.com/BirdeeHub/nix-wrapper-modules";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
     wrappers = {
-      url = "path:///home/peng/Projects/nix-wrapper-modules";
+      url = "git+https://github.com/BirdeeHub/nix-wrapper-modules";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     flake-parts = {
@@ -132,7 +129,7 @@ rec {
 
   nixConfig = {
     substituters = [
-      # "https://mirror.sjtu.edu.cn/nix-channels/store?priority=20"
+      "https://mirror.sjtu.edu.cn/nix-channels/store?priority=20"
       "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store?priority=21"
       "https://mirrors.ustc.edu.cn/nix-channels/store?priority=22"
       "https://mirror.nju.edu.cn/nix-channels/store?priority=23"

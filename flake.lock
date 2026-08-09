@@ -3,11 +3,11 @@
     "dap-view": {
       "flake": false,
       "locked": {
-        "lastModified": 1783556270,
-        "narHash": "sha256-arFB/wZkGjgGiJ3WfxUbnum0FIR7rhg2WHbM0sQjpDM=",
+        "lastModified": 1786073478,
+        "narHash": "sha256-0xCWVHcoyrUicbW04QgyJIFe1juplnK9tPuzDoQIMrg=",
         "ref": "refs/heads/main",
-        "rev": "b8c8aa91f42055d7f69012587cde4f1d99f2a701",
-        "revCount": 496,
+        "rev": "210b2c0e4acc08aad23fbd5a7989dd0169f716d0",
+        "revCount": 499,
         "type": "git",
         "url": "https://github.com/igorlfs/nvim-dap-view"
       },
@@ -39,11 +39,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1782949081,
-        "narHash": "sha256-vp6Y/Grm98ESt6ceOkWiHWyZRDV3J1RID4w+6NWK9yA=",
+        "lastModified": 1785627969,
+        "narHash": "sha256-4dtXQk/NMePegK/nWp5NSeuZKLATItOq61lpEvmXqGw=",
         "ref": "refs/heads/main",
-        "rev": "17c9d6cdfc60c64f4ee8d306f9bc0b4ccb51481e",
-        "revCount": 480,
+        "rev": "427bf4bd9435fdf21321c8cc628c24efc14c0f7a",
+        "revCount": 483,
         "type": "git",
         "url": "https://github.com/hercules-ci/flake-parts"
       },
@@ -70,15 +70,16 @@
     "lze": {
       "flake": false,
       "locked": {
-        "lastModified": 1782136817,
-        "narHash": "sha256-7RNUVDWU13E0LGv3QVfC/Qmz/gA564FKfpv6PxYn75M=",
-        "ref": "refs/heads/master",
-        "rev": "ae45b9f1fd923955a5ebc733b920e23f0c105ae1",
-        "revCount": 470,
+        "lastModified": 1769574380,
+        "narHash": "sha256-5o9/qvlQW7f/+ofENfs63zZls1gWYpug5+PzxSbwSgQ=",
+        "ref": "refs/tags/v0.13.0",
+        "rev": "a6314f9aff8cdbf872f96ff41ee2d2f27627b743",
+        "revCount": 388,
         "type": "git",
         "url": "https://github.com/BirdeeHub/lze"
       },
       "original": {
+        "ref": "refs/tags/v0.13.0",
         "type": "git",
         "url": "https://github.com/BirdeeHub/lze"
       }
@@ -102,34 +103,17 @@
     "neo-tree": {
       "flake": false,
       "locked": {
-        "lastModified": 1782564534,
-        "narHash": "sha256-ixqPyrPGDfIrx0JgzaE18FImQeJMAR4T658oreNRiMc=",
+        "lastModified": 1785923309,
+        "narHash": "sha256-dxcNlXx0+8JDu4itgysQ0Sok6TEyBDSEOZU8srYh7a0=",
         "ref": "refs/heads/main",
-        "rev": "b01ee1769144c4491ea44bc329cb84040e9793be",
-        "revCount": 961,
+        "rev": "6679b9395526b52ddb2b137fcd5255dab71c5a58",
+        "revCount": 973,
         "type": "git",
         "url": "https://github.com/nvim-neo-tree/neo-tree.nvim"
       },
       "original": {
         "type": "git",
         "url": "https://github.com/nvim-neo-tree/neo-tree.nvim"
-      }
-    },
-    "nixpkgs": {
-      "locked": {
-        "lastModified": 1784432872,
-        "narHash": "sha256-n3gKTBIV4ZA5VQpUakffBe3KGu4+mhPoA34rrqS0GkA=",
-        "ref": "nixos-26.05",
-        "rev": "fd1462031fdee08f65fd0b4c6b64e22239a77870",
-        "shallow": true,
-        "type": "git",
-        "url": "https://github.com/NixOS/nixpkgs"
-      },
-      "original": {
-        "ref": "nixos-26.05",
-        "shallow": true,
-        "type": "git",
-        "url": "https://github.com/NixOS/nixpkgs"
       }
     },
     "noctalia-greeter": {
@@ -139,11 +123,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1784582783,
-        "narHash": "sha256-H1tip870cDS8NiNPB1duHmstwb6T0mcStNLheEWlHss=",
+        "lastModified": 1786236850,
+        "narHash": "sha256-K1AkQg+pZyI/vuIrz7s8sGxqTsCrVJwOOK/ttOwh+q0=",
         "owner": "noctalia-dev",
         "repo": "noctalia-greeter",
-        "rev": "873268ee327baecff84e4c87b876cc317a84891c",
+        "rev": "763411f5ebd864adba27db9354a1d5724c15704c",
         "type": "github"
       },
       "original": {
@@ -210,7 +194,9 @@
         "lze": "lze",
         "lzextras": "lzextras",
         "neo-tree": "neo-tree",
-        "nixpkgs": "nixpkgs",
+        "nixpkgs": [
+          "stable"
+        ],
         "noctalia-greeter": "noctalia-greeter",
         "nvim-dap": "nvim-dap",
         "org-bullets": "org-bullets",
@@ -218,9 +204,8 @@
         "rust-overlay": "rust-overlay",
         "rustaceanvim": "rustaceanvim",
         "sops-nix": "sops-nix",
-        "stable": [
-          "nixpkgs"
-        ],
+        "stable": "stable",
+        "unstable": "unstable",
         "vimplug-floatty": "vimplug-floatty",
         "wrappers": "wrappers"
       }
@@ -232,11 +217,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1784526465,
-        "narHash": "sha256-L37teKC6oINWG4PGZLIqbphMWvSQ0PEz+aWxAk+rIDw=",
+        "lastModified": 1786160316,
+        "narHash": "sha256-oLoc3ZLg1LX/S5Jb3v6MrF415AzDyC4vgeWy9UcYTQk=",
         "ref": "refs/heads/master",
-        "rev": "58c6334db52d51fc5dd8877c90b01f00cf8a696b",
-        "revCount": 2245,
+        "rev": "4e1c940c96560ceab7c547f89642231371a66646",
+        "revCount": 2264,
         "type": "git",
         "url": "https://github.com/oxalica/rust-overlay"
       },
@@ -282,6 +267,40 @@
         "url": "https://github.com/Mic92/sops-nix"
       }
     },
+    "stable": {
+      "locked": {
+        "lastModified": 1786089803,
+        "narHash": "sha256-ZuvZfVW2tB5tXYEcpcfhVXB3N4OhdZLOqOviy4OD4b4=",
+        "ref": "nixos-26.05",
+        "rev": "ee48b147c18c7de1e6ec97dc74792be42724bed1",
+        "shallow": true,
+        "type": "git",
+        "url": "https://github.com/NixOS/nixpkgs"
+      },
+      "original": {
+        "ref": "nixos-26.05",
+        "shallow": true,
+        "type": "git",
+        "url": "https://github.com/NixOS/nixpkgs"
+      }
+    },
+    "unstable": {
+      "locked": {
+        "lastModified": 1786106723,
+        "narHash": "sha256-zDSUbpoeo/9ZmD2+wXnzxoo1+uhL8vxc0b8yuYMKYq0=",
+        "ref": "nixos-unstable",
+        "rev": "f13ff45afd1bb73e640eaa08a7066dbed07e3238",
+        "shallow": true,
+        "type": "git",
+        "url": "https://github.com/NixOS/nixpkgs"
+      },
+      "original": {
+        "ref": "nixos-unstable",
+        "shallow": true,
+        "type": "git",
+        "url": "https://github.com/NixOS/nixpkgs"
+      }
+    },
     "vimplug-floatty": {
       "flake": false,
       "locked": {
@@ -305,14 +324,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1783150229,
-        "narHash": "sha256-SCUILIJQephBvd4gKt5+R3aXEEEHtibNWRQgmSJXVaE=",
-        "path": "/home/peng/Projects/nix-wrapper-modules",
-        "type": "path"
+        "lastModified": 1782135443,
+        "narHash": "sha256-vAmbArdCyjqpVW+37aCy/PMBOLIqukUXLQuEKLwUhA4=",
+        "ref": "refs/heads/main",
+        "rev": "6e7f66fa2cdf4d63162580b438f7fcf87c28a46f",
+        "revCount": 768,
+        "type": "git",
+        "url": "https://github.com/BirdeeHub/nix-wrapper-modules"
       },
       "original": {
-        "path": "/home/peng/Projects/nix-wrapper-modules",
-        "type": "path"
+        "type": "git",
+        "url": "https://github.com/BirdeeHub/nix-wrapper-modules"
       }
     }
   },

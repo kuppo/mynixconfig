@@ -1,6 +1,7 @@
 {
   self,
   priUser,
+  inputs,
   ...
 }:
 {
@@ -20,6 +21,7 @@
         self.packages.${pkgs.stdenv.hostPlatform.system}.zathura
         _7zip-zstd
         blender
+        bc
         curl
         devenv
         dust
@@ -37,8 +39,9 @@
         nix-tree
         numix-cursor-theme
         numix-icon-theme-square
-        fresh-editor
+        inputs.unstable.legacyPackages.${pkgs.stdenv.hostPlatform.system}.fresh-editor
         nwg-look
+        pi-coding-agent
         qqmusic
         ristretto
         mediainfo
