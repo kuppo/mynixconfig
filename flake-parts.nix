@@ -17,19 +17,21 @@
 
   perSystem =
     { system, ... }:
+    let
+      overlays = [
+        inputs.rust-overlay.overlays.default
+        # use wl-clipboard-rs instead of wl-clipboard
+        (final: prev: {
+          wl-clipboard = final.wl-clipboard-rs;
+        })
+      ];
+      config = {
+        allowUnfree = true;
+      };
+    in
     {
       _module.args.pkgs = import inputs.nixpkgs {
-        inherit system;
-        overlays = [
-          inputs.rust-overlay.overlays.default
-          # use wl-clipboard-rs instead of wl-clipboard
-          (final: prev: {
-            wl-clipboard = final.wl-clipboard-rs;
-          })
-        ];
-        config = {
-          allowUnfree = true;
-        };
+        inherit system overlays config;
       };
     };
 }
