@@ -22,6 +22,7 @@
         _7zip-zstd
         blender
         bc
+        brave
         curl
         devenv
         dust
