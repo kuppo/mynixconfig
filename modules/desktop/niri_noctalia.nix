@@ -109,8 +109,8 @@
                   "XF86AudioPrev".spawn-sh = "noctalia msg media previous";
                   "XF86AudioNext".spawn-sh = "noctalia msg media next";
 
-                  "XF86MonBrightnessUp".spawn-sh = "noctalia msg brightness up";
-                  "XF86MonBrightnessDown".spawn-sh = "noctalia msg brightness down";
+                  "XF86MonBrightnessUp".spawn-sh = "noctalia msg brightness-up 1";
+                  "XF86MonBrightnessDown".spawn-sh = "noctalia msg brightness-down 1";
                 };
               };
             };
