@@ -8,21 +8,21 @@
       ...
     }:
     {
-      programs.noctalia-greeter = lib.mkIf (config.desktop.dm == "greetd") {
-        enable = true;
-        greeter-args = "";
-        settings = {
-          cursor = {
-            theme = "Numix-Cursor";
-            size = 24;
-            path = "${pkgs.numix-cursor-theme}/share/icons";
-          };
-          keyboard = {
-            layout = "us";
+      services.displayManager = {
+        noctalia-greeter = lib.mkIf (config.desktop.dm == "greetd") {
+          enable = true;
+          greeter-args = "";
+          settings = {
+            cursor = {
+              theme = "Numix-Cursor";
+              size = 24;
+              path = "${pkgs.numix-cursor-theme}/share/icons";
+            };
+            keyboard = {
+              layout = "us";
+            };
           };
         };
-      };
-      services.displayManager = {
         sddm = lib.mkIf (config.desktop.dm == "sddm") {
           enable = true;
           enableHidpi = true;

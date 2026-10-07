@@ -9,7 +9,8 @@ rec {
     # 4. regarding parameters of the url
     #    - ref = branches or tag, use ref=refs/tags/tag to get tag
     #    - shallow = truncated git history, small size for big repo
-    nixpkgs.follows = "stable";
+    # nixpkgs.follows = "stable";
+    nixpkgs.follows = "unstable";
     stable.url = "git+https://github.com/NixOS/nixpkgs?ref=nixos-26.05&shallow=1";
     unstable.url = "git+https://github.com/NixOS/nixpkgs?ref=nixos-unstable&shallow=1";
     # nixpkgs.url = "path:///home/peng/Projects/nixpkgs";
@@ -36,7 +37,7 @@ rec {
       inputs.nixpkgs.follows = "nixpkgs";
     };
     noctalia-greeter = {
-      url = "github:noctalia-dev/noctalia-greeter";
+      url = "git+https://github.com/noctalia-dev/noctalia-greeter";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -58,7 +59,7 @@ rec {
       flake = false;
     };
     project = {
-      url = "git+https://github.com/DrKJeff16/project.nvim?ref=refs/tags/v5.1.0-1";
+      url = "git+https://github.com/DrKJeff16/project.nvim";
       flake = false;
     };
     neo-tree = {
@@ -66,7 +67,7 @@ rec {
       flake = false;
     };
     rustaceanvim = {
-      url = "git+https://github.com/mrcjkb/rustaceanvim?ref=refs/tags/v9.0.5";
+      url = "git+https://github.com/mrcjkb/rustaceanvim";
       flake = false;
     };
     nvim-dap = {

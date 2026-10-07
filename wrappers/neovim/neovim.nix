@@ -120,6 +120,7 @@
               org-roam-nvim
               orgmode
               vimtex
+              nvim-dap-python
               which-key-nvim
               yazi-nvim
 

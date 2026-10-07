@@ -40,7 +40,7 @@
             expansion = "nixos-rebuild switch --flake $NIXDOTFILE_PATH#$hostname --sudo";
           };
           nupgrade = {
-            expansion = "nix flake update --flake $NIXDOTFILE_PATH && nixos-rebuild switch --flake $NIXDOTFILE_PATH#$hostname";
+            expansion = "nix flake update --flake $NIXDOTFILE_PATH && nixos-rebuild switch --flake $NIXDOTFILE_PATH#$hostname --sudo";
             position = "command";
             cursor = "%";
           };
