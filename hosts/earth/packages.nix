@@ -40,7 +40,7 @@
         nix-tree
         numix-cursor-theme
         numix-icon-theme-square
-        inputs.unstable.legacyPackages.${pkgs.stdenv.hostPlatform.system}.fresh-editor
+        fresh-editor
         nwg-look
         pi-coding-agent
         qqmusic
