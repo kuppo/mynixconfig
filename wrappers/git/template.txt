@@ -1,3 +1,5 @@
+
+
 # <type>(<scope>): <short summary under 50 characters>
 
 # ── Body (Optional) ──────────────────────────────────────────────────
