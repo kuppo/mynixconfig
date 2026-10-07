@@ -31,6 +31,7 @@
       config = {
         settings = {
           commit.template = "${./template.txt}";
+          commit.cleanup = "strip";
           user.email = config.git.email;
           user.name = config.git.user;
           init.defaultBranch = "dev";
