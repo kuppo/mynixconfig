@@ -39,11 +39,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1788450739,
-        "narHash": "sha256-glZLQlzIn1fXH6PazR2iUmTo7kzzyYSshrWhLS9TqCU=",
+        "lastModified": 1790898470,
+        "narHash": "sha256-zTwuwezD0w3hpga6a6P8emidzAZFyWqlNeRBlpWOOl8=",
         "ref": "refs/heads/main",
-        "rev": "31729ca8cbdb4fa927b34e5f4353e6a83f39e993",
-        "revCount": 494,
+        "rev": "024633cd702b10285db5cb19b40ad48d2399ba60",
+        "revCount": 497,
         "type": "git",
         "url": "https://github.com/hercules-ci/flake-parts"
       },
@@ -102,11 +102,11 @@
     "neo-tree": {
       "flake": false,
       "locked": {
-        "lastModified": 1789628251,
-        "narHash": "sha256-R5o7htB4gdgCCyBGEx6XaOwzfFTwpEAL87PBKDudlxQ=",
+        "lastModified": 1791200062,
+        "narHash": "sha256-jtEPxxXBxEUTeBNJ/hTOKxkQJ1aoBYyKWzoQLBJREsg=",
         "ref": "refs/heads/main",
-        "rev": "162f9b953a692b559afe43e38d60afee81e8e79b",
-        "revCount": 990,
+        "rev": "ffdf8d93c8db197a5cab072a18cc8da69d490b81",
+        "revCount": 994,
         "type": "git",
         "url": "https://github.com/nvim-neo-tree/neo-tree.nvim"
       },
@@ -122,11 +122,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1789745917,
-        "narHash": "sha256-2hTzGtOgBz9KA8viAWdp/jYcZW8AtP8SA9Up8Mfplos=",
+        "lastModified": 1791310429,
+        "narHash": "sha256-7BYSaTLXJNC+MKrB/zq4JmrmxdUedGtJ6Av6+w0aIPU=",
         "ref": "refs/heads/main",
-        "rev": "cdc492abbca4ac6b6f757190bcac8256b6d5b113",
-        "revCount": 261,
+        "rev": "6c0704bc4ec34aaba8624609d775b75ede784b9f",
+        "revCount": 286,
         "type": "git",
         "url": "https://github.com/noctalia-dev/noctalia-greeter"
       },
@@ -170,11 +170,11 @@
     "project": {
       "flake": false,
       "locked": {
-        "lastModified": 1789790754,
-        "narHash": "sha256-fh7ixcYsWq9zD1t0+D82DZqbzRiQq25zLCo/SaKK5GY=",
+        "lastModified": 1791083846,
+        "narHash": "sha256-m4PowFpeHPb5B2ktd3Jdzzeqi0AQkJ2JByxkOLExqEA=",
         "ref": "refs/heads/main",
-        "rev": "68d2caa889498d321c034e8b04eb38dd60022e64",
-        "revCount": 1617,
+        "rev": "7804fdeb816c5126e87dc18a9ae60ad65b7b6368",
+        "revCount": 1646,
         "type": "git",
         "url": "https://github.com/DrKJeff16/project.nvim"
       },
@@ -215,11 +215,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1789715798,
-        "narHash": "sha256-hWw9vlrsFm9kOw8MT5k6IX/7xCzgROuJ6ZvQOrkq66Q=",
+        "lastModified": 1791276535,
+        "narHash": "sha256-iwqAmHTX1IgzTumJR3JayNAQAo5xEmmOuGzB6b2pT/Q=",
         "ref": "refs/heads/master",
-        "rev": "fbdb2de9e7619d660ae7e8f752f38b261020b701",
-        "revCount": 2308,
+        "rev": "b962e5d0c8cd97196c6a882d659fe451b52ad989",
+        "revCount": 2327,
         "type": "git",
         "url": "https://github.com/oxalica/rust-overlay"
       },
@@ -251,11 +251,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1789691124,
-        "narHash": "sha256-k+I+R6uwHX3VcJ7326qLV6vCahZUgsVl+i8sSU/Stxk=",
+        "lastModified": 1791103873,
+        "narHash": "sha256-nFxM+pKoZ8LJAEnUXARyCaOAloWgaW9kZQOSjWzKcTE=",
         "ref": "refs/heads/master",
-        "rev": "1e73e8f7176d65e1b55e324de099bbfff4b2c574",
-        "revCount": 1243,
+        "rev": "dcd241ba97088c22569d1573286e1b9daad340c0",
+        "revCount": 1249,
         "type": "git",
         "url": "https://github.com/Mic92/sops-nix"
       },
@@ -266,10 +266,10 @@
     },
     "stable": {
       "locked": {
-        "lastModified": 1789654592,
-        "narHash": "sha256-vrwAiXmz+0hs/IWXZalFG/Ws6xQRcW+gClUDlfvcfjQ=",
+        "lastModified": 1791254437,
+        "narHash": "sha256-qMSsgG+9tIdx282dMqGuJAUK3t6F36clM6efd0rXfes=",
         "ref": "nixos-26.05",
-        "rev": "ecc58f32d1069a3e3f8a991e2233d365689f748d",
+        "rev": "b25309931cfda5f0b8805f462a29897eeae50168",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/NixOS/nixpkgs"
@@ -283,10 +283,10 @@
     },
     "unstable": {
       "locked": {
-        "lastModified": 1789684949,
-        "narHash": "sha256-ZKhUe/2IJUq1JhKxKMu8rbkgSGmPP2ZCqlIPn40aGCM=",
+        "lastModified": 1791260994,
+        "narHash": "sha256-Miqqk/ammqnTUxaoCyvtwoPeLbI1ksFyLxi/CazZpWY=",
         "ref": "nixos-unstable",
-        "rev": "e554fab72f81915600f3f449b786fd9af40439a5",
+        "rev": "151fa4e8ddfdd8dd25d945ad94ed54a13de9f6e4",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/NixOS/nixpkgs"
