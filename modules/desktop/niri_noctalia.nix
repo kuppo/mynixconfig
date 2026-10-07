@@ -47,7 +47,7 @@
                   // }
                 '';
                 spawn-at-startup = [
-                  [ "noctalia-shell" ]
+                  [ "noctalia" ]
                 ];
                 window-rules = [
                   {
@@ -184,7 +184,8 @@
 
         # config de
         environment.systemPackages = lib.mkIf (config.desktop.de == "noctalia-shell") [
-          pkgs.noctalia-shell
+          inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
+          # pkgs.noctalia-shell
           # (inputs.wrappers.wrappers.noctalia-shell.wrap {
           #   inherit pkgs;
           #   settings.appLauncher.terminalCommand = "{config.userTerminal} -e";

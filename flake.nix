@@ -40,6 +40,10 @@ rec {
       url = "git+https://github.com/noctalia-dev/noctalia-greeter";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    noctalia = {
+      url = "git+https://github.com/noctalia-dev/noctalia";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # nvim plugins
     lze = {

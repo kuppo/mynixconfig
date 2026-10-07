@@ -115,6 +115,26 @@
         "url": "https://github.com/nvim-neo-tree/neo-tree.nvim"
       }
     },
+    "noctalia": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1791338722,
+        "narHash": "sha256-IPNpSRXvRCQTLPmhaZ4lob3F0WnljzfDQ0xa81JfwiE=",
+        "ref": "refs/heads/main",
+        "rev": "7784c94414acf415234ae24dcf36593073dcfd43",
+        "revCount": 5702,
+        "type": "git",
+        "url": "https://github.com/noctalia-dev/noctalia"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://github.com/noctalia-dev/noctalia"
+      }
+    },
     "noctalia-greeter": {
       "inputs": {
         "nixpkgs": [
@@ -195,6 +215,7 @@
         "nixpkgs": [
           "unstable"
         ],
+        "noctalia": "noctalia",
         "noctalia-greeter": "noctalia-greeter",
         "nvim-dap": "nvim-dap",
         "org-bullets": "org-bullets",
