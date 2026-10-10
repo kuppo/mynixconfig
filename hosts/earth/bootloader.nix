@@ -10,11 +10,11 @@
           enable = true;
           # theme = "breeze";
         };
+        resumeDevice = "/dev/vg1/swap";
         consoleLogLevel = 0;
         kernelParams = [
           "quiet"
           "udev.log_level=3"
-          "resume=/dev/vg1/swap"
         ];
         initrd = {
           verbose = false;
