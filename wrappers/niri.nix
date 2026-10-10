@@ -201,9 +201,11 @@
             {
               matches = [
                 { app-id = "r#\"firefox$\"#"; }
+                { title = "Noctalia Settings"; }
                 { title = "^Picture-in-Picture$"; }
               ];
               open-floating = true;
+              open-fullscreen = false;
             }
             {
               matches = [
