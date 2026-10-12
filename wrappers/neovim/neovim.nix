@@ -116,11 +116,13 @@
               lazydev-nvim
               lazygit-nvim
               lualine-nvim
-              multicursors-nvim
+              multicursor-nvim
               org-roam-nvim
               orgmode
               vimtex
               nvim-dap-python
+              nvim-dap-disasm
+              # nvim-dap-lldb
               which-key-nvim
               yazi-nvim
 
