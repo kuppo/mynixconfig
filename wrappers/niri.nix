@@ -200,7 +200,9 @@
           window-rules = [
             {
               matches = [
-                { app-id = "r#\"firefox$\"#"; }
+                # { app-id = "r#\"firefox$\"#"; }
+                { app-id = "flameshot"; }
+                { title = "r#\"flameshot\"#"; }
                 { title = "Noctalia Settings"; }
                 { title = "^Picture-in-Picture$"; }
               ];

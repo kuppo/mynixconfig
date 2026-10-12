@@ -11,13 +11,12 @@
       services.displayManager = {
         noctalia-greeter = lib.mkIf (config.desktop.dm == "greetd") {
           enable = true;
-          greeter-args = "";
+          cursorTheme = {
+            name = "Numix-Cursor";
+            package = pkgs.numix-cursor-theme;
+          };
           settings = {
-            cursor = {
-              theme = "Numix-Cursor";
-              size = 24;
-              path = "${pkgs.numix-cursor-theme}/share/icons";
-            };
+            cursor.size = 18;
             keyboard = {
               layout = "us";
             };

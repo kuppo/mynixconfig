@@ -119,8 +119,8 @@
 
         # config de
         environment.systemPackages = lib.mkIf (config.desktop.de == "noctalia-shell") [
-          inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
-          # pkgs.noctalia-shell
+          # inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
+          pkgs.noctalia
           # (inputs.wrappers.wrappers.noctalia-shell.wrap {
           #   inherit pkgs;
           #   settings.appLauncher.terminalCommand = "{config.userTerminal} -e";

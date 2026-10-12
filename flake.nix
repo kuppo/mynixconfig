@@ -9,39 +9,30 @@ rec {
     # 4. regarding parameters of the url
     #    - ref = branches or tag, use ref=refs/tags/tag to get tag
     #    - shallow = truncated git history, small size for big repo
+
     # nixpkgs.follows = "stable";
     nixpkgs.follows = "unstable";
     stable.url = "git+https://github.com/NixOS/nixpkgs?ref=nixos-26.05&shallow=1";
     unstable.url = "git+https://github.com/NixOS/nixpkgs?ref=nixos-unstable&shallow=1";
-    # nixpkgs.url = "path:///home/peng/Projects/nixpkgs";
     # home-manager = {
     #   url = "git+https://github.com/nix-community/home-manager?ref=release-26.05&shallow=1";
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
     import-tree.url = "git+https://github.com/denful/import-tree";
     wrappers = {
-      url = "git+https://github.com/BirdeeHub/nix-wrapper-modules";
+      url = "git+https://github.com/nix-community/nix-wrapper-modules";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     flake-parts = {
       url = "git+https://github.com/hercules-ci/flake-parts";
       inputs.nixpkgs-lib.follows = "nixpkgs";
     };
-    # vaultix.url = "git+https://github.com/milieuim/vaultix";
     sops-nix = {
       url = "git+https://github.com/Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     rust-overlay = {
       url = "git+https://github.com/oxalica/rust-overlay";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    noctalia-greeter = {
-      url = "git+https://github.com/noctalia-dev/noctalia-greeter";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    noctalia = {
-      url = "git+https://github.com/noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
