@@ -52,39 +52,13 @@
                 window-rules = [
                   {
                     matches = [
-                      { app-id = "org.wezfurlong.wezterm"; }
-                      { app-id = "kitty"; }
-                      { app-id = "ghostty"; }
+                      { title = "Noctalia Settings"; }
                     ];
-                    open-maximized-to-edges = true;
+                    open-floating = true;
+                    open-fullscreen = false;
                   }
-                  {
-                    matches = [
-                      { app-id = ''r#"^org\.wezfurlong\.wezterm$"#''; }
-                    ];
-                    default-column-width = _: { };
-                  }
-
                 ];
-                outputs = {
-                  # Legion laptop
-                  "California Institute of Technology 0x1600 Unknown" =
-                    lib.mkIf (config.networking.hostName == "earth")
-                      {
-                        mode = "2560x1600@60.008";
-                        scale = 1.25;
-                        hot-corners = {
-                          top-left = _: { };
-                        };
-
-                      };
-                };
                 binds = {
-                  "Mod+Return" = _: {
-                    props.hotkey-overlay-title = "Open a Terminal: ${config.userTerminal}";
-                    content.spawn = "${config.userTerminal}";
-                  };
-
                   "Mod+D" = _: {
                     content.spawn-sh = "noctalia msg panel-toggle launcher";
                     props.hotkey-overlay-title = "Open noctalia launcher";
@@ -111,6 +85,8 @@
 
                   "XF86MonBrightnessUp".spawn-sh = "noctalia msg brightness-up 1";
                   "XF86MonBrightnessDown".spawn-sh = "noctalia msg brightness-down 1";
+
+                  "Ctrl+Alt+Delete".spawn-sh = "nocatlia msg panel-toggle session";
                 };
               };
             };

@@ -1,4 +1,8 @@
-{ self, cursor, ... }:
+{
+  self,
+  cursor,
+  ...
+}:
 {
   flake.wrappers.niri =
     {
@@ -23,6 +27,17 @@
           pkgs.xwayland-satellite
         ];
         settings = {
+          outputs = {
+            # Legion laptop
+            "California Institute of Technology 0x1600 Unknown" = {
+              mode = "2560x1600@60.008";
+              scale = 1.25;
+              hot-corners = {
+                top-left = _: { };
+              };
+
+            };
+          };
           binds = {
             "Mod+Shift+Slash".show-hotkey-overlay = _: { };
 
@@ -186,24 +201,36 @@
               content.toggle-keyboard-shortcuts-inhibit = _: { };
             };
 
+            "Mod+Return" = _: {
+              props.hotkey-overlay-title = "Open a Terminal: ${config.userTerminal}";
+              content.spawn = "${config.userTerminal}";
+            };
+
             "Mod+Shift+E".quit = _: { };
             "Ctrl+Alt+Delete".quit = _: { };
 
             "Mod+Shift+P".power-off-monitors = _: { };
           };
-          # spawn-at-startup = [
-          #   [
-          #     "fcitx5"
-          #     "-d"
-          #   ]
-          # ];
           window-rules = [
+            {
+              matches = [
+                { app-id = "org.wezfurlong.wezterm"; }
+                { app-id = "kitty"; }
+                { app-id = "ghostty"; }
+              ];
+              open-maximized-to-edges = true;
+            }
+            {
+              matches = [
+                { app-id = ''r#"^org\.wezfurlong\.wezterm$"#''; }
+              ];
+              default-column-width = _: { };
+            }
             {
               matches = [
                 # { app-id = "r#\"firefox$\"#"; }
                 { app-id = "flameshot"; }
                 { title = "r#\"flameshot\"#"; }
-                { title = "Noctalia Settings"; }
                 { title = "^Picture-in-Picture$"; }
               ];
               open-floating = true;

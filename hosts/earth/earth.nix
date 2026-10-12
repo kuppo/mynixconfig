@@ -16,7 +16,6 @@
       self.nixosModules.font
       self.nixosModules.fcitx5
       self.nixosModules.qt
-      # self.nixosModules.gtk
       self.nixosModules.dev
       self.nixosModules.primaryUser
       self.nixosModules.xdg
@@ -26,6 +25,8 @@
       self.nixosModules.security
       self.nixosModules.yazi
       self.nixosModules.locale
+
+      self.nixosModules.myOptions
 
       inputs.sops-nix.nixosModules.sops
       inputs.nixpkgs.nixosModules.readOnlyPkgs
