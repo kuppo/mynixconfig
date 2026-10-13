@@ -18,12 +18,9 @@
       imports = [
         (lib.mkAliasOptionModule [ "knownHosts" ] [ "programs" "ssh" "knownHosts" ])
       ];
-      options = {
-        enableSshd = lib.mkEnableOption "Whether enable the sshd.";
-      };
       config = {
         services.openssh = {
-          enable = config.enableSshd;
+          enable = config.myoptions.enableSshd;
           openFirewall = true;
           settings = {
             PasswordAuthentication = false;
