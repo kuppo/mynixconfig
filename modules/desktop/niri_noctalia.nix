@@ -80,7 +80,7 @@
                 "XF86MonBrightnessUp".spawn-sh = "noctalia msg brightness-up 1";
                 "XF86MonBrightnessDown".spawn-sh = "noctalia msg brightness-down 1";
 
-                "Ctrl+Alt+Delete".spawn-sh = "nocatlia msg panel-toggle session";
+                "Ctrl+Alt+Delete".spawn-sh = "noctalia msg panel-toggle session";
               };
             };
           };
