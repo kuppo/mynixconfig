@@ -29,7 +29,7 @@
         eza
         firefox
         flameshot
-        # freecad-wayland
+        freecad-wayland
         gimp
         # gradia
         # self.packages.${pkgs.stdenv.hostPlatform.system}.helix
@@ -42,7 +42,7 @@
         nix-tree
         numix-cursor-theme
         numix-icon-theme-square
-        # fresh-editor
+        fresh-editor
         nwg-look
         pi-coding-agent
         qqmusic
