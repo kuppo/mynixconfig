@@ -38,6 +38,11 @@
         };
       };
       config = {
+        # information pass down to neovim
+        # grab it in lua with `nixInfo(nil, "info", "key") == "value"`
+        info = {
+          vscode-lldb-path = "${pkgs.vscode-extensions.vadimcn.vscode-lldb}";
+        };
         # add runtimePkgs to the spec
         specMods =
           {

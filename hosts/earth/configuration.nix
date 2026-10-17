@@ -17,7 +17,7 @@
         self.nixosModules.earthHardware
       ];
 
-      enableSshd = false;
+      myoptions.enableSshd = false;
       nix.settings = nixConfig;
       time.timeZone = "Asia/Shanghai";
 

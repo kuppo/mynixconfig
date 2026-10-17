@@ -201,13 +201,7 @@
               content.toggle-keyboard-shortcuts-inhibit = _: { };
             };
 
-            "Mod+Return" = _: {
-              props.hotkey-overlay-title = "Open a Terminal: ${config.userTerminal}";
-              content.spawn = "${config.userTerminal}";
-            };
-
             "Mod+Shift+E".quit = _: { };
-            "Ctrl+Alt+Delete".quit = _: { };
 
             "Mod+Shift+P".power-off-monitors = _: { };
           };

@@ -1,6 +1,6 @@
 { self, ... }:
 {
-  flake.nixosModules.network =
+  flake.nixosModules.earthNetworking =
     {
       pkgs,
       wlib,

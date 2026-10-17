@@ -9,7 +9,7 @@
     }:
     {
       services.displayManager = {
-        noctalia-greeter = lib.mkIf (config.desktop.dm == "greetd") {
+        noctalia-greeter = lib.mkIf (config.myoptions.desktop.dm == "greetd") {
           enable = true;
           cursorTheme = {
             name = "Numix-Cursor";
@@ -22,23 +22,23 @@
             };
           };
         };
-        sddm = lib.mkIf (config.desktop.dm == "sddm") {
+        sddm = lib.mkIf (config.myoptions.desktop.dm == "sddm") {
           enable = true;
           enableHidpi = true;
           wayland.enable = true;
           theme = "${pkgs.sddm-astronaut}/share/sddm/themes/sddm-astronaut-theme";
           extraPackages = [ pkgs.sddm-astronaut ];
         };
-        plasma-login-manager = lib.mkIf (config.desktop.dm == "plasma") {
+        plasma-login-manager = lib.mkIf (config.myoptions.desktop.dm == "plasma") {
           enable = true;
         };
-        gdm = lib.mkIf (config.desktop.dm == "gdm") {
+        gdm = lib.mkIf (config.myoptions.desktop.dm == "gdm") {
           enable = true;
         };
-        cosmic-greeter = lib.mkIf (config.desktop.dm == "cosmic") {
+        cosmic-greeter = lib.mkIf (config.myoptions.desktop.dm == "cosmic") {
           enable = true;
         };
-        ly = lib.mkIf (config.desktop.dm == "ly") {
+        ly = lib.mkIf (config.myoptions.desktop.dm == "ly") {
           enable = true;
           settings = {
             animation = "doom";
@@ -53,7 +53,7 @@
             session_log = "/tmp/ly_session.log";
           };
         };
-        lemurs = lib.mkIf (config.desktop.dm == "lemurs") {
+        lemurs = lib.mkIf (config.myoptions.desktop.dm == "lemurs") {
           enable = true;
         };
       };

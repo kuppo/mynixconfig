@@ -53,10 +53,13 @@
           })
 
           # C
-          lldb
+          # lldb
+          # vscode-extensions.llvm-org.lldb-vscode
+          vscode-extensions.vadimcn.vscode-lldb
           clang
           clang-tools
           gnumake
+          cmake
           ninja
 
           # zig

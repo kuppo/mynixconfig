@@ -1,9 +1,6 @@
 { self, ... }:
 {
   flake.nixosModules.earthBootloader = {
-    options = {
-    };
-
     config = {
       boot = {
         plymouth = {
