@@ -5,6 +5,9 @@
       boot = {
         plymouth = {
           enable = true;
+          extraConfig = ''
+            DeviceScale=2
+          '';
           # theme = "breeze";
         };
         resumeDevice = "/dev/vg1/swap";
