@@ -27,7 +27,7 @@
         devenv
         dust
         eza
-        firefox
+        # firefox
         flameshot
         freecad-wayland
         gimp
@@ -42,9 +42,9 @@
         nix-tree
         numix-cursor-theme
         numix-icon-theme-square
-        fresh-editor
+        # fresh-editor
         nwg-look
-        pi-coding-agent
+        # pi-coding-agent
         qqmusic
         ristretto
         mediainfo

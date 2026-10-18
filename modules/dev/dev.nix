@@ -107,15 +107,15 @@
           graphviz-nox # dependency for rustaceanvim
 
           # other common tools
-          (self.wrappers.jujutsu.wrap {
-            inherit pkgs;
-            settings = {
-              user = {
-                name = "${priUser.fullName}";
-                email = "${priUser.email}";
-              };
-            };
-          })
+          # (self.wrappers.jujutsu.wrap {
+          #   inherit pkgs;
+          #   settings = {
+          #     user = {
+          #       name = "${priUser.fullName}";
+          #       email = "${priUser.email}";
+          #     };
+          #   };
+          # })
           bat
           fd
           fzf

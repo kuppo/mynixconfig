@@ -3,11 +3,11 @@
     "dap-view": {
       "flake": false,
       "locked": {
-        "lastModified": 1787664477,
-        "narHash": "sha256-lBXIkPCDrJDrAvHptCHP4frSaI+UdPDduT05PZ0x/60=",
+        "lastModified": 1792114274,
+        "narHash": "sha256-zHoImo1NMEtWBgEjcPAaxU/CDDVVqPf5PG9oyYad5jY=",
         "ref": "refs/heads/main",
-        "rev": "e766b3d8acef97e7e8b29f7f421aa4977b9978e1",
-        "revCount": 505,
+        "rev": "b4486a6e83c45db4712849c09a76ef95b41a2133",
+        "revCount": 511,
         "type": "git",
         "url": "https://github.com/igorlfs/nvim-dap-view"
       },
@@ -70,11 +70,11 @@
     "lze": {
       "flake": false,
       "locked": {
-        "lastModified": 1791800658,
-        "narHash": "sha256-dGwRhYcnnk3smjAq3sOBBATfzof/jMI4ncFNsU7jQIg=",
+        "lastModified": 1791893192,
+        "narHash": "sha256-6tHakQ5xHsqirKuxC8eEiw6vuWWLYr5vcq1AbcnpsRI=",
         "ref": "refs/heads/master",
-        "rev": "31437a724a2f085001082af22cc4c077b94d3414",
-        "revCount": 474,
+        "rev": "c0f881bab1091bab827d2b966fe1dbdfa32809ad",
+        "revCount": 476,
         "type": "git",
         "url": "https://github.com/BirdeeHub/lze"
       },
@@ -102,11 +102,11 @@
     "neo-tree": {
       "flake": false,
       "locked": {
-        "lastModified": 1791783936,
-        "narHash": "sha256-SueDvINiP3+jbViRv/biaoUMd5eHk1yed5rmKN3xpL0=",
+        "lastModified": 1792234719,
+        "narHash": "sha256-E9qrYN6/XkT3ecWwfPqqwj/Y/m3PwNxXVV1EoJr57vM=",
         "ref": "refs/heads/main",
-        "rev": "d5b8a12b74683ddaefa519ce66a097610672859f",
-        "revCount": 996,
+        "rev": "4d55ed3482da32d1a68a9ed36dca5f4d69ec0ffb",
+        "revCount": 997,
         "type": "git",
         "url": "https://github.com/nvim-neo-tree/neo-tree.nvim"
       },
@@ -150,11 +150,11 @@
     "project": {
       "flake": false,
       "locked": {
-        "lastModified": 1791656833,
-        "narHash": "sha256-D9hef4Hg8yKZlRMVI13BFgvYmD3GdO51ptPQGBmn4mU=",
+        "lastModified": 1792286740,
+        "narHash": "sha256-tcDIKzpsDPy3ZIZRi7nozOFD/QqVNiwmD43PjbBN0dQ=",
         "ref": "refs/heads/main",
-        "rev": "5eb0d81c322bf69701815ae3464ec0d3a0915322",
-        "revCount": 1649,
+        "rev": "b90b5b0c034b7b32c4f5f1ebbd6a29d6089fbadf",
+        "revCount": 1653,
         "type": "git",
         "url": "https://github.com/DrKJeff16/project.nvim"
       },
@@ -194,11 +194,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1791795448,
-        "narHash": "sha256-12C5ef8a3endLXBvLOVR/jynM9EHGgP1t+y5uBorwx4=",
+        "lastModified": 1792219666,
+        "narHash": "sha256-RMO08tKD+hFIL5ryWi85VY4aHE5oIpdV1h4kVFctOkw=",
         "ref": "refs/heads/master",
-        "rev": "404b7a5537f0adc6e5c558a1b94612e683dec504",
-        "revCount": 2333,
+        "rev": "a110337465cfb76e3806b81b9db3094c3e6e770a",
+        "revCount": 2339,
         "type": "git",
         "url": "https://github.com/oxalica/rust-overlay"
       },
@@ -230,11 +230,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1791710405,
-        "narHash": "sha256-mVD4XIc5JkqMW2K04IkFUzHgHmyJZlzw5ktfgMDCbKU=",
+        "lastModified": 1792056300,
+        "narHash": "sha256-YU1LjDe1o2Ymg5zEiCHbmMXLkDCtxHQRiVqZ3nC5GGk=",
         "ref": "refs/heads/master",
-        "rev": "ee48786c6f9160d2c1a084aac841f68195b8420c",
-        "revCount": 1252,
+        "rev": "44931708c62937c2b1bf7953902989fa5bb9ee1b",
+        "revCount": 1254,
         "type": "git",
         "url": "https://github.com/Mic92/sops-nix"
       },
@@ -245,10 +245,10 @@
     },
     "stable": {
       "locked": {
-        "lastModified": 1791662279,
-        "narHash": "sha256-xI8L+UwJLIg75yVJwLPsY+AUEP1teCT3FyuvodyJu2Y=",
+        "lastModified": 1792030654,
+        "narHash": "sha256-OaQwAtPMTjQiY2sT/2/62UbSPhzP/0aDnWzMm/NCiUw=",
         "ref": "nixos-26.05",
-        "rev": "6fcc160353f63555b560f25588925133c8f61f2a",
+        "rev": "26f4107e47e3ad0ffd0db220469ba83b6f6d96e8",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/NixOS/nixpkgs"
@@ -262,10 +262,10 @@
     },
     "unstable": {
       "locked": {
-        "lastModified": 1791594108,
-        "narHash": "sha256-XK4KceonkwD8LuMAt/vNrz982mXJM5jeHAxMwsUXXAQ=",
+        "lastModified": 1792094642,
+        "narHash": "sha256-zp8ToDMnqZcu4o4IH9pdwXFXGp7yLm/M0dEnNWnyd7I=",
         "ref": "nixos-unstable",
-        "rev": "6510408d147d8c5e6d76043e899e9251756f6a75",
+        "rev": "fe13242281a67641c0102cdb1087f0ebe586c7df",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/NixOS/nixpkgs"
@@ -300,11 +300,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1791769612,
-        "narHash": "sha256-qI4/PP0PlW5H75Umy7g6ZcSeHn/1Gf6at23GFceVSgA=",
+        "lastModified": 1792152791,
+        "narHash": "sha256-J3sKT3dVyCXlblkgzWc41cUZ4ezZbR5XZzfvETkAH78=",
         "ref": "refs/heads/main",
-        "rev": "dbfb92e9e4abc3f4b1931a1e26128fd22cbf45ad",
-        "revCount": 796,
+        "rev": "6bc32f5cc67ee0f1bfb246c47b4b2c53ba1bc014",
+        "revCount": 802,
         "type": "git",
         "url": "https://github.com/nix-community/nix-wrapper-modules"
       },
