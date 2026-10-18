@@ -74,6 +74,7 @@
             data = [
               (config.nvim-lib.mkPlugin "lze" inputs.lze)
               (config.nvim-lib.mkPlugin "lzextras" inputs.lzextras)
+              # pkgs.luaPackages.nvim-nio
             ];
           };
 
@@ -111,8 +112,9 @@
               (config.nvim-lib.mkPlugin "project" inputs.project)
               (config.nvim-lib.mkPlugin "rustaceanvim" inputs.rustaceanvim)
               (config.nvim-lib.mkPlugin "nvim-dap" inputs.nvim-dap)
-              (config.nvim-lib.mkPlugin "dap-virtual-text" inputs.dap-virtual-text)
-              (config.nvim-lib.mkPlugin "dap-view" inputs.dap-view)
+              # (config.nvim-lib.mkPlugin "dap-virtual-text" inputs.dap-virtual-text)
+              # (config.nvim-lib.mkPlugin "dap-view" inputs.dap-view)
+              nvim-dap-ui
               # (config.nvim-lib.mkPlugin "texpresso" inputs.texpresso)
               # knap
               blink-cmp
