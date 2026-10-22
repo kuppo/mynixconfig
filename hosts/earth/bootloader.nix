@@ -4,7 +4,7 @@
     config = {
       boot = {
         plymouth = {
-          enable = true;
+          enable = false;
           extraConfig = ''
             DeviceScale=2
           '';
