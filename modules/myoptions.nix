@@ -64,6 +64,9 @@
                 };
               };
               enableSshd = lib.mkEnableOption "Whether enable the sshd.";
+              nixvim = {
+                enable = lib.mkEnableOption "Whether enable nixvim integration";
+              };
               desktop = {
                 userTerminal = lib.mkOption {
                   type = lib.types.enum [

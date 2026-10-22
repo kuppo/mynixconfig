@@ -78,7 +78,7 @@
           package = self.packages.${pkgs.stdenv.hostPlatform.system}.git;
         };
         neovim = {
-          enable = true;
+          enable = false;
           defaultEditor = true;
           package = self.wrappers.neovim.wrap {
             inherit pkgs;
