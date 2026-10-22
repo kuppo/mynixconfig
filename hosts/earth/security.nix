@@ -1,6 +1,6 @@
 { self, priUser, ... }:
 {
-  flake.nixosModules.security =
+  flake.nixosModules.earthSecurity =
     {
       pkgs,
       wlib,

@@ -12,6 +12,7 @@
       self.nixosModules.earthPackages
       self.nixosModules.earthServices
       self.nixosModules.earthNetworking
+      self.nixosModules.earthSecurity
 
       self.nixosModules.desktop
       self.nixosModules.font
@@ -22,7 +23,6 @@
       self.nixosModules.xdg
       self.nixosModules.graphics
       self.nixosModules.ssh
-      self.nixosModules.security
       self.nixosModules.yazi
       self.nixosModules.locale
 
