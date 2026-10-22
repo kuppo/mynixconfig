@@ -22,7 +22,7 @@
         loader = {
           systemd-boot = {
             enable = true;
-            configurationLimit = 5;
+            configurationLimit = 3;
             edk2-uefi-shell.enable = true;
             windows.windowsHome = {
               title = "Windows 11 Home Edition (For RuiRui)";
