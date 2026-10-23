@@ -17,7 +17,17 @@
         self.nixosModules.earthHardware
       ];
 
-      myoptions.enableSshd = false;
+      myoptions = {
+        nixvim = {
+          enable = true;
+          full = true;
+        };
+        dev = {
+          enable = true;
+          lsp = true;
+        };
+        enableSshd = false;
+      };
       nix.settings = nixConfig;
       time.timeZone = "Asia/Shanghai";
 

@@ -25,6 +25,7 @@
       self.nixosModules.ssh
       self.nixosModules.yazi
       self.nixosModules.locale
+      self.nixosModules.nixvim
 
       self.nixosModules.myOptions
 

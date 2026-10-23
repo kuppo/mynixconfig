@@ -37,6 +37,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.api.nvim_buf_create_user_command(0, "LspRestart", function()
       vim.cmd("lsp restart")
     end, {})
-    vim.api.nvim_buf_create_user_command(0, "LspInfo", ":checkhealth vim.lsp", {})
+    vim.api.nvim_buf_create_user_command(0, "LspInfo", ":checkhealth vim.lsp<cr>", {})
   end,
 })

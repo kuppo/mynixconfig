@@ -18,7 +18,11 @@
     }:
     {
       imports = [ self.nixosModules.latex ];
-      config = {
+      config =
+      # let
+      # myDev = config.myoptions.dev;
+      # in
+      {
         users.users.${priUser.name}.packages = with pkgs; [
           # (self.wrappers.treefmt.wrap {
           #   inherit pkgs;
@@ -34,7 +38,7 @@
           #     };
           #   };
           # })
-          # lua
+          lua
           lua-language-server
           (self.wrappers.stylua.wrap {
             inherit pkgs;
@@ -55,6 +59,7 @@
           # C
           # lldb
           # vscode-extensions.llvm-org.lldb-vscode
+          gcc
           vscode-extensions.vadimcn.vscode-lldb
           clang
           clang-tools

@@ -1,37 +1,5 @@
 {
   "nodes": {
-    "dap-view": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1792114274,
-        "narHash": "sha256-zHoImo1NMEtWBgEjcPAaxU/CDDVVqPf5PG9oyYad5jY=",
-        "ref": "refs/heads/main",
-        "rev": "b4486a6e83c45db4712849c09a76ef95b41a2133",
-        "revCount": 511,
-        "type": "git",
-        "url": "https://github.com/igorlfs/nvim-dap-view"
-      },
-      "original": {
-        "type": "git",
-        "url": "https://github.com/igorlfs/nvim-dap-view"
-      }
-    },
-    "dap-virtual-text": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1748181918,
-        "narHash": "sha256-8hsk+EwnvoHCNhb0dcL9e4hQg9I+t/5Cy9ZoZgcz4fU=",
-        "ref": "refs/heads/master",
-        "rev": "fbdb48c2ed45f4a8293d0d483f7730d24467ccb6",
-        "revCount": 145,
-        "type": "git",
-        "url": "https://github.com/theHamsta/nvim-dap-virtual-text"
-      },
-      "original": {
-        "type": "git",
-        "url": "https://github.com/theHamsta/nvim-dap-virtual-text"
-      }
-    },
     "flake-parts": {
       "inputs": {
         "nixpkgs-lib": [
@@ -67,123 +35,42 @@
         "url": "https://github.com/denful/import-tree"
       }
     },
-    "lze": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1791893192,
-        "narHash": "sha256-6tHakQ5xHsqirKuxC8eEiw6vuWWLYr5vcq1AbcnpsRI=",
-        "ref": "refs/heads/master",
-        "rev": "c0f881bab1091bab827d2b966fe1dbdfa32809ad",
-        "revCount": 476,
-        "type": "git",
-        "url": "https://github.com/BirdeeHub/lze"
+    "nixvim": {
+      "inputs": {
+        "flake-parts": [
+          "flake-parts"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "systems": "systems"
       },
-      "original": {
-        "type": "git",
-        "url": "https://github.com/BirdeeHub/lze"
-      }
-    },
-    "lzextras": {
-      "flake": false,
       "locked": {
-        "lastModified": 1788891348,
-        "narHash": "sha256-ae+NIDI+1po2HeY/efAdsyMtKn8I1p3Tx8MuX7X9XcI=",
-        "ref": "refs/heads/master",
-        "rev": "84224dbbee6e392a581870ac8657cd0bfe81396f",
-        "revCount": 226,
-        "type": "git",
-        "url": "https://github.com/BirdeeHub/lzextras"
-      },
-      "original": {
-        "type": "git",
-        "url": "https://github.com/BirdeeHub/lzextras"
-      }
-    },
-    "neo-tree": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1792234719,
-        "narHash": "sha256-E9qrYN6/XkT3ecWwfPqqwj/Y/m3PwNxXVV1EoJr57vM=",
+        "lastModified": 1792203519,
+        "narHash": "sha256-yJ072hxngo/srNdLTp4BlFeo0hedwnKicI3TGlSXLFE=",
         "ref": "refs/heads/main",
-        "rev": "4d55ed3482da32d1a68a9ed36dca5f4d69ec0ffb",
-        "revCount": 997,
+        "rev": "453dc9c5037e6d1bec81d2a51ddacd58a2f44e9c",
+        "revCount": 4779,
         "type": "git",
-        "url": "https://github.com/nvim-neo-tree/neo-tree.nvim"
+        "url": "https://github.com/nix-community/nixvim"
       },
       "original": {
         "type": "git",
-        "url": "https://github.com/nvim-neo-tree/neo-tree.nvim"
-      }
-    },
-    "nvim-dap": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1789133830,
-        "narHash": "sha256-9T6EL8mZ1rddDXBNvkh68jQSKK1bhi73IvyD6v464x8=",
-        "ref": "refs/heads/master",
-        "rev": "cfa2d58f4537aca6ca83e2de1a0d9f1491121264",
-        "revCount": 752,
-        "type": "git",
-        "url": "https://github.com/mfussenegger/nvim-dap"
-      },
-      "original": {
-        "type": "git",
-        "url": "https://github.com/mfussenegger/nvim-dap"
-      }
-    },
-    "org-bullets": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1774343634,
-        "narHash": "sha256-Tgeqr/Zd1hJXXaln4XWGS5aZqypnpfNxgO/+pQVk7jg=",
-        "ref": "refs/heads/main",
-        "rev": "503fe053550879cc202086a40454e46a87c41ddb",
-        "revCount": 59,
-        "type": "git",
-        "url": "https://github.com/nvim-orgmode/org-bullets.nvim"
-      },
-      "original": {
-        "type": "git",
-        "url": "https://github.com/nvim-orgmode/org-bullets.nvim"
-      }
-    },
-    "project": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1792286740,
-        "narHash": "sha256-tcDIKzpsDPy3ZIZRi7nozOFD/QqVNiwmD43PjbBN0dQ=",
-        "ref": "refs/heads/main",
-        "rev": "b90b5b0c034b7b32c4f5f1ebbd6a29d6089fbadf",
-        "revCount": 1653,
-        "type": "git",
-        "url": "https://github.com/DrKJeff16/project.nvim"
-      },
-      "original": {
-        "type": "git",
-        "url": "https://github.com/DrKJeff16/project.nvim"
+        "url": "https://github.com/nix-community/nixvim"
       }
     },
     "root": {
       "inputs": {
-        "dap-view": "dap-view",
-        "dap-virtual-text": "dap-virtual-text",
         "flake-parts": "flake-parts",
         "import-tree": "import-tree",
-        "lze": "lze",
-        "lzextras": "lzextras",
-        "neo-tree": "neo-tree",
         "nixpkgs": [
           "unstable"
         ],
-        "nvim-dap": "nvim-dap",
-        "org-bullets": "org-bullets",
-        "project": "project",
+        "nixvim": "nixvim",
         "rust-overlay": "rust-overlay",
-        "rustaceanvim": "rustaceanvim",
         "sops-nix": "sops-nix",
         "stable": "stable",
         "unstable": "unstable",
-        "vimplug-floatty": "vimplug-floatty",
         "wrappers": "wrappers"
       }
     },
@@ -194,33 +81,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1792219666,
-        "narHash": "sha256-RMO08tKD+hFIL5ryWi85VY4aHE5oIpdV1h4kVFctOkw=",
+        "lastModified": 1792653800,
+        "narHash": "sha256-E8zFJilWlORqzIUJizyhZ/0WKBOizuM6s1nRSgPRomo=",
         "ref": "refs/heads/master",
-        "rev": "a110337465cfb76e3806b81b9db3094c3e6e770a",
-        "revCount": 2339,
+        "rev": "5f267b7f323a4d6df0b9c0e3eaa043cbe85386f2",
+        "revCount": 2344,
         "type": "git",
         "url": "https://github.com/oxalica/rust-overlay"
       },
       "original": {
         "type": "git",
         "url": "https://github.com/oxalica/rust-overlay"
-      }
-    },
-    "rustaceanvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1789432932,
-        "narHash": "sha256-Fg20mGTMBhbausVuF2NtZJVia6w7Bj4ROuc38TBlId0=",
-        "ref": "refs/heads/main",
-        "rev": "a968f5133b8b24f481de12f08cd79420d1ace559",
-        "revCount": 1486,
-        "type": "git",
-        "url": "https://github.com/mrcjkb/rustaceanvim"
-      },
-      "original": {
-        "type": "git",
-        "url": "https://github.com/mrcjkb/rustaceanvim"
       }
     },
     "sops-nix": {
@@ -230,11 +101,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792056300,
-        "narHash": "sha256-YU1LjDe1o2Ymg5zEiCHbmMXLkDCtxHQRiVqZ3nC5GGk=",
+        "lastModified": 1792308394,
+        "narHash": "sha256-r4G33ygU307QCwyngAS6E9BMhnCRPyZrL7UxRCMrqo0=",
         "ref": "refs/heads/master",
-        "rev": "44931708c62937c2b1bf7953902989fa5bb9ee1b",
-        "revCount": 1254,
+        "rev": "a1438ca361b05d1e70854d5495abcb34fdf6ff47",
+        "revCount": 1255,
         "type": "git",
         "url": "https://github.com/Mic92/sops-nix"
       },
@@ -245,10 +116,10 @@
     },
     "stable": {
       "locked": {
-        "lastModified": 1792030654,
-        "narHash": "sha256-OaQwAtPMTjQiY2sT/2/62UbSPhzP/0aDnWzMm/NCiUw=",
+        "lastModified": 1792615934,
+        "narHash": "sha256-MlvRfa1O5Cqc2/a+gG+l9TSuowEoCKCmrJ1d9oAVm0I=",
         "ref": "nixos-26.05",
-        "rev": "26f4107e47e3ad0ffd0db220469ba83b6f6d96e8",
+        "rev": "da6dc0e7b26060f2f71ce3ef7088fb56ee44fa36",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/NixOS/nixpkgs"
@@ -258,14 +129,31 @@
         "shallow": true,
         "type": "git",
         "url": "https://github.com/NixOS/nixpkgs"
+      }
+    },
+    "systems": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1791244623,
+        "narHash": "sha256-uuanbkFk8a313Zfrxdcz8Us/yQtaxNnKJtX8v0ZPpd8=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "d36eeed142f88b5a636f2e3856a53c61654cf29b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "ref": "future-26.11",
+        "repo": "default",
+        "type": "github"
       }
     },
     "unstable": {
       "locked": {
-        "lastModified": 1792094642,
-        "narHash": "sha256-zp8ToDMnqZcu4o4IH9pdwXFXGp7yLm/M0dEnNWnyd7I=",
+        "lastModified": 1792502884,
+        "narHash": "sha256-IoNisKcGbUjdd45qCqywGMCYmZ5EnkxezvLII0FWwNA=",
         "ref": "nixos-unstable",
-        "rev": "fe13242281a67641c0102cdb1087f0ebe586c7df",
+        "rev": "02c087f3fe673c9e317f206a627cb6b910336dbe",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/NixOS/nixpkgs"
@@ -275,22 +163,6 @@
         "shallow": true,
         "type": "git",
         "url": "https://github.com/NixOS/nixpkgs"
-      }
-    },
-    "vimplug-floatty": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1783278049,
-        "narHash": "sha256-hU+3FV08UXru1H6kwBqlw1IS1EsyUbPzdFL1div4kMI=",
-        "ref": "refs/heads/main",
-        "rev": "ba6c7cd828474084001d131fc0160fcb3bbef6d2",
-        "revCount": 27,
-        "type": "git",
-        "url": "https://github.com/ingur/floatty.nvim"
-      },
-      "original": {
-        "type": "git",
-        "url": "https://github.com/ingur/floatty.nvim"
       }
     },
     "wrappers": {
@@ -300,11 +172,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792152791,
-        "narHash": "sha256-J3sKT3dVyCXlblkgzWc41cUZ4ezZbR5XZzfvETkAH78=",
+        "lastModified": 1792532408,
+        "narHash": "sha256-rasFTcWJo7CdUaCFcxcDTnMWlY6WxZo/X6EsbEqgIpM=",
         "ref": "refs/heads/main",
-        "rev": "6bc32f5cc67ee0f1bfb246c47b4b2c53ba1bc014",
-        "revCount": 802,
+        "rev": "e40208b34e08f764e6b972eb0ee919706e960eb2",
+        "revCount": 809,
         "type": "git",
         "url": "https://github.com/nix-community/nix-wrapper-modules"
       },
