@@ -35,7 +35,7 @@
           languages = {
             nix = true;
             c = true;
-            lua = true;
+            # lua = true;
             rust = true;
             python = true;
             zig = true;
