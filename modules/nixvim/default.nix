@@ -36,6 +36,7 @@
               if config.myoptions.nixvim.full then
                 [
                   self.nixosModules.nixvimPluginBetterEscape
+                  self.nixosModules.nixvimPluginFloaterm
                   self.nixosModules.nixvimPluginBlink
                   self.nixosModules.nixvimPluginBlinkIndent
                   self.nixosModules.nixvimPluginBlinkPairs
