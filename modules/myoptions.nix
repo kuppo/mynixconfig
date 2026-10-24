@@ -73,16 +73,18 @@
                   cmake = lib.mkEnableOption "Whether install cmake";
                   make = lib.mkEnableOption "Whether install make";
                   ninja = lib.mkEnableOption "Whether install ninja";
+                  uv = lib.mkEnableOption "Whether install ";
                 };
                 languages = {
-                  c = lib.mkEnableOption "Whether install c";
-                  nix = lib.mkEnableOption "Whether install nix";
-                  python = lib.mkEnableOption "Whether install python";
-                  rust = lib.mkEnableOption "Whether install rust";
-                  zig = lib.mkEnableOption "Whether install zig";
-                  typst = lib.mkEnableOption "Whether install typst";
-                  latex = lib.mkEnableOption "Whether install latex";
-                  lua = lib.mkEnableOption "Whether install lua";
+                  c = lib.mkEnableOption "Whether enable c";
+                  nix = lib.mkEnableOption "Whether enable nix";
+                  python = lib.mkEnableOption "Whether enable python";
+                  rust = lib.mkEnableOption "Whether enable rust";
+                  zig = lib.mkEnableOption "Whether enable zig";
+                  typst = lib.mkEnableOption "Whether enable typst";
+                  latex = lib.mkEnableOption "Whether enable latex";
+                  lua = lib.mkEnableOption "Whether enable lua";
+                  toml = lib.mkEnableOption "Whether enable toml";
                 };
               };
               desktop = {

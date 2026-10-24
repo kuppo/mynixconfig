@@ -26,6 +26,12 @@
           enable = true;
           lsp = true;
           formator = true;
+          buildTools = {
+            make = true;
+            cmake = true;
+            ninja = true;
+            uv = true;
+          };
           languages = {
             nix = true;
             c = true;
@@ -35,6 +41,7 @@
             zig = true;
             typst = true;
             latex = true;
+            toml = true;
           };
         };
         enableSshd = false;
