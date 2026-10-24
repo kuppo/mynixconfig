@@ -33,7 +33,7 @@
           #   position = "command";
           #   cursor = "%";
           # };
-          nfupdate = "nix flake update --flake $NIXDOTFILE_PATH";
+          nupdate = "nix flake update --flake $NIXDOTFILE_PATH";
           nswitch = {
             position = "command";
             cursor = "%";
