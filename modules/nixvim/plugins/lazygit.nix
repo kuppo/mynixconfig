@@ -1,10 +1,14 @@
-{ self, lib, ... }:
+{ self, ... }:
 {
   flake.nixosModules.nixvimPluginLazygit =
     {
+      pkgs,
       ...
     }:
     {
+      extraPackages = [
+        self.packages.${pkgs.stdenv.hostPlatform.system}.git
+      ];
       plugins.lazygit = {
         enable = true;
         lazyLoad = {
