@@ -6,17 +6,11 @@
 }:
 {
   flake.nixosModules.earthConfiguration =
-    {
-      config,
-      lib,
-      pkgs,
-      ...
-    }:
+    { ... }:
     {
       imports = [
         self.nixosModules.earthHardware
       ];
-
       myoptions = {
         nixvim = {
           enable = true;
@@ -26,6 +20,7 @@
           enable = true;
           lsp = true;
           formator = true;
+          dap = true;
           buildTools = {
             make = true;
             cmake = true;

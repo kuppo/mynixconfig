@@ -37,6 +37,7 @@
                 [
                   self.nixosModules.nixvimPluginBetterEscape
                   self.nixosModules.nixvimPluginFloaterm
+                  self.nixosModules.nixvimPluginDap
                   self.nixosModules.nixvimPluginBlink
                   self.nixosModules.nixvimPluginBlinkIndent
                   self.nixosModules.nixvimPluginBlinkPairs
