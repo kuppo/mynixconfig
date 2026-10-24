@@ -23,19 +23,6 @@
           };
           desc = "Highlight text after yank";
         }
-        {
-          event = "BufWritePre";
-          group = "userConfig";
-          callback = {
-            __raw = ''
-              function()
-                local dir = vim.fn.expand("<afile>:p:h")
-                  if vim.fn.isdirectory(dir) == 0 then vim.fn.mkdir(dir, "p") end
-              end
-            '';
-          };
-          desc = "Create missing parant directories when saving";
-        }
       ];
     };
 }

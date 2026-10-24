@@ -265,7 +265,7 @@
         {
           mode = "n";
           key = "<leader>fs";
-          action = "<cmd>w<cr>";
+          action = "<cmd>w ++p<cr>";
           options = {
             desc = "Save buffer";
             silent = true;
@@ -274,7 +274,7 @@
         {
           mode = "n";
           key = "<leader>fS";
-          action = "<cmd>wa<cr>";
+          action = "<cmd>wa ++p<cr>";
           options = {
             desc = "Save all buffer";
             silent = true;
