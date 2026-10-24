@@ -48,6 +48,7 @@
                   self.nixosModules.nixvimPluginWhichkey
                   self.nixosModules.nixvimPluginLualine
                   self.nixosModules.nixvimPluginOrgmode
+                  self.nixosModules.nixvimPluginSurround
                 ]
               else
                 [ ]
