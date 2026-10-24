@@ -1,23 +1,30 @@
 { ... }:
 {
   flake.nixosModules.nixvimPluginBetterEscape =
+    { ... }:
     {
-      lib,
-      ...
-    }:
-    {
-      plugins.better-escaper = {
+      plugins.better-escape = {
         enable = true;
         settings = {
           mapping = {
+            c = {
+              j = {
+                k = "<C-c>";
+                j = false;
+              };
+            };
             i = {
+              j = {
+                k = "<Esc>";
+                j = false;
+              };
               " " = {
                 "<tab>" = {
                   __raw = ''
                     function()
                       -- Defer execution to avoid side-effects
                       local ok, luasnip = pcall(require, "luasnip")
-                      if ok, then
+                      if ok then
                         vim.defer_fn(function()
                             -- set undo point
                             vim.o.ul = vim.o.ul

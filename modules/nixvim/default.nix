@@ -35,16 +35,17 @@
             (
               if config.myoptions.nixvim.full then
                 [
+                  self.nixosModules.nixvimPluginBetterEscape
                   self.nixosModules.nixvimPluginBlink
                   self.nixosModules.nixvimPluginBlinkIndent
                   self.nixosModules.nixvimPluginBlinkPairs
                   self.nixosModules.nixvimPluginFzflua
+                  self.nixosModules.nixvimPluginGitsigns
                   self.nixosModules.nixvimPluginLazygit
                   self.nixosModules.nixvimPluginLuasnip
                   self.nixosModules.nixvimPluginLzn
                   self.nixosModules.nixvimPluginNeotree
                   self.nixosModules.nixvimPluginWhichkey
-                  self.nixosModules.nixvimPluginGitsigns
                 ]
               else
                 [ ]

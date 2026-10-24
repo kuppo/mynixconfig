@@ -1,19 +1,19 @@
-{ self, inputs, ... }:
+{ ... }:
 {
   flake.nixosModules.nixvimKeybindings =
     {
-      lib,
       nixosConfig,
+      lib,
       ...
     }:
     {
-      keymaps = [
-        {
+      keymaps = lib.flatten [
+         ( lib.optional (!nixosConfig.myoptions.nixvim.full) {
           action = "<esc>";
           key = "jk";
           mode = "i";
           options.nowait = true;
-        }
+        })
         {
           action = "";
           key = "<F1>";
@@ -79,7 +79,7 @@
         }
         {
           mode = ["n" "v"];
-          key = "<leader>d";
+          key = "<localleader>d";
           action = "\"_d";
           options.desc = "Delete without yanking";
         }
@@ -286,6 +286,15 @@
           action = "<cmd>wa<cr><cmd>qa<cr>";
           options = {
             desc = "Quit nvim";
+            silent = true;
+          };
+        }
+        {
+          mode = "n";
+          key = "<leader>qQ";
+          action = "<cmd>wa<cr><cmd>qa!<cr>";
+          options = {
+            desc = "Force quit nvim";
             silent = true;
           };
         }
