@@ -49,6 +49,7 @@
                   self.nixosModules.nixvimPluginLualine
                   self.nixosModules.nixvimPluginOrgmode
                   self.nixosModules.nixvimPluginSurround
+                  self.nixosModules.nixvimPluginSuda
                 ]
               else
                 [ ]
