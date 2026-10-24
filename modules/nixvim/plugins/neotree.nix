@@ -10,6 +10,28 @@
         enable = true;
         settings = {
           close_if_last_window = false;
+          event_handlers = [
+            {
+              event = "neo_tree_window_after_close";
+              handler = {
+                __raw = ''
+                  function()
+                    vim.cmd("tabdo wincmd =")
+                  end
+                '';
+              };
+            }
+            {
+              event = "neo_tree_window_after_open";
+              handler = {
+                __raw = ''
+                  function()
+                    vim.cmd("tabdo wincmd =")
+                  end
+                '';
+              };
+            }
+          ];
           source_selector = {
             winbar = true;
             statusline = false;
@@ -72,41 +94,6 @@
                 desc = "Focus explorer";
               }
             ];
-            after = lib.nixvim.mkRaw ''
-              function()
-                require("neo-tree").setup({
-                  -- close_if_last_window = true,
-                  source_selector = { winbar = true, statusline = false },
-                  window = {
-                    position = "right",
-                    width = 30,
-                    mappings = {
-                      ["C"] = "none",
-                      ["<C-b>"] = { "scroll_preview", config = { direction = 10 } },
-                      ["<C-f>"] = { "scroll_preview", config = { direction = -10 } },
-                      ["S"] = "none",
-                      ["s"] = "none",
-                      ["t"] = "none",
-                      ["<c-s>"] = "open_split",
-                      ["<c-v>"] = "open_vsplit",
-                      ["<c-t>"] = "open_tabnew",
-                    },
-                  },
-                  filesystem = {
-                    follow_current_file = { enabled = true },
-                    filtered_items = {
-                      always_show = { ".gitignore" },
-                    },
-                    window = {
-                      mappings = {
-                        ["H"] = "none",
-                        ["<A-h>"] = "toggle_hidden",
-                      },
-                    },
-                  },
-                })
-              end
-            '';
           };
         };
       };
