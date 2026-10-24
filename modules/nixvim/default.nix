@@ -46,6 +46,7 @@
                   self.nixosModules.nixvimPluginLzn
                   self.nixosModules.nixvimPluginNeotree
                   self.nixosModules.nixvimPluginWhichkey
+                  self.nixosModules.nixvimPluginLualine
                   self.nixosModules.nixvimPluginOrgmode
                 ]
               else
