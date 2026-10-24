@@ -16,14 +16,24 @@
         };
       };
       lsp = {
-        servers = {
-          "*" = {
-            config = {
-              root_markers = [ ".git" ];
+        servers =
+          let
+            myDev = myOpts.dev.languages;
+          in
+          {
+            "*" = {
+              config = {
+                root_markers = [ ".git" ];
+              };
             };
+            nixd.enable = lib.mkIf myDev.nix true;
+            ty.enable = lib.mkIf myDev.python true;
+            ruff.enable = lib.mkIf myDev.python true;
+            lua_ls.enable = lib.mkIf myDev.lua true;
+            tinymist.enable = lib.mkIf myDev.typst true;
+            texlab.enable = lib.mkIf myDev.latex true;
+            clangd.enable = lib.mkIf myDev.c true;
           };
-          nixd.enable = true;
-        };
         keymaps = [
           {
             key = "grci";

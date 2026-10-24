@@ -16,15 +16,6 @@
         netrw_liststyle = 1;
         netrw_sizestyle = "h";
         netrw_sort_by = "size";
-        enabled_lsps = [
-          "lua_ls"
-          "nixd"
-          "ty"
-          "ruff"
-          "tinymist"
-          "texlab"
-          "clangd"
-        ];
       };
 
       opts = {
