@@ -51,6 +51,7 @@
                   self.nixosModules.nixvimPluginSurround
                   self.nixosModules.nixvimPluginSuda
                   self.nixosModules.nixvimPluginConform
+                  self.nixosModules.nixvimPluginRustacean
                 ]
               else
                 [ ]
