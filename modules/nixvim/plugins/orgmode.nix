@@ -9,7 +9,6 @@
       plugins.orgmode = {
         enable = true;
         settings = {
-
           org_agenda_files = "~/org/*";
           org_default_notes_file = "~/org/working_on.org";
           org_todo_keywords = [

@@ -50,6 +50,7 @@
                   self.nixosModules.nixvimPluginOrgmode
                   self.nixosModules.nixvimPluginSurround
                   self.nixosModules.nixvimPluginSuda
+                  self.nixosModules.nixvimPluginConform
                 ]
               else
                 [ ]

@@ -25,6 +25,17 @@
         dev = {
           enable = true;
           lsp = true;
+          formator = true;
+          languages = {
+            nix = true;
+            c = true;
+            lua = true;
+            rust = true;
+            python = true;
+            zig = true;
+            typst = true;
+            latex = true;
+          };
         };
         enableSshd = false;
       };
