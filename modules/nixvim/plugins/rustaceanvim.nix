@@ -1,7 +1,12 @@
 { ... }:
 {
   flake.nixosModules.nixvimPluginRustacean =
-    { nixosConfig, lib, ... }:
+    {
+      nixosConfig,
+      lib,
+      pkgs,
+      ...
+    }:
     let
       myOpts = nixosConfig.myoptions.dev;
     in
@@ -9,6 +14,12 @@
       plugins.rustaceanvim = lib.mkIf (myOpts.enable && myOpts.languages.rust) {
         enable = true;
         settings = {
+          dap = lib.mkIf myOpts.dap {
+            adapter = {
+              type = "executable";
+              command = "${pkgs.vscode-extensions.vadimcn.vscode-lldb}/share/vscode/extensions/vadimcn.vscode-lldb/adapter/codelldb";
+            };
+          };
           server = {
             default_settings = {
               rust-analyzer = {
@@ -25,6 +36,7 @@
                       enable = true;
                     };
                     enumVariant = {
+
                       enable = true;
                     };
                     method = {

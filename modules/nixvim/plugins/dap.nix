@@ -17,9 +17,7 @@
           adapters = {
             executables = {
               codelldb = lib.mkIf (myDev.languages.c || myDev.languages.rust || myDev.languages.zig) {
-                command =
-                  "${pkgs.vscode-extensions.vadimcn.vscode-lldb}"
-                  + "/share/vscode/extensions/vadimcn.vscode-lldb/adapter/codelldb";
+                command = "${pkgs.vscode-extensions.vadimcn.vscode-lldb}/share/vscode/extensions/vadimcn.vscode-lldb/adapter/codelldb";
               };
             };
           };
@@ -37,7 +35,7 @@
                     end
                   '';
                 };
-                cwd = "$${workspaceFolder}";
+                cwd = "\${workspaceFolder}";
                 stopOnEntry = false;
               }
               {
@@ -51,7 +49,7 @@
                     end
                   '';
                 };
-                cwd = "$${workspaceFolder}";
+                cwd = "\${workspaceFolder}";
                 stopOnEntry = false;
               }
               {
@@ -65,7 +63,7 @@
                     end
                   '';
                 };
-                cwd = "$${workspaceFolder}";
+                cwd = "\${workspaceFolder}";
                 stopOnEntry = false;
               }
             ];
@@ -162,6 +160,14 @@
               desc = "Center widget",
               buffer = true,
             })
+
+
+            -- chain other plugins
+            -- TODO: not working, it doesn't load the plugin
+            pcall(require, "dapui")
+            pcall(require, "dap-disasm")
+            pcall(require, "dap-view")
+            pcall(require, "dap-python")
           '';
           lazyLoad = {
             enable = true;
@@ -233,7 +239,7 @@
           lazyLoad = {
             enable = true;
             settings = {
-              after = "dap";
+              lazy = true;
             };
           };
         };
@@ -260,11 +266,11 @@
             })
           '';
           settings = {
-            element_mappings = {
-              scopes = {
-                watch = "w";
-              };
-            };
+            # element_mappings = {
+            #   scopes = {
+            #     watch = "w";
+            #   };
+            # };
             controls = {
               icons = {
                 disconnect = "";
@@ -324,7 +330,7 @@
           lazyLoad = {
             enable = true;
             settings = {
-              after = "dap";
+              lazy = true;
             };
           };
         };
@@ -392,7 +398,7 @@
           lazyLoad = {
             enable = true;
             settings = {
-              after = "dap";
+              lazy = true;
             };
           };
         };
@@ -405,7 +411,7 @@
           lazyLoad = {
             enable = true;
             settings = {
-              after = "'dap-ui'";
+              lazy = true;
             };
           };
         };

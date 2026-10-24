@@ -60,6 +60,7 @@
             (lib.optional myOpts.languages.zig [
               zig
               (lib.optional myOpts.lsp zls)
+              (lib.optional myOpts.dap vscode-extensions.vadimcn.vscode-lldb)
             ])
 
             # latex
@@ -119,6 +120,7 @@
             # rust
             (lib.optional myOpts.languages.rust [
               (lib.optional myOpts.lsp rust-analyzer)
+              (lib.optional myOpts.dap vscode-extensions.vadimcn.vscode-lldb)
               rust-bin.stable.latest.default
               graphviz-nox # dependency for rustaceanvim
             ])
