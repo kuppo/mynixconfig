@@ -1,12 +1,8 @@
-{ self, ... }:
+{ ... }:
 {
   flake.nixosModules.myOptions =
     {
-      pkgs,
-      wlib,
       lib,
-      config,
-      options,
       ...
     }:
     {
@@ -66,6 +62,30 @@
               enableSshd = lib.mkEnableOption "Whether enable the sshd.";
               nixvim = {
                 enable = lib.mkEnableOption "Whether enable nixvim integration";
+                full = lib.mkEnableOption "Whether enable full nixvim integration";
+              };
+              dev = {
+                enable = lib.mkEnableOption "Whether to install dev tools";
+                lsp = lib.mkEnableOption "Whether to enable LSP";
+                formator = lib.mkEnableOption "Whether to enable formator";
+                dap = lib.mkEnableOption "Whether to enable dap";
+                buildTools = {
+                  cmake = lib.mkEnableOption "Whether install cmake";
+                  make = lib.mkEnableOption "Whether install make";
+                  ninja = lib.mkEnableOption "Whether install ninja";
+                  uv = lib.mkEnableOption "Whether install ";
+                };
+                languages = {
+                  c = lib.mkEnableOption "Whether enable c";
+                  nix = lib.mkEnableOption "Whether enable nix";
+                  python = lib.mkEnableOption "Whether enable python";
+                  rust = lib.mkEnableOption "Whether enable rust";
+                  zig = lib.mkEnableOption "Whether enable zig";
+                  typst = lib.mkEnableOption "Whether enable typst";
+                  latex = lib.mkEnableOption "Whether enable latex";
+                  lua = lib.mkEnableOption "Whether enable lua";
+                  toml = lib.mkEnableOption "Whether enable toml";
+                };
               };
               desktop = {
                 userTerminal = lib.mkOption {
