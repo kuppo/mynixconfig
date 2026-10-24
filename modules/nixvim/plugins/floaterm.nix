@@ -18,6 +18,10 @@
                 __unkeyed-1 = "<C-t>";
                 __unkeyed-2 = "<cmd>FloatermToggle<cr>";
                 desc = "Toggle float terminal";
+                mode = [
+                  "t"
+                  "n"
+                ];
               }
             ];
             cmd = [
