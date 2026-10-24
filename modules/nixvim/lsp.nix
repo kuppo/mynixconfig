@@ -92,8 +92,6 @@
           desc = "LSP information";
         };
       };
-    }:
-    {
       diagnostic.settings = {
         jump = {
           on_jump = {

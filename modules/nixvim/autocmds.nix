@@ -24,18 +24,6 @@
           desc = "Highlight text after yank";
         }
         {
-          event = "VimResized";
-          group = "userConfig";
-          callback = {
-            __raw = ''
-              function()
-                 vim.cmd("tabdo wincmd =")
-              end
-            '';
-          };
-          desc = "Auto-resize splits when window is resized";
-        }
-        {
           event = "BufWritePre";
           group = "userConfig";
           callback = {
@@ -45,8 +33,8 @@
                   if vim.fn.isdirectory(dir) == 0 then vim.fn.mkdir(dir, "p") end
               end
             '';
-            desc = "Create missing parant directories when saving";
           };
+          desc = "Create missing parant directories when saving";
         }
       ];
     };

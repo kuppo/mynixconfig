@@ -56,7 +56,7 @@
         updatetime = 250;
         timeoutlen = 300;
         termguicolors = true;
-        textwidth = 85;
+        # textwidth = 85;
         colorcolumn = "85,100,120";
         showmatch = true;
         matchtime = 2;

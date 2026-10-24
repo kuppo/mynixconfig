@@ -12,6 +12,11 @@
       ];
       config = lib.mkIf config.myoptions.nixvim.enable {
         programs.nixvim = {
+          extraFiles = {
+            "after" = {
+              source = ./after;
+            };
+          };
           enable = true;
           defaultEditor = true;
           viAlias = true;
@@ -39,6 +44,7 @@
                   self.nixosModules.nixvimPluginLzn
                   self.nixosModules.nixvimPluginNeotree
                   self.nixosModules.nixvimPluginWhichkey
+                  self.nixosModules.nixvimPluginGitsigns
                 ]
               else
                 [ ]
