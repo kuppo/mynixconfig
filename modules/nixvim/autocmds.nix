@@ -11,18 +11,18 @@
         };
       };
       autoCmd = [
-        {
-          event = "TextYankPost";
-          group = "userConfig";
-          callback = {
-            __raw = ''
-              function()
-                vim.hl.on_yank()
-              end
-            '';
-          };
-          desc = "Highlight text after yank";
-        }
+        # {
+        #   event = "TextYankPost";
+        #   group = "userConfig";
+        #   callback = {
+        #     __raw = ''
+        #       function()
+        #         vim.hl.on_yank()
+        #       end
+        #     '';
+        #   };
+        #   desc = "Highlight text after yank";
+        # }
       ];
     };
 }
