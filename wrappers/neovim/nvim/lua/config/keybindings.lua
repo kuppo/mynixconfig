@@ -30,7 +30,6 @@ map("n", "<C-u>", "<C-u>zz", { desc = "Half page up (centered)" })
 map("x", "<leader>p", "\"_dP", { desc = "Paste without yanking" })
 
 -- Delete without yanking
-map({ "n", "v" }, "<leader>d", "\"_d", { desc = "Delete without yanking" })
 map("n", "x", "\"_x", { desc = "Delete single char without yanking" })
 
 -- Buffer navigation
@@ -73,8 +72,8 @@ map("n", "<leader>bc", "<cmd>e ++enc=utf-8<cr>", { desc = "Reload [c]oding with 
 map("n", "<leader>bd", "<cmd>bd<cr>", { desc = "Leave the buffer" })
 
 -- buffers
-map("n", "<leader>fs", "<cmd>w<cr>", { desc = "Save buffer" })
-map("n", "<leader>fS", "<cmd>wa<cr>", { desc = "Save all buffers" })
+map("n", "<leader>fs", "<cmd>w ++p<cr>", { desc = "Save buffer" })
+map("n", "<leader>fS", "<cmd>wa ++p<cr>", { desc = "Save all buffers" })
 
 -- quit
 map("n", "<leader>qq", "<cmd>wa<cr><cmd>qa<cr>", { desc = "Quit nvim" })
