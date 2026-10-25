@@ -30,7 +30,7 @@
               # gcc
               clang
               (lib.optional myOpts.lsp clang-tools)
-              (lib.optional myOpts.dap vscode-extensions.vadimcn.vscode-lldb)
+              # (lib.optional myOpts.dap vscode-extensions.vadimcn.vscode-lldb)
             ])
 
             # lua
