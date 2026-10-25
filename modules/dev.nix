@@ -129,12 +129,13 @@
               graphviz-nox # dependency for rustaceanvim
             ])
 
-            # other useful tools
             [
               # nix things are always available
               nixd
               nixfmt-rs
 
+              # other useful tools
+              unzip
               bat
               fd
               fzf
