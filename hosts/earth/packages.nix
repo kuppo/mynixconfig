@@ -71,7 +71,7 @@
         };
         fish = {
           enable = true;
-          package = self.packages.${pkgs.stdenv.hostPlatform.system}.fish;
+          # package = self.packages.${pkgs.stdenv.hostPlatform.system}.fish;
         };
         git = {
           enable = true;
