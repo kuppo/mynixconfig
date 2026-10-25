@@ -4,6 +4,7 @@
     {
       config,
       lib,
+      pkgs,
       ...
     }:
     {
@@ -35,7 +36,7 @@
             (
               if config.myoptions.nixvim.full then
                 [
-                  self.nixosModules.nixvimPluginBetterEscape
+                  # self.nixosModules.nixvimPluginBetterEscape
                   self.nixosModules.nixvimPluginLazydev
                   self.nixosModules.nixvimPluginFloaterm
                   self.nixosModules.nixvimPluginDap

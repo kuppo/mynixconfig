@@ -1,6 +1,5 @@
 { self, ... }:
 {
-
   flake.nixosModules.font =
     { pkgs, ... }:
     let

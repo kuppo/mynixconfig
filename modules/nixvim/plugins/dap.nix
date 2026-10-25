@@ -160,14 +160,28 @@
               desc = "Center widget",
               buffer = true,
             })
-
-
             -- chain other plugins
-            -- TODO: not working, it doesn't load the plugin
-            pcall(require, "dapui")
-            pcall(require, "dap-disasm")
-            pcall(require, "dap-view")
-            pcall(require, "dap-python")
+            -- TODO, find another way
+            local dapui_ok, dapui = pcall(vim.cmd, "packadd nvim-dap-ui")
+            local dapdisasm_ok, dapdisasm = pcall(vim.cmd, "packadd dap-disasm")
+            local dapview_ok, dapview = pcall(vim.cmd, "packadd dap-view")
+            local dappy_ok, dappy = pcall(vim.cmd, "packadd dap-python")
+
+            if dapui_ok then
+              local dap, dapui = require("dap"), require("dapui")
+              dap.listeners.before.attach.dapui_config = function()
+                dapui.open()
+              end
+              dap.listeners.before.launch.dapui_config = function()
+                dapui.open()
+              end
+              dap.listeners.before.event_terminated.dapui_config = function()
+                dapui.close()
+              end
+              dap.listeners.before.event_exited.dapui_config = function()
+                dapui.close()
+              end
+            end
           '';
           lazyLoad = {
             enable = true;

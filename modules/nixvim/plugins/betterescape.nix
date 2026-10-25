@@ -6,22 +6,11 @@
       plugins.better-escape = {
         enable = true;
         settings = {
-          mapping = {
-            c = {
-              j = {
-                k = "<C-c>";
-                j = false;
-              };
-            };
-            v = {
-              j = {
-                k = false;
-              };
-            };
+          default_mappins = false;
+          mappings = {
             i = {
               j = {
                 k = "<Esc>";
-                j = false;
               };
               " " = {
                 "<tab>" = {
@@ -41,8 +30,22 @@
                 };
               };
             };
+            c = {
+              j = {
+                k = "<C-c>";
+              };
+            };
+            v = {
+              j = {
+                k = "<Esc>";
+              };
+            };
+            s = {
+              j = {
+                k = "<Esc>";
+              };
+            };
           };
-          timeout = "vim.o.timeoutlen";
         };
         lazyLoad = {
           enable = true;
