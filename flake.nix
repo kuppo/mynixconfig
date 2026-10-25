@@ -35,48 +35,52 @@ rec {
       url = "git+https://github.com/oxalica/rust-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixos-wsl = {
+      url = "git+https://github.com/nix-community/NixOS-WSL";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-    # nvim plugins
-    lze = {
-      url = "git+https://github.com/BirdeeHub/lze";
-      flake = false;
-    };
-    lzextras = {
-      url = "git+https://github.com/BirdeeHub/lzextras";
-      flake = false;
-    };
-    vimplug-floatty = {
-      url = "git+https://github.com/ingur/floatty.nvim";
-      flake = false;
-    };
-    org-bullets = {
-      url = "git+https://github.com/nvim-orgmode/org-bullets.nvim";
-      flake = false;
-    };
-    project = {
-      url = "git+https://github.com/DrKJeff16/project.nvim";
-      flake = false;
-    };
-    neo-tree = {
-      url = "git+https://github.com/nvim-neo-tree/neo-tree.nvim";
-      flake = false;
-    };
-    rustaceanvim = {
-      url = "git+https://github.com/mrcjkb/rustaceanvim";
-      flake = false;
-    };
-    nvim-dap = {
-      url = "git+https://github.com/mfussenegger/nvim-dap";
-      flake = false;
-    };
-    dap-virtual-text = {
-      url = "git+https://github.com/theHamsta/nvim-dap-virtual-text";
-      flake = false;
-    };
-    dap-view = {
-      url = "git+https://github.com/igorlfs/nvim-dap-view";
-      flake = false;
-    };
+    # # nvim plugins
+    # lze = {
+    #   url = "git+https://github.com/BirdeeHub/lze";
+    #   flake = false;
+    # };
+    # lzextras = {
+    #   url = "git+https://github.com/BirdeeHub/lzextras";
+    #   flake = false;
+    # };
+    # vimplug-floatty = {
+    #   url = "git+https://github.com/ingur/floatty.nvim";
+    #   flake = false;
+    # };
+    # org-bullets = {
+    #   url = "git+https://github.com/nvim-orgmode/org-bullets.nvim";
+    #   flake = false;
+    # };
+    # project = {
+    #   url = "git+https://github.com/DrKJeff16/project.nvim";
+    #   flake = false;
+    # };
+    # neo-tree = {
+    #   url = "git+https://github.com/nvim-neo-tree/neo-tree.nvim";
+    #   flake = false;
+    # };
+    # rustaceanvim = {
+    #   url = "git+https://github.com/mrcjkb/rustaceanvim";
+    #   flake = false;
+    # };
+    # nvim-dap = {
+    #   url = "git+https://github.com/mfussenegger/nvim-dap";
+    #   flake = false;
+    # };
+    # dap-virtual-text = {
+    #   url = "git+https://github.com/theHamsta/nvim-dap-virtual-text";
+    #   flake = false;
+    # };
+    # dap-view = {
+    #   url = "git+https://github.com/igorlfs/nvim-dap-view";
+    #   flake = false;
+    # };
   };
 
   outputs =
