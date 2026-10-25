@@ -15,16 +15,17 @@
       self.nixosModules.earthSecurity
 
       self.nixosModules.desktop
-      self.nixosModules.font
-      self.nixosModules.fcitx5
-      self.nixosModules.qt
       self.nixosModules.dev
-      self.nixosModules.primaryUser
-      self.nixosModules.xdg
+      self.nixosModules.fcitx5
+      self.nixosModules.fish
+      self.nixosModules.font
       self.nixosModules.graphics
-      self.nixosModules.ssh
-      self.nixosModules.yazi
       self.nixosModules.locale
+      self.nixosModules.primaryUser
+      self.nixosModules.qt
+      self.nixosModules.ssh
+      self.nixosModules.xdg
+      self.nixosModules.yazi
 
       self.nixosModules.myOptions
 
