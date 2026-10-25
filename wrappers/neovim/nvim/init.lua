@@ -1,2 +1,0 @@
-require("nixsetup")
-require("config")

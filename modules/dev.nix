@@ -27,7 +27,7 @@
 
             # c
             (lib.optional myOpts.languages.c [
-              gcc
+              # gcc
               clang
               (lib.optional myOpts.lsp clang-tools)
               (lib.optional myOpts.dap vscode-extensions.vadimcn.vscode-lldb)
@@ -102,6 +102,16 @@
             (lib.optional myOpts.languages.nix [
               (lib.optional myOpts.lsp nixd)
               (lib.optional myOpts.formator nixfmt-rs)
+            ])
+
+            # json
+            (lib.optional myOpts.languages.json [
+              (lib.optional myOpts.lsp vscode-json-languageserver)
+            ])
+
+            # typescript
+            (lib.optional myOpts.languages.typescript [
+              (lib.optional myOpts.lsp typescript-language-server)
             ])
 
             # typst

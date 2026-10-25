@@ -81,6 +81,8 @@
                   python = lib.mkEnableOption "Whether enable python";
                   rust = lib.mkEnableOption "Whether enable rust";
                   zig = lib.mkEnableOption "Whether enable zig";
+                  json = lib.mkEnableOption "Whether enable json";
+                  typescript = lib.mkEnableOption "Whether enable typescript";
                   typst = lib.mkEnableOption "Whether enable typst";
                   latex = lib.mkEnableOption "Whether enable latex";
                   lua = lib.mkEnableOption "Whether enable lua";

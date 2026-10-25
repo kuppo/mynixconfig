@@ -42,7 +42,7 @@
         nix-tree
         numix-cursor-theme
         numix-icon-theme-square
-        # fresh-editor
+        fresh-editor
         nwg-look
         # pi-coding-agent
         qqmusic
@@ -80,12 +80,20 @@
         neovim = {
           enable = true;
           defaultEditor = true;
-          package = self.wrappers.neovim.wrap {
-            inherit pkgs;
-            settings.profile = "full";
-            hosts.ruby.nvim-host.enable = false;
-            hosts.node.nvim-host.enable = false;
+          viAlias = true;
+          vimAlias = true;
+          withPython3 = true;
+          runtime = {
+            "ftplugin/__g.lua".text = ''
+              _G.myoptions = ${lib.generators.toLua { } config.myoptions}
+            '';
           };
+          # package = self.wrappers.neovim.wrap {
+          #   inherit pkgs;
+          #   settings.profile = "full";
+          #   hosts.ruby.nvim-host.enable = false;
+          #   hosts.node.nvim-host.enable = false;
+          # };
         };
         gnupg.agent = {
           enable = true;
