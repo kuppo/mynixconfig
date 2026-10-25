@@ -18,9 +18,9 @@
         };
         dev = {
           enable = true;
-          lsp = false;
-          formator = false;
-          dap = false;
+          lsp = true;
+          formator = true;
+          dap = true;
           buildTools = {
             make = true;
             cmake = true;
@@ -28,16 +28,15 @@
             uv = true;
           };
           languages = {
-            nix = true;
             c = true;
             lua = true;
             rust = true;
-            json = true;
+            json = false;
             python = true;
             zig = true;
             typst = true;
-            typescript = true;
-            latex = true;
+            typescript = false;
+            latex = false;
             toml = true;
           };
         };
