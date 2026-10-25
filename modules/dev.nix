@@ -98,12 +98,6 @@
               ty
             ])
 
-            # nix
-            (lib.optional myOpts.languages.nix [
-              (lib.optional myOpts.lsp nixd)
-              (lib.optional myOpts.formator nixfmt-rs)
-            ])
-
             # json
             (lib.optional myOpts.languages.json [
               (lib.optional myOpts.lsp vscode-json-languageserver)
@@ -137,6 +131,10 @@
 
             # other useful tools
             [
+              # nix things are always available
+              nixd
+              nixfmt-rs
+
               bat
               fd
               fzf
