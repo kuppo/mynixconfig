@@ -39,10 +39,10 @@
           # url."https://github.com/".pushInsteadOf = "https://github.com/";
         };
         configFile.content = ''
-          [url "https://v6.gh-proxy.org/https://github.com/"]
-                  insteadOf=https://github.com/
-          [url "https://github.com/"]
-                  pushInsteadOf=https://github.com/
+          [url "https://gh-proxy.org/https://github.com"]
+                  insteadOf=https://github.com
+          [url "https://github.com"]
+                  pushInsteadOf=https://github.com
         '';
       };
     };
