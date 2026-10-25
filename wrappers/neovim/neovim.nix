@@ -62,7 +62,7 @@
           };
         runtimePkgs = config.specCollect (acc: v: acc ++ (v.runtimePkgs or [ ])) [ ];
         settings = {
-          config_directory = ./nvim;
+          # config_directory = ./nvim;
           aliases = [
             "vim"
             "vi"
