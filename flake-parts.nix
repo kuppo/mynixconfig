@@ -13,6 +13,7 @@
   imports = [
     inputs.wrappers.flakeModules.wrappers
     inputs.flake-parts.flakeModules.modules
+    inputs.devshell.flakeModule
   ];
 
   perSystem =

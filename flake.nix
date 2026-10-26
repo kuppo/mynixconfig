@@ -35,6 +35,10 @@ rec {
       url = "git+https://github.com/nix-community/NixOS-WSL";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    devshell = {
+      url = "git+https://github.com/numtide/devshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
