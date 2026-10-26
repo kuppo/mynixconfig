@@ -14,10 +14,6 @@ rec {
     nixpkgs.follows = "unstable";
     stable.url = "git+https://github.com/NixOS/nixpkgs?ref=nixos-26.05&shallow=1";
     unstable.url = "git+https://github.com/NixOS/nixpkgs?ref=nixos-unstable&shallow=1";
-    # home-manager = {
-    #   url = "git+https://github.com/nix-community/home-manager?ref=release-26.05&shallow=1";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
     import-tree.url = "git+https://github.com/denful/import-tree";
     wrappers = {
       url = "git+https://github.com/nix-community/nix-wrapper-modules";
@@ -39,48 +35,6 @@ rec {
       url = "git+https://github.com/nix-community/NixOS-WSL";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # # nvim plugins
-    # lze = {
-    #   url = "git+https://github.com/BirdeeHub/lze";
-    #   flake = false;
-    # };
-    # lzextras = {
-    #   url = "git+https://github.com/BirdeeHub/lzextras";
-    #   flake = false;
-    # };
-    # vimplug-floatty = {
-    #   url = "git+https://github.com/ingur/floatty.nvim";
-    #   flake = false;
-    # };
-    # org-bullets = {
-    #   url = "git+https://github.com/nvim-orgmode/org-bullets.nvim";
-    #   flake = false;
-    # };
-    # project = {
-    #   url = "git+https://github.com/DrKJeff16/project.nvim";
-    #   flake = false;
-    # };
-    # neo-tree = {
-    #   url = "git+https://github.com/nvim-neo-tree/neo-tree.nvim";
-    #   flake = false;
-    # };
-    # rustaceanvim = {
-    #   url = "git+https://github.com/mrcjkb/rustaceanvim";
-    #   flake = false;
-    # };
-    # nvim-dap = {
-    #   url = "git+https://github.com/mfussenegger/nvim-dap";
-    #   flake = false;
-    # };
-    # dap-virtual-text = {
-    #   url = "git+https://github.com/theHamsta/nvim-dap-virtual-text";
-    #   flake = false;
-    # };
-    # dap-view = {
-    #   url = "git+https://github.com/igorlfs/nvim-dap-view";
-    #   flake = false;
-    # };
   };
 
   outputs =
