@@ -30,6 +30,7 @@
       self.nixosModules.myOptions
 
       inputs.sops-nix.nixosModules.sops
+      inputs.direnv-instant.nixosModules.direnv-instant
       inputs.nixpkgs.nixosModules.readOnlyPkgs
       self.nixosModules.nixpkgs
     ];
