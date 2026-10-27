@@ -1,4 +1,4 @@
-{ self, ... }:
+{ self, priUser, ... }:
 {
   flake.nixosModules.fish =
     {
@@ -8,7 +8,6 @@
     {
       programs.fish = {
         shellAliases = {
-          ls = "ls --hyperlink=auto --color=auto";
           nupdate = "nix flake update --flake $NIXDOTFILE_PATH";
           nswitch = "nixos-rebuild switch --flake $NIXDOTFILE_PATH#$hostname --sudo";
           nupgrade = "nix flake update --flake $NIXDOTFILE_PATH && nixos-rebuild switch --flake $NIXDOTFILE_PATH#$hostname --sudo";
@@ -29,119 +28,32 @@
           sph = "http_proxy=socks5h://127.0.0.1:1089 https_proxy=socks5h://127.0.0.1:1089 ftp_proxy=socks5h://127.0.0.1:1089 all_proxy=socks5h://127.0.0.1:1089 HTTP_PROXY=socks5h://127.0.0.1:1089 HTTPS_PROXY=socks5h://127.0.0.1:1089 ALL_PROXY=socks5h://127.0.0.1:1089";
           gitignore = "curl -sL https://www.toptal.com/developers/gitignore/api/%";
         };
-        shellInit = ''
-          # set the default fzf interface
-          set -g -x FZF_DEFAULT_OPTS '--reverse --border=sharp --height=40% --no-info'
-
-          # source z.lua
-          #if test -e ~/.config/fish/z.lua; and test -x /etc/profiles/per-user/$USER/bin/lua
-          #    source (lua ~/.config/fish/z.lua --init fish | psub)
-          #end
-
-          # rustup mirror
-          # rustcc.cn
-          #set -g -x RUSTUP_DIST_SERVER 'http://mirrors.rustcc.cn'
-          #set -g -x RUSTUP_UPDATE_ROOT 'http://mirrors.rustcc.cn/rustup'
-
-          # 清华大学
-          #set -g -x RUSTUP_UPDATE_ROOT https://mirrors.tuna.tsinghua.edu.cn/rustup/rustup'
-          #set -g -x RUSTUP_DIST_SERVER https://mirrors.tuna.tsinghua.edu.cn/rustup'
-
-          # 中国科学技术大学
-          #set -g -x RUSTUP_DIST_SERVER 'https://mirrors.ustc.edu.cn/rust-static'
-          #set -g -x RUSTUP_UPDATE_ROOT 'https://mirrors.ustc.edu.cn/rust-static/rustup'
-
-          # 上海交通大学
+        interactiveShellInit = ''
+          # set -g -x RUSTUP_UPDATE_ROOT https://mirrors.tuna.tsinghua.edu.cn/rustup/rustup'
+          # set -g -x RUSTUP_DIST_SERVER https://mirrors.tuna.tsinghua.edu.cn/rustup'
+          # set -g -x RUSTUP_DIST_SERVER 'https://mirrors.ustc.edu.cn/rust-static'
+          # set -g -x RUSTUP_UPDATE_ROOT 'https://mirrors.ustc.edu.cn/rust-static/rustup'
           set -g -x RUSTUP_DIST_SERVER 'https://mirrors.sjtug.sjtu.edu.cn/rust-static/'
           set -g -x RUSTUP_UPDATE_ROOT 'https://mirrors.sjtug.sjtu.edu.cn/rust-static/rustup'
-
-          # Rustup Tsinghua mirror
-          #set -gx RUSTUP_UPDATE_ROOT https://mirrors.tuna.tsinghua.edu.cn/rustup/rustup
-          #set -gx RUSTUP_DIST_SERVER https://mirrors.tuna.tsinghua.edu.cn/rustup
-
-          # Cargo home
+          set -g -x FZF_DEFAULT_OPTS '--reverse --border=sharp --height=40% --no-info'
           set -gx CARGO_HOME "$HOME/.local/cargo/"
-
-          # devenv
-          if test -x /etc/profiles/per-user/$USER/bin/devenv
-            devenv hook fish | source
-          end
-
-          # tree = tre
-          if test -x /etc/profiles/per-user/$USER/bin/tre
-              alias tree=tre
-          end
-
-          # Go Proxy
           set -g -x GOPROXY 'https://proxy.golang.com.cn,direct'
-
-          # NO_proxy
           set -g -x NO_PROXY "localhost,127.0.0.1,::1,192.168.0.0/16,172.16.0.0/24,10.0.0.0/8"
           set -g -x no_proxy "localhost,127.0.0.1,::1,192.168.0.0/16,172.16.0.0/24,10.0.0.0/8"
-
-          # Jupyter notebook config directory
           set -g -x JUPYTER_CONFIG_DIR ~/.config/jupyter
-
-          # iPython config directory
           set -g -x IPYTHONDIR ~/.config/ipython
-
-          # add doom emacs bin to HOME -- Disabled in NixOS
-          # if test -x ~/.config/emacs/bin/doom
-          #     fish_add_path -aPg ~/.config/emacs/bin
-          # end
-          fish_add_path -aPg ~/.local/bin
-
-          # pass command directory for save all password
-          set -gx PASSWORD_STORE_DIR "$HOME/.config/password-store"
-
-          # better diff
-          if test -x /etc/profiles/per-usr/$USER/bin/icdiff
-              alias diff="icdiff"
-          end
-
-          # better ls
-          if test -x /etc/profiles/per-usr/$USER/bin/eza
-              alias ls="eza"
-              alias ll="eza -l"
-              alias la="eza -la"
-          end
-
-          # better du
-          if test -x /etc/profiles/per-usr/$USER/bin/dust
-              alias du="dust"
-          end
-
-          # better find
-          if test -x /etc/profiles/per-usr/$USER/bin/fd
-             alias find="fd"
-          end
-
-          # better cd
-          if test -x /etc/profiles/per-usr/$USER/bin/zoxide
-              zoxide init fish | source
-          end
-
-          # better cat
-          if test -x /etc/profiles/per-usr/$USER/bin/bat
-              alias cat="bat"
-          end
-
-          # probe-rs
-          if test -x ~/.local/cargo/bin/probe-rs
-              probe-rs complete install 2>/dev/null | source
-          end
-
-          # Gemini API key
           set -gx AVANTE_GEMINI_API_KEY 'AIzaSyA7QlyWMg9maWhuM1jl2orGy2O0MRH8zxQ'
-
           set -gx NIXDOTFILE_PATH '${config.programs.nh.flake}'
-
-          ## fish
-          fish_config theme choose bay-cruise
-          fish_config prompt choose nim
-          function fish_greeting
-            echo Fishing time!
-          end
+          if test -x /etc/profiles/per-user/${priUser.name}/bin/tre; alias tree=tre; end
+          if test -x /etc/profiles/per-user/${priUser.name}/bin/icdiff; alias diff="icdiff"; end
+          if test -x /etc/profiles/per-user/${priUser.name}/bin/eza; alias ls="eza"; alias ll="eza -l"; alias la="eza -la"; end
+          if test -x /etc/profiles/per-user/${priUser.name}/bin/dust; alias du="dust"; end
+          if test -x /etc/profiles/per-user/${priUser.name}/bin/fd; alias find="fd"; end
+          if test -x /etc/profiles/per-user/${priUser.name}/bin/zoxide; zoxide init fish | source; end
+          if test -x /etc/profiles/per-user/${priUser.name}/bin/bat; alias cat="bat"; end
+          if test -x ~${priUser.name}/.local/cargo/bin/probe-rs; probe-rs complete install 2> /dev/null | source; end
+          fish_config theme choose bay-cruise; fish_config prompt choose nim
+          function fish_greeting; echo Fishing time!; end
         '';
       };
     };
