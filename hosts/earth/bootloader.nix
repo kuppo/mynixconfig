@@ -16,9 +16,6 @@
           "quiet"
           "udev.log_level=3"
         ];
-        initrd = {
-          verbose = false;
-        };
         loader = {
           systemd-boot = {
             enable = true;
