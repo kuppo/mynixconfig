@@ -30,7 +30,7 @@
               # gcc
               clang
               (lib.optional myOpts.lsp clang-tools)
-              # (lib.optional myOpts.dap vscode-extensions.vadimcn.vscode-lldb)
+              (lib.optional myOpts.dap (self.wrappers.codelldb.wrap { inherit pkgs; }))
             ])
 
             # lua
@@ -41,7 +41,7 @@
             (lib.optional myOpts.languages.zig [
               zig
               (lib.optional myOpts.lsp zls)
-              (lib.optional myOpts.dap vscode-extensions.vadimcn.vscode-lldb)
+              (lib.optional myOpts.dap (self.wrappers.codelldb.wrap { inherit pkgs; }))
             ])
 
             # latex
@@ -105,7 +105,7 @@
             # rust
             (lib.optional myOpts.languages.rust [
               (lib.optional myOpts.lsp rust-analyzer)
-              (lib.optional myOpts.dap vscode-extensions.vadimcn.vscode-lldb)
+              (lib.optional myOpts.dap (self.wrappers.codelldb.wrap { inherit pkgs; }))
               rust-bin.stable.latest.default
               graphviz-nox # dependency for rustaceanvim
             ])
@@ -142,8 +142,6 @@
               ripgrep
             ]
           ];
-
-        # make codelldb executable into the path
 
         # fix for "NixOS cannot run dynamically linked executables intended for generic Linux environments out of the box."
         programs = {
