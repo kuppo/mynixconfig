@@ -36,7 +36,7 @@
         htop
         kdePackages.kdenlive
         kdePackages.okular
-        kicad
+        # kicad
         ksnip
         exiftool
         nix-tree
@@ -88,12 +88,6 @@
               _G.myoptions = ${lib.generators.toLua { } config.myoptions}
             '';
           };
-          # package = self.wrappers.neovim.wrap {
-          #   inherit pkgs;
-          #   settings.profile = "full";
-          #   hosts.ruby.nvim-host.enable = false;
-          #   hosts.node.nvim-host.enable = false;
-          # };
         };
         gnupg.agent = {
           enable = true;
@@ -102,8 +96,6 @@
         obs-studio = {
           enable = true;
           plugins = with pkgs.obs-studio-plugins; [
-            wlrobs
-            obs-vaapi
             obs-pipewire-audio-capture
           ];
         };
