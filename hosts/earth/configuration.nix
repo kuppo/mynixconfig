@@ -29,7 +29,6 @@
           };
           languages = {
             c = true;
-            lua = true;
             rust = true;
             json = false;
             python = true;

@@ -35,25 +35,6 @@
 
             # lua
             (lib.optional myOpts.languages.lua [
-              lua
-              (lib.optional myOpts.lsp lua-language-server)
-              (lib.optional myOpts.formator (
-                self.wrappers.stylua.wrap {
-                  inherit pkgs;
-                  generateCpScript = {
-                    enable = true;
-                  };
-                  customStyle = {
-                    call_parentheses = "Always";
-                    column_width = 100;
-                    collapse_simple_statement = "ConditionalOnly";
-                    indent_type = "Spaces";
-                    indent_width = 2;
-                    quote_style = "ForceDouble";
-                    sort_requires.enabled = true;
-                  };
-                }
-              ))
             ])
 
             # zig
@@ -134,12 +115,30 @@
               nixd
               nixfmt-rs
 
+              # lua things are also available
+              lua
+              lua-language-server
+              (self.wrappers.stylua.wrap {
+                inherit pkgs;
+                generateCpScript = {
+                  enable = true;
+                };
+                customStyle = {
+                  call_parentheses = "Always";
+                  column_width = 100;
+                  collapse_simple_statement = "ConditionalOnly";
+                  indent_type = "Spaces";
+                  indent_width = 2;
+                  quote_style = "ForceDouble";
+                  sort_requires.enabled = true;
+                };
+              })
+
               # other useful tools
               unzip
               bat
               fd
               fzf
-              lazygit
               ripgrep
             ]
           ];
