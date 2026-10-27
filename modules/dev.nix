@@ -143,21 +143,31 @@
             ]
           ];
 
+        # make codelldb executable into the path
+
         # fix for "NixOS cannot run dynamically linked executables intended for generic Linux environments out of the box."
-        programs.nix-ld = {
-          enable = true;
-          libraries =
-            options.programs.nix-ld.libraries.default
-            ++ (with pkgs; [
-              dbus # libdbus-1.so.3
-              fontconfig # libfontconfig.so.1
-              freetype # libfreetype.so.6
-              glib # libglib-2.0.so.0
-              libGL # libGL.so.1
-              libxkbcommon # libxkbcommon.so.0
-              libX11 # libX11.so.6
-              wayland
-            ]);
+        programs = {
+          direnv-instant.enable = true;
+          direnv = {
+            enable = true;
+            enableFishIntegration = true;
+            nix-direnv.enable = true;
+          };
+          nix-ld = {
+            enable = true;
+            libraries =
+              options.programs.nix-ld.libraries.default
+              ++ (with pkgs; [
+                dbus # libdbus-1.so.3
+                fontconfig # libfontconfig.so.1
+                freetype # libfreetype.so.6
+                glib # libglib-2.0.so.0
+                libGL # libGL.so.1
+                libxkbcommon # libxkbcommon.so.0
+                libX11 # libX11.so.6
+                wayland
+              ]);
+          };
         };
       };
     };
