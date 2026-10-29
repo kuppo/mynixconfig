@@ -18,6 +18,9 @@
           scrollback_lines = 20000;
           scrollbar = "never";
         };
+        keybindings = {
+          "ctrl+shift+h" = "launch --stdin-source=@screen_scrollback --type=overlay nvim -R -";
+        };
       };
     };
 }
