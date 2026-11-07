@@ -37,6 +37,7 @@
         kdePackages.kdenlive
         kdePackages.okular
         # kicad
+        libreoffice
         ksnip
         exiftool
         nix-tree
