@@ -21,6 +21,7 @@
           recolor-lightcolor = "#111111";
           recolor-darkcolor = "#aaaaaa";
           recolor-keephue = true;
+          selection-clipboard = "clipboard";
         };
         mappings = {
           "[normal] bb" = "feedkeys :bmark<Space>";
