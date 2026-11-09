@@ -29,6 +29,8 @@
             (lib.optional myOpts.languages.c [
               # gcc
               clang
+              lld
+              openocd
               (lib.optional myOpts.lsp clang-tools)
               (lib.optional myOpts.dap (self.wrappers.codelldb.wrap { inherit pkgs; }))
             ])
