@@ -222,8 +222,9 @@
             }
             {
               matches = [
-                # { app-id = "r#\"firefox$\"#"; }
+                { app-id = "r#\"firefox$\"#"; }
                 { app-id = "flameshot"; }
+                { title = "Brave"; }
                 { title = "r#\"flameshot\"#"; }
                 { title = "^Picture-in-Picture$"; }
               ];
