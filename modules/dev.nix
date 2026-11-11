@@ -30,6 +30,7 @@
               # gcc
               clang
               lld
+              libllvm
               openocd
               (lib.optional myOpts.lsp clang-tools)
               (lib.optional myOpts.dap (self.wrappers.codelldb.wrap { inherit pkgs; }))
